@@ -20,11 +20,28 @@
     <!-- Custom Stylesheet --> <link rel="shortcut icon" href="http://www.w3.org/2008/site/images/favicon.ico"
       type="image/x-icon" />
     <style type="text/css">
-
+ 
       /*<![CDATA[*/
       pre.example script {
         display:block;
       }
+      .comment { color: #b22222; }
+      .keyword { color: #a020f0; }
+      .shape-name { color: #a0522d; }
+      .shape-name:visited { color: #a0522d; }
+      .constraint-name { color: #a08000; }
+      .predicate { color: #522da0; }
+      .value-constraint { color: #2d52a0; }
+      ul { padding: 0 2em; margin: 1ex; }
+      pre { padding: 0; margin: 1ex; }
+      pre {
+        background-color: #fcfaee;
+        margin-left: 0;
+        line-height: 1.2;
+        display: table;
+      }
+      pre.schema.shexc { background-color: #ECEBF7; border: thick solid #e4e3ec; }
+      pre.instance { border: thick solid #f8f6ea; display: inline-block; }
       /*]]>*/
   </style>
   </head>
@@ -32,8 +49,8 @@
     <div id="w3c_container">
       <div id="w3c_mast">
         <!-- #w3c_mast / Page top header -->
-	<h1 class="logo999">
-	    <img src="http://www.w3.org/2015/ShEx-Icon.svg" style="height:100%; padding-left: 1%;" alt="W3C SW"/>
+	<h1 class="logo">
+	    <img src="http://www.w3.org/2015/ShEx-Icon.svg" style="float:left; height:100%; padding-left: 6%;" alt="ShEx Icon"/><img style="float:left; height:97%; padding-top: 2%; padding-left: 6%;" src="http://www.w3.org/RDF/icons/rdf_w3c.svg" alt="W3C SW"/>
 	</h1>
         <div id="w3c_nav">
           <form action="http://www.w3.org/Help/search" method="get" enctype="application/x-www-form-urlencoded">
@@ -74,6 +91,12 @@
           </ul>
           <h3 class="category"> <span class="ribbon"><b>Online resources</b></span> </h3>
           <ul class="theme">
+            <li><a href="http://shexspec.github.io/primer/">Primer</a></li>
+            <li><a href="http://shexspec.github.io/semantics/">Semantics</a></li>
+            <li><a href="http://www.w3.org/2015/ShExpressivity">Expressivity questionnaire</a></li>
+          </ul>
+          <h3 class="category"> <span class="ribbon"><b>Online learning tools</b></span> </h3>
+          <ul class="theme">
             <!-- @@later li><a href="Registration">Workshop Participants</a></li -->
             <!-- @@later li><a href="Report">Report</a></li -->
             <!-- @@later li>Minutes <a href="http://www.w3.org/2099/08/32-rdfval-minutes">day 1</a>, <a href="http://www.w3.org/2099/08/33-rdfval-minutes">day 2</a></li -->
@@ -81,8 +104,6 @@
             <!-- @@later li><a href="Schedule">Schedule</a></li -->
             <li><a href="http://rdfshape.herokuapp.com/">RDFShape</a></li>
             <li><a href="http://www.w3.org/2013/ShEx/FancyShExDemo">ShExDemo</a></li>
-
-            <li><a href="http://shexspec.github.io/semantics/">Semantics</a></li>
           </ul>
           <h3 class="category"> <span class="ribbon"><b>Contact Info</b></span>
           </h3>
@@ -97,20 +118,39 @@
             <div class="article line">
               <h2>Validation, traversal and transformation of RDF graphs.</h2>
 	      <p>
-		Shape Expressions is a structural schema language for RDF
+		      Shape Expressions is a structural schema language for RDF graphs.
+          It allows one to describe profiles of data like this:
 	      </p>
+
+        <div>
+          <pre style="float:left" class="schema shexc"><span class="comment"># our EmployeeShape reuses the FOAF ontology</span>
+<span class="shape-name">&lt;EmployeeShape&gt;</span> {                <span class="comment"># An &lt;EmployeeShape&gt; has:</span>
+    <span class="predicate">foaf:givenName</span>  <span class="value-constraint">xsd:string</span><span class="keyword">+</span>,   <span class="comment"># at least one givenName.</span>
+    <span class="predicate">foaf:familyName</span> <span class="value-constraint">xsd:string</span>,    <span class="comment"># one familyName.</span>
+    <span class="predicate">foaf:phone</span>      <span class="value-constraint">IRI</span><span class="keyword">*</span>,          <span class="comment"># any number of phone numbers.</span>
+    <span class="predicate">foaf:mbox</span>       <span class="value-constraint">IRI</span>            <span class="comment"># one FOAF mbox.</span>
+}</pre>
+          <pre class="instance turte"><span class="comment"># Employee7 matches EmployeeShape</span>
+&lt;http://a.example/Employee7&gt;
+    foaf:givenName  "Robert", "Taylor" ;
+    foaf:familyName "Johnson" ;
+    <span class="comment"># no phone number needed</span>
+    foaf:mbox       &lt;mailto:rtj@example.com&gt;
+    .
+</pre>
+        </div>
               <h3 id="features">Features</h3>
 	      <ul>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
+		<li>datatype constraints</li>
+		<li>value sets</li>
+		<li>XML Schema facets</li>
+		<li>hierarchical shapes</li>
 	      </ul>
               <h3 id="platforms">Platforms</h3>
 	      <ul>
 		<li>Java - Jena</li>
 		<li>Python - RDFLib</li>
-		<li>Javascript - shex.js/n3.js</li>
+		<li>Javascript - shex.js (<a href="https://github.com/shexSpec/shex.js/wiki">wiki</a>, <a href="https://github.com/shexSpec/shex.js/">repo</a>), runs on <a href="https://github.com/RubenVerborgh/N3.js">n3.js</a></li>
 	      </ul>
           </div>
           <!-- /end #w3c_content_body --> </div>
