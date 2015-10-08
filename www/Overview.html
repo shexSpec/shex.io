@@ -42,6 +42,13 @@
       }
       pre.schema.shexc { background-color: #ECEBF7; border: thick solid #e4e3ec; }
       pre.instance { border: thick solid #f8f6ea; display: inline-block; }
+      ul.main_nav { padding: .66ex; }
+ul.cols {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+
       /*]]>*/
   </style>
   </head>
@@ -50,7 +57,7 @@
       <div id="w3c_mast">
         <!-- #w3c_mast / Page top header -->
 	<h1 class="logo">
-	    <img src="http://www.w3.org/2015/ShEx-Icon.svg" style="float:left; height:80%; padding-left: 6%;" alt="ShEx Icon"/><img style="float:left; height:76%; padding-top: 2%; padding-left: 6%;" src="http://www.w3.org/RDF/icons/rdf_w3c.svg" alt="W3C SW"/>
+	    <img src="http://www.w3.org/2015/ShEx-Icon.svg" style="float:left; height:95%; padding-left: 6%;" alt="ShEx Icon"/><img style="float:left; height:90%; padding-top: 2%; padding-left: 6%;" src="http://www.w3.org/RDF/icons/rdf_w3c.svg" alt="W3C SW"/>
 	</h1>
         <div id="w3c_nav">
           <form action="http://www.w3.org/Help/search" method="get" enctype="application/x-www-form-urlencoded">
@@ -140,11 +147,19 @@
 </pre>
         </div>
               <h3 id="features">Features</h3>
-	      <ul>
-		<li>datatype constraints</li>
-		<li>value sets</li>
-		<li>XML Schema facets</li>
-		<li>hierarchical shapes</li>
+	      <ul class="cols">
+		<li><a href="http://shexspec.github.io/primer/#vocab-literal-datatype">datatype constraints</a></li>
+		<li><a href="http://shexspec.github.io/primer/#value-sets">value sets</a></li>
+		<li><a href="http://shexspec.github.io/primer/#vocab-literal-facets">XML Schema facets</a></li>
+		<li><a href="http://shexspec.github.io/primer/#vocab-value-shape">hierarchical shapes</a></li>
+    <li><a href="http://shexspec.github.io/primer/#additive-properties">additive property constraints</a></li>
+    <li>algabraics (<a href="http://shexspec.github.io/primer/#choices">or</a>, <a href="http://shexspec.github.io/primer/#simple-expressions">and</a>)</li>
+		<li><a href="http://shexspec.github.io/primer/#negated-properties">negated properties</a></li>
+		<li><a href="http://shexspec.github.io/primer/#inverse-properties">incoming arcs</a></li>
+		<li><a href="http://shexspec.github.io/primer/#vocab-node-kind">node kind (IRI, BNode or literal)</a></li>
+		<li>open/closed <a href="http://shexspec.github.io/primer/#closed-shapes">shapes</a> and <a href="http://shexspec.github.io/primer/#extra-properties">properties</a></li>
+		<li><a href="http://shexspec.github.io/primer/ShExJ">JSON schema format</a></li>
+		<li><a href="http://shexspec.github.io/primer/ShExJ">JSON validation results</a></li>
 	      </ul>
               <h3 id="platforms">Platforms</h3>
 	      <ul>
