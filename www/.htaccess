@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteRule ^/extensions/(.*)$ http://shexspec.github.io/extensions/$1 [L,P]
 
-ProxyPassReverse / http://shexspec.github.io
+# ProxyPassReverse / http://shexspec.github.io
