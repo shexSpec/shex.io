@@ -49,20 +49,117 @@ ul.cols {
   -moz-columns: 3;
 }
 
+.w3c_leftCol {
+      float: none !important; 
+}
+
       /*]]>*/
   </style>
   </head>
   <body id="www-w3-org" class="w3c_public">
-    <h1>shex-to-json</h1>
-    <p>
-      Translate ShExC to JSON
-    </p>
+    <div id="w3c_container">
+      <div id="w3c_mast">
+        <!-- #w3c_mast / Page top header -->
+	<h1 class="logo">
+	    <img src="http://www.w3.org/2015/ShEx-Icon.svg" style="float:left; height:95%; padding-left: 6%;" alt="ShEx Icon"/><img style="float:left; height:90%; padding-top: 2%; padding-left: 6%;" src="http://www.w3.org/RDF/icons/rdf_w3c.svg" alt="W3C SW"/>
+	</h1>
+        <div id="w3c_nav">
+          <form action="http://www.w3.org/Help/search" method="get" enctype="application/x-www-form-urlencoded">
+            <!-- w3c_sec_nav is populated through js -->
+            <div class="w3c_sec_nav">
+              <!-- --> </div>
+            <ul class="main_nav">
+              <!-- Main navigation menu -->
+              <li class="first-item"> <a href="https://www.w3.org/2001/sw/wiki/ShEx">Wiki</a></li>
+              <li> <a href="https://lists.w3.org/Archives/Public/public-shex-dev/">Archive</a> </li>
+              <li class="search-item">
+                <div id="search-form"> <input tabindex="3" class="text" name="q"
+                    value=""
+                    title="Search"/>
+                  <button id="search-submit" name="search-submit" type="submit">
+                    <img class="submit" src="http://www.w3.org/2008/site/images/search-button"
+                      alt="Search"
+                      height="17"
+                      width="21"/>
+                  </button> </div>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+      <!-- /end #w3c_mast -->
+      <div id="w3c_main">
+        <div id="w3c_logo_shadow" class="w3c_leftCol"> <img alt="" src="http://www.w3.org/2008/site/images/logo-shadow"
+            height="32"/>
+        </div>
+        <div class="w3c_mainCol">
+          <h1 class="title">shex-to-json</h1>
+          <div id="w3c_content_body">
+            <div class="article line">
+	      <p>
+      Translate ShExC to JSON.
+	      </p>
+
+    <div>
     <h2>Invocation</h2>
-    <p>
-    </p>
+    <pre>      --cut  &lt;arg&gt;                  (default = 1)
+  -d, --data  &lt;arg&gt;                Data to validate
+  -e, --endpoint  &lt;arg&gt;            SPARQL endpoint
+  -f, --in-data-format  &lt;arg&gt;      Input data format. Available values:
+                                   TURTLE,RDF/XML,N-TRIPLES,RDF/JSON,TRIG
+                                   (default = TURTLE)
+  -m, --memory                     show memory used
+      --no-memory                  don't show memory used
+  -n, --node  &lt;arg&gt;                Node to validate
+      --out-data-format  &lt;arg&gt;     Output data format. Available values:
+                                   TURTLE,RDF/XML,N-TRIPLES,RDF/JSON,TRIG
+                                   (default = TURTLE)
+  -o, --out-schema  &lt;arg&gt;          Output schema file
+  -u, --out-schema-format  &lt;arg&gt;   Output schema format. Available values:
+                                   SHEXC,JSONAST,TURTLE,RDF/XML,N-TRIPLES,RDF/JSON,TRIG
+                                   (default = SHEXC)
+  -s, --schema  &lt;arg&gt;              Schema file
+  -x, --schema-format  &lt;arg&gt;       Schema Format. Available values:
+                                   SHEXC,JSONAST,TURTLE,RDF/XML,N-TRIPLES,RDF/JSON,TRIG
+                                   (default = SHEXC)
+  -r, --schema-version  &lt;arg&gt;      Schema Version. Available values:
+                                   ValidatorVersions (default = SHEX3)
+  -l, --shape  &lt;arg&gt;               Label (IRI) of Shape in Schema
+      --showData                   show Data
+      --no-showData                don't show Data
+      --showSchema                 show schema
+      --no-showSchema              don't show schema
+  -t, --time                       show time
+      --no-time                    don't time
+      --validator  &lt;arg&gt;           Validation algorithm: SORBE (Single Occurrence
+                                   Bag Expressions) (default = SORBE)
+  -V, --verbose                    Normal output
+      --no-verbose                 Verbose output
+      --withAny                    adds a node of type any
+      --no-withAny                 does not add a node of type any
+      --withIncoming               validates with nodes incoming
+      --no-withIncoming            does not validate nodes incoming
+      --withOpen                   with open shapes by default
+      --no-withOpen                with closed shapes by default
+  -h, --help                       Show help message
+      --nohelp                     Don't show help message
+  -v, --version                    Show version
+      --no-version                 Don't show version</pre>
+    </div>
+    <div>
     <h2>Implementations</h2>
     <ul>
       <li><a href="https://github.com/shexSpec/shex.js/blob/validate/bin/shex-to-json">shex.js</a></li>
     </ul>
+    </div>
+          </div>
+          <!-- /end #w3c_content_body --> </div>
+        <!-- /end #w3c_mainCol --> </div>
+      <!-- end #w3c_main --> </div></div>
+    <!-- /end #w3c_container -->
+    <!-- /end #footer -->
+    <div id="w3c_scripts">
+      <script type="text/javascript" src="http://www.w3.org/2008/site/js/main"> </script>
+    </div>
   </body>
 </html>
