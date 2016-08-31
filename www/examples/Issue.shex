@@ -9,8 +9,8 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 start = <IssueShape>  # Issue validation starts with <IssueShape>
 
 <IssueShape> {                       # An <IssueShape> has:
-    ex:state (ex:unassigned            # state which is
-              ex:assigned),            #   unassigned or assigned.
+    ex:state [ex:unassigned            # state which is
+              ex:assigned],            #   unassigned or assigned.
     ex:reportedBy @<UserShape>,        # reported by a <UserShape>.
     ex:reportedOn xsd:dateTime,        # reported some date/time.
     (                                  # optionally
