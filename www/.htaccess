@@ -5,5 +5,8 @@ RewriteRule    "^extensions/(.*)$"  "http://shexspec.github.io/extensions/$1"  [
 RewriteBase    "/primer/"
 RewriteRule    "^primer/(.*)$"  "http://shexspec.github.io/primer/$1"  [P]
 
+RewriteBase    "/spec/"
+RewriteRule    "^spec/(.*)$"  "http://shexspec.github.io/spec/$1"  [P]
+
 # # ProxyPassReverse / http://shexspec.github.io
 
