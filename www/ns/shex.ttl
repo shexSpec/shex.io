@@ -1,0 +1,6 @@
+PREFIX sx: <http://shex.io/ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+sx:expression rdfs:domain sx:Shape ; rdfs:range sx:expression .
+sx:predicate rdfs:domain sx:TripleConstraint .
+
