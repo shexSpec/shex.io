@@ -3,7 +3,7 @@ RewriteEngine  on
 
 # Vocabulary/Namespaece
 RewriteBase     /
-RewriteRule     ^context.jsonld$ https://shexSpec.github.io/context.jsonld [P]
+RewriteRule     ^context.jsonld$ http://shexSpec.github.io/context.jsonld [P]
 
 RewriteBase    "/ns/"
 RewriteRule    "^ns/(.*)$"  "http://shexspec.github.io/ns/$1"  [P]
