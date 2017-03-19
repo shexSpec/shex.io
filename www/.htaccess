@@ -24,7 +24,7 @@ RewriteRule    ^ns/shex$   http://shexspec.github.io/ns/shex.ttl [P,L]
 
 RewriteCond %{HTTP_ACCEPT} application/json [OR]
 RewriteCond %{HTTP_ACCEPT} application/ld+json
-RewriteRule    ^ns/shex$   http://shexspec.github.io/ns/shex.json [P,L]
+RewriteRule    ^ns/shex$   http://shexspec.github.io/ns/shex.jsonld [P,L]
 
 # Default to HTML
 RewriteRule    ^ns/shex$   http://shexspec.github.io/ns/shex.html [P,L]
