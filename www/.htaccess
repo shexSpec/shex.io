@@ -3,14 +3,15 @@ RewriteEngine  on
 # Pass content through from referenced location
 RewriteBase     /
 # Redirect to canonical locations
-RewriteRule     ^ns$                  ns/shex [R=301,L]
-RewriteRule     ^ns/$                 ns/shex [R=301,L]
-RewriteRule     ^ns/index(\.html)?$   ns/shex [R=301,L]
-RewriteRule     ^spec$                spec/ [R=301,L]
+RewriteRule    ^ns$                  ns/shex [R=301,L]
+RewriteRule    ^ns/$                 ns/shex [R=301,L]
+RewriteRule    ^ns/index(\.html)?$   ns/shex [R=301,L]
+RewriteRule    ^spec$                spec/ [R=301,L]
 
 # Context passed through
-RewriteRule     ^context.jsonld$  http://shexSpec.github.io/context.jsonld [P,L]
+RewriteRule    ^context.jsonld$  http://shexSpec.github.io/context.jsonld [P,L]
 
+RewriteRule    ^ns/shex$          http://shexspec.github.io/ns/shex.html [P,L]
 RewriteRule    ^ns(.*)$           http://shexspec.github.io/ns/$1 [P,L]
 RewriteRule    ^extensions/(.*)$  http://shexspec.github.io/extensions/$1  [P,L]
 RewriteRule    ^primer/(.*)$      http://shexspec.github.io/primer/$1  [P,L]
