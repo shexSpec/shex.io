@@ -6,6 +6,9 @@ RewriteBase     /
 RewriteRule     ^context.jsonld$ http://shexSpec.github.io/context.jsonld [P]
 
 RewriteBase    "/ns/"
+RewriteRule    "^ns/$"  "http://shexspec.github.io/ns/shex.html"  [P]
+RewriteRule    "^ns/index$"  "http://shexspec.github.io/ns/shex.html"  [P]
+RewriteRule    "^ns/index.html$"  "http://shexspec.github.io/ns/shex.html"  [P]
 RewriteRule    "^ns/(.*)$"  "http://shexspec.github.io/ns/$1"  [P]
 
 RewriteBase    "/extensions/"
