@@ -1,24 +1,20 @@
 RewriteEngine  on
 
-
-# Vocabulary/Namespaece
+# Pass content through from referenced location
 RewriteBase     /
-RewriteRule     ^context.jsonld$ http://shexSpec.github.io/context.jsonld [P]
+# Redirect to canonical locations
+RewriteRule     ^ns$                  ns/shex [R=301,L]
+RewriteRule     ^ns/$                 ns/shex [R=301,L]
+RewriteRule     ^ns/index(\.html)?$   ns/shex [R=301,L]
+RewriteRule     ^spec$                spec/ [R=301,L]
 
-RewriteBase    "/ns/"
-RewriteRule    "^ns/$"  "http://shexspec.github.io/ns/shex.html"  [P]
-RewriteRule    "^ns/index$"  "http://shexspec.github.io/ns/shex.html"  [P]
-RewriteRule    "^ns/index.html$"  "http://shexspec.github.io/ns/shex.html"  [P]
-RewriteRule    "^ns/(.*)$"  "http://shexspec.github.io/ns/$1"  [P]
+# Context passed through
+RewriteRule     ^context.jsonld$  http://shexSpec.github.io/context.jsonld [P,L]
 
-RewriteBase    "/extensions/"
-RewriteRule    "^extensions/(.*)$"  "http://shexspec.github.io/extensions/$1"  [P]
-
-RewriteBase    "/primer/"
-RewriteRule    "^primer/(.*)$"  "http://shexspec.github.io/primer/$1"  [P]
-
-RewriteBase    "/spec/"
-RewriteRule    "^spec/(.*)$"  "http://shexspec.github.io/spec/$1"  [P]
+RewriteRule    ^ns(.*)$           http://shexspec.github.io/ns/$1 [P,L]
+RewriteRule    ^extensions/(.*)$  http://shexspec.github.io/extensions/$1  [P,L]
+RewriteRule    ^primer/(.*)$      http://shexspec.github.io/primer/$1  [P,L]
+RewriteRule    ^spec/(.*)$        http://shexspec.github.io/spec/$1  [P,L]
 
 # # ProxyPassReverse / http://shexspec.github.io
 
