@@ -22,7 +22,6 @@ AddType application/ld+json .jsonld
 RewriteCond %{HTTP_ACCEPT} text/turtle
 RewriteRule    ^ns/shex$   http://shexspec.github.io/ns/shex.ttl [P,L]
 
-RewriteCond %{HTTP_ACCEPT} application/json [OR]
 RewriteCond %{HTTP_ACCEPT} application/ld+json
 RewriteRule    ^ns/shex$   http://shexspec.github.io/ns/shex.jsonld [P,L]
 
