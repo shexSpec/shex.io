@@ -20,13 +20,13 @@ AddType text/turtle .ttl
 AddType application/ld+json .jsonld
 
 RewriteCond %{HTTP_ACCEPT} text/turtle
-RewriteRule    ^ns/shex$   http://shexspec.github.io/ns/shex.ttl [P,L]
+RewriteRule    ^ns/shex$   http://shexspec.github.io/ns/shex.ttl [R=303]
 
 RewriteCond %{HTTP_ACCEPT} application/ld+json
-RewriteRule    ^ns/shex$   http://shexspec.github.io/ns/shex.jsonld [P,L]
+RewriteRule    ^ns/shex$   http://shexspec.github.io/ns/shex.jsonld [R=303]
 
 # Default to HTML
-RewriteRule    ^ns/shex$   http://shexspec.github.io/ns/shex.html [P,L]
+RewriteRule    ^ns/shex$   http://shexspec.github.io/ns/shex.html [R=303]
 
 # Everything else is sent over as is
 RewriteRule    ^ns/(.*)$           http://shexspec.github.io/ns/$1 [P,L]
