@@ -3,33 +3,23 @@ RewriteEngine  on
 # Pass content through from referenced location
 RewriteBase     /
 # Redirect to canonical locations
-RewriteRule    ^ns$                  http://shexspec.github.io/ns/shex.html [R=301,L]
-RewriteRule    ^ns/$                 http://shexspec.github.io/ns/shex.html [R=301,L]
-RewriteRule    ^ns/index(\.html)?$   http://shexspec.github.io/ns/shex.html [R=301,L]
+RewriteRule    ^ns$                  http://www.w3.org/ns/shex [R=301,L]
+RewriteRule    ^ns/$                 http://www.w3.org/ns/shex [R=301,L]
+RewriteRule    ^ns/index(\.html)?$   http://www.w3.org/ns/shex.html [R=301,L]
 RewriteRule    ^spec$                spec/
 
 # Context passed through
-RewriteRule    ^context.jsonld$  http://shexSpec.github.io/context.jsonld [P,L]
+RewriteRule    ^context.jsonld$   http://www.w3.org/ns/shex.jsonld [P,L]
 
 RewriteRule    ^extensions/(.*)$  http://shexspec.github.io/extensions/$1  [P,L]
-RewriteRule    ^primer/(.*)$      http://shexspec.github.io/primer/$1  [P,L]
+
+RewriteRule    ^primer$           shex-primer/index.html [R=301,L]
+RewriteRule    ^primer/$          shex-primer/index.html [R=301,L]
+RewriteRule    ^primer/(.*)$      shex-primer/$1  [P,L]
+
+RewriteRule    ^spec$             shex-semantics/index.html [R=301,L]
+RewriteRule    ^spec/$            shex-semantics/index.html [R=301,L]
 RewriteRule    ^spec/(.*)$        http://shexspec.github.io/spec/$1  [P,L]
-
-# Content negotiation on namespace
-AddType text/turtle .ttl
-AddType application/ld+json .jsonld
-
-#RewriteCond %{HTTP_ACCEPT} text/turtle
-#RewriteRule    ^ns/shex$   http://shexspec.github.io/ns/shex.ttl [R=303]
-
-#RewriteCond %{HTTP_ACCEPT} application/ld+json
-#RewriteRule    ^ns/shex$   http://shexspec.github.io/ns/shex.jsonld [R=303]
-
-# Default to HTML
-RewriteRule    ^ns/shex$   http://shexspec.github.io/ns/shex.html [R=303]
-
-# Everything else is sent over as is
-RewriteRule    ^ns/(.*)$           http://shexspec.github.io/ns/$1 [P,L]
 
 # # ProxyPassReverse / http://shexspec.github.io
 
