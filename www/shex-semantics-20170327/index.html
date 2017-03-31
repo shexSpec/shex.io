@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" typeof="bibo:Document " prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#">
+<html typeof="bibo:Document " prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#" lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <meta lang="" property="dc:language" content="en">
+  <meta property="dc:language" content="en" lang="">
   <style>
     /*
 
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */
-    
+
     .hljs {
       display: block;
       overflow-x: auto;
@@ -18,20 +18,20 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       color: #333;
       background: #f8f8f8;
     }
-    
+
     .hljs-comment,
     .hljs-quote {
       color: #998;
       font-style: italic;
     }
-    
+
     .hljs-keyword,
     .hljs-selector-tag,
     .hljs-subst {
       color: #333;
       font-weight: bold;
     }
-    
+
     .hljs-number,
     .hljs-literal,
     .hljs-variable,
@@ -39,84 +39,84 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .hljs-tag .hljs-attr {
       color: #008080;
     }
-    
+
     .hljs-string,
     .hljs-doctag {
       color: #d14;
     }
-    
+
     .hljs-title,
     .hljs-section,
     .hljs-selector-id {
       color: #900;
       font-weight: bold;
     }
-    
+
     .hljs-subst {
       font-weight: normal;
     }
-    
+
     .hljs-type,
     .hljs-class .hljs-title {
       color: #458;
       font-weight: bold;
     }
-    
+
     .hljs-tag,
     .hljs-name,
     .hljs-attribute {
       color: #000080;
       font-weight: normal;
     }
-    
+
     .hljs-regexp,
     .hljs-link {
       color: #009926;
     }
-    
+
     .hljs-symbol,
     .hljs-bullet {
       color: #990073;
     }
-    
+
     .hljs-built_in,
     .hljs-builtin-name {
       color: #0086b3;
     }
-    
+
     .hljs-meta {
       color: #999;
       font-weight: bold;
     }
-    
+
     .hljs-deletion {
       background: #fdd;
     }
-    
+
     .hljs-addition {
       background: #dfd;
     }
-    
+
     .hljs-emphasis {
       font-style: italic;
     }
-    
+
     .hljs-strong {
       font-weight: bold;
     }
   </style>
   <style>
     /* --- EXAMPLES --- */
-    
+
     div.example-title {
       min-width: 7.5em;
       color: #b9ab2d;
     }
-    
+
     div.example-title span {
       text-transform: uppercase;
     }
-    
+
     aside.example,
     div.example,
     div.illegal-example {
@@ -125,15 +125,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       position: relative;
       clear: both;
     }
-    
+
     div.illegal-example {
       color: red
     }
-    
+
     div.illegal-example p {
       color: black
     }
-    
+
     aside.example,
     div.example {
       padding: .5em;
@@ -142,20 +142,20 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       border-color: #e0cb52;
       background: #fcfaee;
     }
-    
+
     aside.example div.example {
       border-left-width: .1em;
       border-color: #999;
       background: #fff;
     }
-    
+
     aside.example div.example div.example-title {
       color: #999;
     }
   </style>
   <style>
     /* --- ISSUES/NOTES --- */
-    
+
     div.issue-title,
     div.note-title,
     div.ednote-title,
@@ -164,27 +164,27 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       min-width: 7.5em;
       color: #b9ab2d;
     }
-    
+
     div.issue-title {
       color: #e05252;
     }
-    
+
     div.note-title,
     div.ednote-title {
       color: #2b2;
     }
-    
+
     div.warning-title {
       color: #f22;
     }
-    
+
     div.issue-title span,
     div.note-title span,
     div.ednote-title span,
     div.warning-title span {
       text-transform: uppercase;
     }
-    
+
     div.note,
     div.issue,
     div.ednote,
@@ -192,14 +192,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       margin-top: 1em;
       margin-bottom: 1em;
     }
-    
+
     .note>p:first-child,
     .ednote>p:first-child,
     .issue>p:first-child,
     .warning>p:first-child {
       margin-top: 0
     }
-    
+
     .issue,
     .note,
     .ednote,
@@ -208,7 +208,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       border-left-width: .5em;
       border-left-style: solid;
     }
-    
+
     div.issue,
     div.note,
     div.ednote,
@@ -218,32 +218,32 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       position: relative;
       clear: both;
     }
-    
+
     span.note,
     span.ednote,
     span.issue,
     span.warning {
       padding: .1em .5em .15em;
     }
-    
+
     .issue {
       border-color: #e05252;
       background: #fbe9e9;
     }
-    
+
     .note,
     .ednote {
       border-color: #52e052;
       background: #e9fbe9;
     }
-    
+
     .warning {
       border-color: #f11;
       border-width: .2em;
       border-style: solid;
       background: #fbe9e9;
     }
-    
+
     .warning-title:before {
       content: "⚠";
       /*U+26A0 WARNING SIGN*/
@@ -254,11 +254,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       vertical-align: top;
       margin-top: -0.5em;
     }
-    
+
     li.task-list-item {
       list-style: none;
     }
-    
+
     input.task-list-item-checkbox {
       margin: 0 0.35em 0.25em -1.6em;
       vertical-align: middle;
@@ -266,29 +266,29 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   </style>
   <style>
     /* --- WEB IDL --- */
-    
+
     pre.idl {
       border-top: 1px solid #90b8de;
       border-bottom: 1px solid #90b8de;
       padding: 1em;
       line-height: 120%;
     }
-    
+
     .respec-idl-separator {
       display: block;
       padding: 0 0 0.4cm 0;
     }
-    
+
     .respec-idl-separator:last-child {
       padding: 0;
     }
-    
+
     @media print {
       pre.idl {
         white-space: pre-wrap;
       }
     }
-    
+
     pre.idl::before {
       content: "WebIDL";
       display: block;
@@ -300,7 +300,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       font-weight: bold;
       margin: -1em 0 1em -1em;
     }
-    
+
     .idlType {
       color: #ff4500;
       font-weight: bold;
@@ -309,7 +309,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     /*.idlModule*/
     /*.idlModuleID*/
     /*.idlInterface*/
-    
+
     .idlInterfaceID,
     .idlDictionaryID,
     .idlCallbackID,
@@ -317,31 +317,31 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       font-weight: bold;
       color: #005a9c;
     }
-    
+
     a.idlEnumItem {
       color: #000;
       border-bottom: 1px dotted #ccc;
       text-decoration: none;
     }
-    
+
     .idlSuperclass {
       font-style: italic;
       color: #005a9c;
     }
     /*.idlAttribute*/
-    
+
     .idlAttrType,
     .idlFieldType,
     .idlMemberType {
       color: #005a9c;
     }
-    
+
     .idlAttrName,
     .idlFieldName,
     .idlMemberName {
       color: #ff4500;
     }
-    
+
     .idlAttrName a,
     .idlFieldName a,
     .idlMemberName a {
@@ -350,90 +350,90 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       text-decoration: none;
     }
     /*.idlMethod*/
-    
+
     .idlMethType,
     .idlCallbackType {
       color: #005a9c;
     }
-    
+
     .idlMethName {
       color: #ff4500;
     }
-    
+
     .idlMethName a {
       color: #ff4500;
       border-bottom: 1px dotted #ff4500;
       text-decoration: none;
     }
     /*.idlCtor*/
-    
+
     .idlCtorName {
       color: #ff4500;
     }
-    
+
     .idlCtorName a {
       color: #ff4500;
       border-bottom: 1px dotted #ff4500;
       text-decoration: none;
     }
     /*.idlParam*/
-    
+
     .idlParamType {
       color: #005a9c;
     }
-    
+
     .idlParamName,
     .idlDefaultValue {
       font-style: italic;
     }
-    
+
     .extAttr {
       color: #666;
     }
     /*.idlSectionComment*/
-    
+
     .idlSectionComment {
       color: gray;
     }
     /*.idlIterable*/
-    
+
     .idlIterableKeyType,
     .idlIterableValueType {
       color: #005a9c;
     }
     /*.idlMaplike*/
-    
+
     .idlMaplikeKeyType,
     .idlMaplikeValueType {
       color: #005a9c;
     }
     /*.idlConst*/
-    
+
     .idlConstType {
       color: #005a9c;
     }
-    
+
     .idlConstName {
       color: #ff4500;
     }
-    
+
     .idlConstName a {
       color: #ff4500;
       border-bottom: 1px dotted #ff4500;
       text-decoration: none;
     }
     /*.idlException*/
-    
+
     .idlExceptionID {
       font-weight: bold;
       color: #c00;
     }
-    
+
     .idlTypedefID,
     .idlTypedefType {
       color: #005a9c;
     }
-    
+
     .idlRaises,
     .idlRaises a.idlType,
     .idlRaises a.idlType code,
@@ -442,16 +442,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       color: #c00;
       font-weight: normal;
     }
-    
+
     .excName a {
       font-family: monospace;
     }
-    
+
     .idlRaises a.idlType,
     .excName a.idlType {
       border-bottom: 1px dotted #c00;
     }
-    
+
     .excGetSetTrue,
     .excGetSetFalse,
     .prmNullTrue,
@@ -461,23 +461,23 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       width: 45px;
       text-align: center;
     }
-    
+
     .excGetSetTrue,
     .prmNullTrue,
     .prmOptTrue {
       color: #0c0;
     }
-    
+
     .excGetSetFalse,
     .prmNullFalse,
     .prmOptFalse {
       color: #c00;
     }
-    
+
     .idlImplements a {
       font-weight: bold;
     }
-    
+
     dl.attributes,
     dl.methods,
     dl.constants,
@@ -486,7 +486,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     dl.dictionary-members {
       margin-left: 2em;
     }
-    
+
     .attributes dt,
     .methods dt,
     .constants dt,
@@ -495,7 +495,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .dictionary-members dt {
       font-weight: normal;
     }
-    
+
     .attributes dt code,
     .methods dt code,
     .constants dt code,
@@ -506,13 +506,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       color: #000;
       font-family: monospace;
     }
-    
+
     .attributes dt code,
     .fields dt code,
     .dictionary-members dt code {
       background: #ffffd2;
     }
-    
+
     .attributes dt .idlAttrType code,
     .fields dt .idlFieldType code,
     .dictionary-members dt .idlMemberType code {
@@ -522,19 +522,19 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       font-weight: normal;
       font-style: italic;
     }
-    
+
     .methods dt code {
       background: #d9e6f8;
     }
-    
+
     .constants dt code {
       background: #ddffd2;
     }
-    
+
     .constructors dt code {
       background: #cfc;
     }
-    
+
     .attributes dd,
     .methods dd,
     .constants dd,
@@ -543,7 +543,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .dictionary-members dd {
       margin-bottom: 1em;
     }
-    
+
     table.parameters,
     table.exceptions {
       border-spacing: 0;
@@ -551,15 +551,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       margin: 0.5em 0;
       width: 100%;
     }
-    
+
     table.parameters {
       border-bottom: 1px solid #90b8de;
     }
-    
+
     table.exceptions {
       border-bottom: 1px solid #deb890;
     }
-    
+
     .parameters th,
     .exceptions th {
       color: inherit;
@@ -567,38 +567,38 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       text-align: left;
       font-weight: normal;
     }
-    
+
     .parameters th {
       color: #fff;
       background: #005a9c;
     }
-    
+
     .exceptions th {
       background: #deb890;
     }
-    
+
     .parameters td,
     .exceptions td {
       padding: 3px 10px;
       border-top: 1px solid #ddd;
       vertical-align: top;
     }
-    
+
     .parameters tr:first-child td,
     .exceptions tr:first-child td {
       border-top: none;
     }
-    
+
     .parameters td.prmName,
     .exceptions td.excName,
     .exceptions td.excCodeName {
       width: 100px;
     }
-    
+
     .parameters td.prmType {
       width: 120px;
     }
-    
+
     table.exceptions table {
       border-spacing: 0;
       border-collapse: collapse;
@@ -624,18 +624,18 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
     /* Override code highlighter background */
-    
+
     .hljs {
       background: transparent !important;
     }
     /* --- INLINES --- */
-    
+
     em.rfc2119 {
       text-transform: lowercase;
       font-style: normal;
       color: #900;
     }
-    
+
     h1 acronym,
     h2 acronym,
     h3 acronym,
@@ -652,107 +652,107 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     a abbr {
       border: none;
     }
-    
+
     dfn {
       font-weight: bold;
     }
-    
+
     a.internalDFN {
       color: inherit;
       border-bottom: 1px solid #99c;
       text-decoration: none;
     }
-    
+
     a.externalDFN {
       color: inherit;
       border-bottom: 1px dotted #ccc;
       text-decoration: none;
     }
-    
+
     a.bibref {
       text-decoration: none;
     }
-    
+
     cite .bibref {
       font-style: normal;
     }
-    
+
     code {
       color: #C83500;
     }
-    
+
     th code {
       color: inherit;
     }
     /* --- TOC --- */
-    
+
     .toc a,
     .tof a {
       text-decoration: none;
     }
-    
+
     a .secno,
     a .figno {
       color: #000;
     }
-    
+
     ul.tof,
     ol.tof {
       list-style: none outside none;
     }
-    
+
     .caption {
       margin-top: 0.5em;
       font-style: italic;
     }
     /* --- TABLE --- */
-    
+
     table.simple {
       border-spacing: 0;
       border-collapse: collapse;
       border-bottom: 3px solid #005a9c;
     }
-    
+
     .simple th {
       background: #005a9c;
       color: #fff;
       padding: 3px 5px;
       text-align: left;
     }
-    
+
     .simple th[scope="row"] {
       background: inherit;
       color: inherit;
       border-top: 1px solid #ddd;
     }
-    
+
     .simple td {
       padding: 3px 10px;
       border-top: 1px solid #ddd;
     }
-    
+
     .simple tr:nth-child(even) {
       background: #f0f6ff;
     }
     /* --- DL --- */
-    
+
     .section dd>p:first-child {
       margin-top: 0;
     }
-    
+
     .section dd>p:last-child {
       margin-bottom: 0;
     }
-    
+
     .section dd {
       margin-bottom: 1em;
     }
-    
+
     .section dl.attrs dd,
     .section dl.eldef dd {
       margin-bottom: 0;
     }
-    
+
     #respec-ui {
       position: fixed;
       display: flex;
@@ -762,7 +762,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       width: 202px;
       text-align: right;
     }
-    
+
     #respec-pill,
     .respec-info-button {
       background: #fff;
@@ -771,7 +771,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       border: 1px solid #ccc;
       box-shadow: 1px 1px 8px 0 rgba(100, 100, 100, .5);
     }
-    
+
     .respec-info-button {
       border: none;
       opacity: .5;
@@ -779,12 +779,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       margin-right: 1em;
       min-width: 3.5em;
     }
-    
+
     .respec-info-button:focus {
       opacity: 1;
       transition: opacity .2s;
     }
-    
+
     #respec-pill:disabled {
       font-size: 2.8px;
       text-indent: -9999em;
@@ -796,14 +796,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       animation: respec-spin .5s infinite linear;
       box-shadow: none;
     }
-    
+
     #respec-pill:disabled,
     #respec-pill:disabled:after {
       border-radius: 50%;
       width: 10em;
       height: 10em;
     }
-    
+
     @keyframes respec-spin {
       0% {
         transform: rotate(0deg);
@@ -812,14 +812,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         transform: rotate(360deg);
       }
     }
-    
+
     #respec-pill:hover,
     #respec-pill:focus {
       color: rgb(0, 0, 0);
       background-color: rgb(245, 245, 245);
       transition: color .2s;
     }
-    
+
     #respec-menu {
       position: absolute;
       margin: 0;
@@ -833,13 +833,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       margin-top: 32px;
       font-size: .8em;
     }
-    
+
     #respec-menu li {
       list-style-type: none;
       margin: 0;
       padding: 0;
     }
-    
+
     .respec-save-button {
       background: #fff;
       border: 1px solid #000;
@@ -853,24 +853,24 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       text-align: center;
       font-size: inherit;
     }
-    
+
     #respec-ui button:focus,
     #respec-pill:focus,
     .respec-option:focus {
       outline: 0;
       outline-style: none;
     }
-    
+
     #respec-pill-error {
       background-color: red;
       color: white;
     }
-    
+
     #respec-pill-warning {
       background-color: orange;
       color: white;
     }
-    
+
     .respec-warning-list,
     .respec-error-list {
       margin: 0;
@@ -880,38 +880,38 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       background-color: rgb(255, 251, 230);
       font-size: .9em;
     }
-    
+
     .respec-warning-list li,
     .respec-error-list li {
       padding: 0.4em 0.7em;
     }
-    
+
     .respec-warning-list li::before {
       content: "⚠️";
       padding-right: .5em;
     }
-    
+
     .respec-warning-list li {
       color: rgb(92, 59, 0);
       border-bottom: thin solid rgb(255, 245, 194);
     }
-    
+
     .respec-error-list,
     .respec-error-list li {
       background-color: rgb(255, 240, 240);
     }
-    
+
     .respec-error-list li::before {
       content: "💥";
       padding-right: .5em;
     }
-    
+
     .respec-error-list li {
       padding: 0.4em 0.7em;
       color: rgb(92, 59, 0);
       border-bottom: thin solid rgb(255, 215, 215);
     }
-    
+
     #respec-overlay {
       display: block;
       opacity: 0;
@@ -923,7 +923,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       width: 100%;
       background: #000;
     }
-    
+
     .respec-modal {
       display: block;
       position: fixed;
@@ -940,13 +940,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       overflow-y: auto;
       margin: 0 -.5cm
     }
-    
+
     @media screen and (min-width: 78em) {
       .respec-modal {
         width: 64%;
       }
     }
-    
+
     .respec-modal h3 {
       margin: 0;
       padding: .2em;
@@ -955,11 +955,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       background: linear-gradient(to bottom, rgba(238, 238, 238, 1) 0%, rgba(238, 238, 238, 1) 50%, rgba(204, 204, 204, 1) 100%);
       font-size: 1em;
     }
-    
+
     .respec-modal .inside p {
       padding-left: 1cm;
     }
-    
+
     #respec-menu button.respec-option {
       background: white;
       padding: 0 .2cm;
@@ -969,27 +969,27 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       font-size: inherit;
       padding: 1.2em 1.2em;
     }
-    
+
     #respec-menu button.respec-option:hover,
     #respec-menu button:focus {
       background-color: #eeeeee;
     }
-    
+
     .respec-cmd-icon {
       padding-right: .5em;
     }
-    
+
     #respec-ui button.respec-option:last-child {
       border: none;
       border-radius: inherit;
     }
-    
+
     .respec-offending-element {
       display: inline-block;
       position: relative;
       background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x;
     }
-    
+
     @supports (text-decoration-style: wavy) {
       .respec-offending-element {
         background: none;
@@ -998,17 +998,17 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         text-decoration-color: red;
       }
     }
-    
+
     #issue-summary>ul,
     .respec-dfn-list {
       column-count: 2;
     }
-    
+
     #issue-summary li,
     .respec-dfn-list li {
       list-style: none;
     }
-    
+
     @media print {
       .removeOnSave {
         display: none;
@@ -1017,7 +1017,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   </style>
   <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft">
   <link rel="canonical" href="https://www.w3.org/TR/shex-semantics/">
-  <meta name="generator" content="ReSpec 11.2.1">
+  <meta name="generator" content="ReSpec 11.2.4">
   <script id="initialUserConfig" type="application/json">
     {
       "localBiblio":
@@ -1089,13 +1089,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   </script>
 </head>
 
-<body aria-busy="false" class="h-entry toc-inline" id="respecDocument">
+<body aria-busy="false" class="h-entry" id="respecDocument">
   <div class="head" role="contentinfo" id="respecHeader">
     <p>
-      <a class="logo" href="https://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
+      <a class="logo" href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C" height="48" width="72"></a>
     </p>
     <h1 class="title p-name" id="title" property="dc:title">Shape Expressions Language 2.0</h1>
-    <h2 id="draft-community-group-report-28-march-2017">Draft Community Group Report <time property="dc:issued" class="dt-published" datetime="2017-03-28">28 March 2017</time></h2>
+    <h2 id="draft-community-group-report-27-march-2017">Draft Community Group Report <time property="dc:issued" class="dt-published" datetime="2017-03-27">27 March 2017</time></h2>
     <dl>
       <dt>This version:</dt>
       <dd><a class="u-url" href="http://shex.io/shex-semantics-20170327">http://shex.io/shex-semantics-20170327</a></dd>
@@ -1295,7 +1295,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <h2 id="h-notation" resource="#h-notation"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span>Notation</span>
     </h2>
     <p>
-      The JSON[<cite><a class="bibref" href="#bib-rfc4627">rfc4627</a></cite>] Syntax serves as a serializable proxy for an abstract syntax. This specification uses a simple grammar to describe the set of JSON documents that can be interpreted as a ShEx schema.
+      The JSON [<cite><a class="bibref" href="#bib-rfc4627">rfc4627</a></cite>] Syntax serves as a serializable proxy for an abstract syntax. This specification uses a simple grammar to describe the set of JSON documents that can be interpreted as a ShEx schema.
     </p>
     <ul>
       <li>Typed data structures are represented as JSON objects:
@@ -1363,7 +1363,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <h3 id="h-shex-references" resource="#h-shex-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.1 </span>References</span>
       </h3>
       <p>
-        <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a> is a dialect of JSON-LD [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] and the member <code>id</code> is used as a <a href="https://www.w3.org/TR/json-ld/#node-identifiers">node identifier</a>. An object may be represented inline or referenced by its <code>id</code> which may be either a <a href="#dfn-blank-node" class="internalDFN" data-link-type="dfn">blank node</a> or an <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a>.
+        <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a> is a dialect of JSON-LD [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] and the member <code>id</code> is used as a <a href="https://www.w3.org/TR/json-ld/#node-identifiers">node identifier</a>. An object may be represented inline or referenced by its <code>id</code> which may be either a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node">blank node</a> or an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a>.
       </p>
       <div class="shexj">
         <pre aria-busy="false" aria-live="polite" class="hljs undefined"> ShapeOr         { id:shapeExprLabel? shapeExprs:[shapeExpr] }
@@ -1372,7 +1372,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
  tripleExprLabel = IRI | BNODE ;</pre>
       </div>
       <p>
-        The JSON structure may include references to <a data-lt="shape" href="#dfn-shapes" class="internalDFN" data-link-type="dfn">shapes</a> and <a href="#dfn-triples" class="internalDFN" data-link-type="dfn">triples</a>:
+        The JSON structure may include references to <a data-lt="shape" href="#dfn-shapes" class="internalDFN" data-link-type="dfn">shapes</a> and <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-triple">triples</a>:
       </p>
       <div class="shexj">
         <pre aria-busy="false" aria-live="polite" class="hljs undefined"> shapeExpr     = ShapeOr | ... | shapeExprRef ;
@@ -1419,7 +1419,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <h3 id="h-graphaccess" resource="#h-graphaccess"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3 </span>Graph access</span>
       </h3>
       <p>
-        The validation process defined in this document relies on matching <a href="#dfn-sparql-triple-pattern" class="internalDFN" data-link-type="dfn">triple patterns</a> in the form <code>(subject, predicate, object)</code> where each position may be supplied by a constant, a previously defined term, or the underscore "<code>_</code>", which represents a previously undefined element or wildcard. This corresponds to a <dfn data-dfn-type="dfn" id="dfn-sparql-triple-pattern"><a href="https://www.w3.org/TR/sparql11-query/#defn_TriplePattern">SPARQL Triple Pattern</a></dfn> where each "_" is replaced by a unique <a href="#dfn-blank-node" class="internalDFN" data-link-type="dfn">blank node</a>. Matching such a <a href="#dfn-sparql-triple-pattern" class="internalDFN" data-link-type="dfn">triple pattern</a> against a <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">graph</a> is defined by <a href="https://www.w3.org/TR/sparql11-query/#BGPsparql">SPARQL Basic Graph Pattern Matching</a> (BGP) with a BGP containing only that <a href="#dfn-sparql-triple-pattern" class="internalDFN" data-link-type="dfn">triple pattern</a>.
+        The validation process defined in this document relies on matching <a data-link-type="dfn" href="https://www.w3.org/TR/sparql11-query/#defn_TriplePattern">triple patterns</a> in the form <code>(subject, predicate, object)</code> where each position may be supplied by a constant, a previously defined term, or the underscore "<code>_</code>", which represents a previously undefined element or wildcard. This corresponds to a <dfn data-dfn-type="dfn" id="dfn-sparql-triple-pattern"><a href="https://www.w3.org/TR/sparql11-query/#defn_TriplePattern">SPARQL Triple Pattern</a></dfn> where each "_" is replaced by a unique <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node">blank node</a>. Matching such a <a data-link-type="dfn" href="https://www.w3.org/TR/sparql11-query/#defn_TriplePattern">triple pattern</a> against a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">graph</a> is defined by <a href="https://www.w3.org/TR/sparql11-query/#BGPsparql">SPARQL Basic Graph Pattern Matching</a> (BGP) with a BGP containing only that <a data-link-type="dfn" href="https://www.w3.org/TR/sparql11-query/#defn_TriplePattern">triple pattern</a>.
       </p>
     </section>
     <!-- button id="toggleRDF">Toggle RDF ("r")</button> <button id="toggleExamples">Toggle Examples ("e")</button> <button id="toggleSquished">Render only abstract syntax ("a")</button -->
@@ -1469,9 +1469,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <!--OddPage-->
     <h2 id="h-terminology" resource="#h-terminology"><span property="xhv:role" resource="xhv:heading"><span class="secno">3. </span>Terminology</span>
     </h2>
-    <p>Shape expressions are defined using terms from RDF semantics[<cite><a class="bibref" href="#bib-rdf11-mt">rdf11-mt</a></cite>]:</p>
+    <p>Shape expressions are defined using terms from RDF semantics [<cite><a class="bibref" href="#bib-rdf11-mt">rdf11-mt</a></cite>]:</p>
     <ul>
-      <li><dfn data-dfn-type="dfn" id="dfn-node"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">Node</a></dfn>: one of <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a>, <dfn data-dfn-type="dfn" id="dfn-blank-node"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node">blank node</a></dfn>, <a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">Literal</a></li>
+      <li><dfn data-dfn-type="dfn" id="dfn-node"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">Node</a></dfn>: one of <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a>, <dfn data-dfn-type="dfn" id="dfn-blank-node"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node">blank node</a></dfn>, <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">Literal</a></li>
       <li><dfn data-dfn-type="dfn" id="dfn-graph"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">Graph</a></dfn>: a set of <dfn data-dfn-type="dfn" id="dfn-triples"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-triple">Triples</a></dfn> of (<dfn data-dfn-type="dfn" id="dfn-subject"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-subject">subject</a></dfn>, <dfn data-dfn-type="dfn" id="dfn-predicate"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a></dfn>, <dfn data-dfn-type="dfn" id="dfn-object"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-object">object</a></dfn>)</li>
     </ul>
 
@@ -1491,22 +1491,22 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
     <p>For the purposes of the <a href="#dom-shexprocessor" class="internalDFN" data-link-type="dfn"><code>ShExProcessor</code></a> interface, a <dfn data-dfn-type="dfn" id="dfn-promise"><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-promise-objects">promise</a></dfn> is an object that represents the eventual result of a single asynchronous operation. Promises are defined in [<cite><a class="bibref" href="#bib-ECMASCRIPT-6.0">ECMASCRIPT-6.0</a></cite>].</p>
     <p>
-      The following functions access the elements of an <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF graph</a> <span class="math">G</span> containing a node <span class="math">n</span>:</p>
+      The following functions access the elements of an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF graph</a> <span class="math">G</span> containing a node <span class="math">n</span>:</p>
     <ul>
       <li>
-        <span class="math"><dfn data-dfn-type="dfn" id="dfn-arcsout">arcsOut</dfn>(G, n)</span> is the set of <a href="#dfn-triples" class="internalDFN" data-link-type="dfn">triples</a> in a <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">graph</a> <span class="math">G</span> with <a href="#dfn-subject" class="internalDFN" data-link-type="dfn">subject</a> <span class="math">n</span>.
+        <span class="math"><dfn data-dfn-type="dfn" id="dfn-arcsout">arcsOut</dfn>(G, n)</span> is the set of <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-triple">triples</a> in a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">graph</a> <span class="math">G</span> with <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-subject">subject</a> <span class="math">n</span>.
       </li>
       <li>
         <span class="math"><dfn data-dfn-type="dfn" id="dfn-predicatesout">predicatesOut</dfn>(G, n)</span> is the set of <a data-lt="predicate" href="#dfn-predicates" class="internalDFN" data-link-type="dfn">predicates</a> in <span class="math"><a href="#dfn-arcsout" class="internalDFN" data-link-type="dfn">arcsOut</a>(G, n)</span>.
       </li>
       <li>
-        <span class="math"><dfn data-dfn-type="dfn" id="dfn-arcsin">arcsIn</dfn>(G, n)</span> is the set of <a href="#dfn-triples" class="internalDFN" data-link-type="dfn">triples</a> in a <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">graph</a> <span class="math">G</span> with <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a> <span class="math">n</span>.
+        <span class="math"><dfn data-dfn-type="dfn" id="dfn-arcsin">arcsIn</dfn>(G, n)</span> is the set of <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-triple">triples</a> in a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">graph</a> <span class="math">G</span> with <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-object">object</a> <span class="math">n</span>.
       </li>
       <li>
         <span class="math"><dfn data-dfn-type="dfn" id="dfn-predicatesin">predicatesIn</dfn>(G, n)</span> is the set of <a data-lt="predicate" href="#dfn-predicates" class="internalDFN" data-link-type="dfn">predicates</a> in <span class="math"><a href="#dfn-arcsin" class="internalDFN" data-link-type="dfn">arcsIn</a>(G, n)</span>.
       </li>
       <li>
-        <span class="math"><dfn data-dfn-type="dfn" id="dfn-neigh">neigh</dfn>(G, n)</span> is the neighbourhood of the <a href="#dfn-node" class="internalDFN" data-link-type="dfn">node</a> <span class="math">n</span> in the <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">graph</a> <span class="math">G</span>.<br><span class="math"><a href="#dfn-neigh" class="internalDFN" data-link-type="dfn">neigh</a>(G, n) = <a href="#dfn-arcsout" class="internalDFN" data-link-type="dfn">arcsOut</a>(G, n) ∪ <a href="#dfn-arcsin" class="internalDFN" data-link-type="dfn">arcsIn</a>(G, n)</span>
+        <span class="math"><dfn data-dfn-type="dfn" id="dfn-neigh">neigh</dfn>(G, n)</span> is the neighbourhood of the <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">node</a> <span class="math">n</span> in the <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">graph</a> <span class="math">G</span>.<br><span class="math"><a href="#dfn-neigh" class="internalDFN" data-link-type="dfn">neigh</a>(G, n) = <a href="#dfn-arcsout" class="internalDFN" data-link-type="dfn">arcsOut</a>(G, n) ∪ <a href="#dfn-arcsin" class="internalDFN" data-link-type="dfn">arcsIn</a>(G, n)</span>
       </li>
       <li>
         <span class="math"><dfn data-dfn-type="dfn" id="dfn-predicates">predicates</dfn>(G, n)</span> is the set of <a data-lt="predicate" href="#dfn-predicates" class="internalDFN" data-link-type="dfn">predicates</a> in <span class="math"><a href="#dfn-neigh" class="internalDFN" data-link-type="dfn">neigh</a>(G, n)</span>.<br><span class="math"><a href="#dfn-predicates" class="internalDFN" data-link-type="dfn">predicates</a>(G, n) = <a href="#dfn-predicatesout" class="internalDFN" data-link-type="dfn">predicatesOut</a>(G, n) ∪ <a href="#dfn-predicatesin" class="internalDFN" data-link-type="dfn">predicatesIn</a>(G, n)</span>
@@ -1515,7 +1515,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
     <div class="example">
       <p>
-        Consider the <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF graph</a> <span class="math">G</span> represented in Turtle:
+        Consider the <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF graph</a> <span class="math">G</span> represented in Turtle:
       </p>
 
       <pre class="graph hljs undefined" aria-busy="false" aria-live="polite">PREFIX ex: http://schema.example/
@@ -1578,7 +1578,7 @@ _:User2
     <h2 id="h-shapes-language" resource="#h-shapes-language"><span property="xhv:role" resource="xhv:heading"><span class="secno">5. </span>The Shape Expressions Language</span>
     </h2>
     <p>
-      A Shape Expressions (ShEx) schema is a collection of labeled <a data-lt="shape" href="#dfn-shapes" class="internalDFN" data-link-type="dfn">Shapes</a> and <a href="#node-constraints">Node Constraints</a>. These can be used to describe or test nodes in <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF graphs</a>. ShEx does not prescribe a language for associating <a href="#dfn-node" class="internalDFN" data-link-type="dfn">nodes</a> with <a data-lt="shape" href="#dfn-shapes" class="internalDFN" data-link-type="dfn">shapes</a> but several approaches are <a href="../primer/index.html#associating-nodes-with-shapes">described in the ShEx Primer</a>.
+      A Shape Expressions (ShEx) schema is a collection of labeled <a data-lt="shape" href="#dfn-shapes" class="internalDFN" data-link-type="dfn">Shapes</a> and <a href="#node-constraints">Node Constraints</a>. These can be used to describe or test nodes in <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF graphs</a>. ShEx does not prescribe a language for associating <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">nodes</a> with <a data-lt="shape" href="#dfn-shapes" class="internalDFN" data-link-type="dfn">shapes</a> but several approaches are <a href="../primer/index.html#associating-nodes-with-shapes">described in the ShEx Primer</a>.
     </p>
 
     <section id="shapes-schema" typeof="bibo:Chapter" resource="#shapes-schema" property="bibo:hasPart">
@@ -1655,7 +1655,7 @@ _:User2
         <div class="note-title marker" aria-level="4" role="heading" id="h-note1"><span>Note</span></div>
         <div class="">
           <p>
-            Validation of a <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">graph</a> <span class="math">G</span> does not necessarily require the construction of a <a href="#dfn-shapemap" class="internalDFN" data-link-type="dfn">ShapeMap</a> with every node in <span class="math">G</span>. The validation semantics defined below imply a set of dependencies for validating some node as a shape. A validation process that tests every <a href="#dfn-node" class="internalDFN" data-link-type="dfn">node</a> in a <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">graph</a> against every <a href="#dfn-shape" class="internalDFN" data-link-type="dfn">shape</a> in a <a href="#dfn-schema" class="internalDFN" data-link-type="dfn">schema</a> can be considered to have an input <a href="#dfn-shapemap" class="internalDFN" data-link-type="dfn">ShapeMap</a> associating each node with the set of all shapes in the schema.
+            Validation of a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">graph</a> <span class="math">G</span> does not necessarily require the construction of a <a href="#dfn-shapemap" class="internalDFN" data-link-type="dfn">ShapeMap</a> with every node in <span class="math">G</span>. The validation semantics defined below imply a set of dependencies for validating some node as a shape. A validation process that tests every <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">node</a> in a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">graph</a> against every <a href="#dfn-shape" class="internalDFN" data-link-type="dfn">shape</a> in a <a href="#dfn-schema" class="internalDFN" data-link-type="dfn">schema</a> can be considered to have an input <a href="#dfn-shapemap" class="internalDFN" data-link-type="dfn">ShapeMap</a> associating each node with the set of all shapes in the schema.
           </p>
           <p>
             The semantics of ShEx are independent from the construction of an input <a href="#dfn-shapemap" class="internalDFN" data-link-type="dfn">ShapeMap</a>.
@@ -1731,7 +1731,7 @@ _:User2
               <tr class="nob">
                 <th class="nob"><dfn data-dfn-type="dfn" id="dfn-shapeexprlabel">shapeExprLabel</dfn></th>
                 <td>=</td>
-                <td><a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> | <a href="#dfn-bnode" class="internalDFN" data-link-type="dfn">BNODE</a> ;</td>
+                <td><a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> | <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#blank-node">BNODE</a> ;</td>
               </tr>
             </tbody>
           </table>
@@ -1767,7 +1767,7 @@ _:User2
         <h4 id="h-shape-expression-semantics" resource="#h-shape-expression-semantics"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.3.2 </span>Semantics</span>
         </h4>
         <p>
-          <span class="label" id="satisfies">satisfies</span>: The expression <code class="function">satisfies(<span class="math">n</span>, <span class="math">se</span>, <span class="math">G</span>, <span class="math">m</span>)</code> indicates that a node <span class="math">n</span> and <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">graph</a> <span class="math">G</span> satisfy a <a href="#dfn-shape-expression" class="internalDFN" data-link-type="dfn">shape expression</a> <span class="math">se</span> with <a href="#dfn-shapemap" class="internalDFN" data-link-type="dfn">shapeMap</a> <span class="math">m</span>.<br>
+          <span class="label" id="satisfies">satisfies</span>: The expression <code class="function">satisfies(<span class="math">n</span>, <span class="math">se</span>, <span class="math">G</span>, <span class="math">m</span>)</code> indicates that a node <span class="math">n</span> and <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">graph</a> <span class="math">G</span> satisfy a <a href="#dfn-shape-expression" class="internalDFN" data-link-type="dfn">shape expression</a> <span class="math">se</span> with <a href="#dfn-shapemap" class="internalDFN" data-link-type="dfn">shapeMap</a> <span class="math">m</span>.<br>
           <span class="label" id="notSatisfies">notSatisfies</span>: Conversely, <code class="function">notSatisfies(<span class="math">n</span>, <span class="math">se</span>, <span class="math">G</span>, <span class="math">m</span>)</code> indicates that <span class="math">n</span> and <span class="math">G</span> do not satisfy <span class="math">se</span> with the given <a href="#dfn-shapemap" class="internalDFN" data-link-type="dfn">shapeMap</a> <span class="math">m</span>.
           <code class="function">notSatisfies(<span class="math">n</span>, <span class="math">se</span>, <span class="math">G</span>, <span class="math">_</span>)</code> indicates that no <a href="#dfn-shapemap" class="internalDFN" data-link-type="dfn">shapeMap</a> would allow <span class="math">n</span> and <span class="math">G</span> to satisfy <span class="math">se</span>.
         </p>
@@ -1776,7 +1776,7 @@ _:User2
         </p>
 
         <ul>
-          <li id="satisfies-NodeConstraint"><span class="math">Se</span> is a <span class="jobjref"><a class="obj internalDFN" href="#dfn-nodeconstraint" data-link-type="dfn">NodeConstraint</a></span> and <code class="function"><a href="#satisfies2-NodeConstraint">satisfies2</a>(<span class="math">n</span>, <span class="math">se</span>)</code> as described below in <a href="#node-constraints">Node Constraints</a>. Note that testing if a node satisfies a node constraint does not require a <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">graph</a> or <a href="#dfn-shapemap" class="internalDFN" data-link-type="dfn">shapeMap</a>.</li>
+          <li id="satisfies-NodeConstraint"><span class="math">Se</span> is a <span class="jobjref"><a class="obj internalDFN" href="#dfn-nodeconstraint" data-link-type="dfn">NodeConstraint</a></span> and <code class="function"><a href="#satisfies2-NodeConstraint">satisfies2</a>(<span class="math">n</span>, <span class="math">se</span>)</code> as described below in <a href="#node-constraints">Node Constraints</a>. Note that testing if a node satisfies a node constraint does not require a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">graph</a> or <a href="#dfn-shapemap" class="internalDFN" data-link-type="dfn">shapeMap</a>.</li>
           <li id="satisfies-Shape-proxy"><span class="math">Se</span> is a <span class="jobjref"><a class="obj internalDFN" href="#dfn-shape" data-link-type="dfn">Shape</a></span> and <code class="function">satisfies(<span class="math">n</span>, <span class="math">se</span>)</code> as <a href="#satisfies-Shape">defined below</a> in Shapes and Triple Expressions.</li>
           <li id="satisfies-ShapeOr"><span class="math">Se</span> is a <span class="jobjref"><a class="obj internalDFN" href="#dfn-shapeor" data-link-type="dfn">ShapeOr</a></span> and there is some <a href="#dfn-shape-expression" class="internalDFN" data-link-type="dfn">shape expression</a> <span class="math">se2</span> in <span class="param">shapeExprs</span> such that <code class="function">satisfies(<span class="math">n</span>, <span class="math">se2</span>, <span class="math">G</span>, <span class="math">m</span>)</code>.</li>
           <li id="satisfies-ShapeAnd"><span class="math">Se</span> is a <span class="jobjref"><a class="obj internalDFN" href="#dfn-shapeand" data-link-type="dfn">ShapeAnd</a></span> and for every <a href="#dfn-shape-expression" class="internalDFN" data-link-type="dfn">shape expression</a> <span class="math">se2</span> in <span class="param">shapeExprs</span>, <code class="function">satisfies(<span class="math">n</span>, <span class="math">se2</span>, <span class="math">G</span>, <span class="math">m</span>)</code>.</li>
@@ -1858,7 +1858,7 @@ _:User2
             <tr class="obj">
               <th class="obj"><dfn data-dfn-type="dfn" id="dfn-nodeconstraint">NodeConstraint</dfn></th>
               <td>{</td>
-              <td><span class="param">id</span>:<a class="nobref internalDFN" href="#dfn-shapeexprlabel" data-link-type="dfn">shapeExprLabel</a>? <span class="param">nodeKind</span>:(<span class="literal">"iri"</span> | <span class="literal">"bnode"</span> | <span class="literal">"nonliteral"</span> | <span class="literal">"literal"</span>)? <span class="param">datatype</span>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a>? <a class="nobref internalDFN" href="#dfn-xsfacet" data-link-type="dfn">xsFacet</a>* <span class="param">values</span>:[<a class="nobref internalDFN" href="#dfn-valuesetvalue" data-link-type="dfn">valueSetValue</a>]? }</td>
+              <td><span class="param">id</span>:<a class="nobref internalDFN" href="#dfn-shapeexprlabel" data-link-type="dfn">shapeExprLabel</a>? <span class="param">nodeKind</span>:(<span class="literal">"iri"</span> | <span class="literal">"bnode"</span> | <span class="literal">"nonliteral"</span> | <span class="literal">"literal"</span>)? <span class="param">datatype</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a>? <a class="nobref internalDFN" href="#dfn-xsfacet" data-link-type="dfn">xsFacet</a>* <span class="param">values</span>:[<a class="nobref internalDFN" href="#dfn-valuesetvalue" data-link-type="dfn">valueSetValue</a>]? }</td>
             </tr>
             <tr class="nob">
               <th class="nob"><dfn data-dfn-type="dfn" id="dfn-xsfacet">xsFacet</dfn></th>
@@ -1893,37 +1893,37 @@ _:User2
             <tr class="nob">
               <th class="nob"><dfn data-dfn-type="dfn" id="dfn-objectvalue">objectValue</dfn></th>
               <td>=</td>
-              <td><a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> | <a class="objref internalDFN" href="#dfn-objectliteral" data-link-type="dfn">ObjectLiteral</a> ;</td>
+              <td><a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> | <a class="objref" data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">ObjectLiteral</a> ;</td>
             </tr>
             <tr class="obj">
               <th class="obj"><dfn data-dfn-type="dfn" id="dfn-iristem">IRIStem</dfn></th>
               <td>{</td>
-              <td><span class="param">stem</span>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> }</td>
+              <td><span class="param">stem</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> }</td>
             </tr>
             <tr class="obj">
               <th class="obj"><dfn data-dfn-type="dfn" id="dfn-iristemrange">IRIStemRange</dfn></th>
               <td>{</td>
-              <td><span class="param">stem</span>:(<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a>|<a class="objref internalDFN" href="#dfn-iristem" data-link-type="dfn">IRIStem</a> +]? }</td>
+              <td><span class="param">stem</span>:(<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a>|<a class="objref internalDFN" href="#dfn-iristem" data-link-type="dfn">IRIStem</a> +]? }</td>
             </tr>
             <tr class="obj">
               <th class="obj"><dfn data-dfn-type="dfn" id="dfn-literalstem">LiteralStem</dfn></th>
               <td>{</td>
-              <td><span class="param">stem</span>:<a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">ObjectLiteral</a> }</td>
+              <td><span class="param">stem</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">ObjectLiteral</a> }</td>
             </tr>
             <tr class="obj">
               <th class="obj"><dfn data-dfn-type="dfn" id="dfn-literalstemrange">LiteralStemRange</dfn></th>
               <td>{</td>
-              <td><span class="param">stem</span>:(<a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">ObjectLiteral</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a>|<a class="objref internalDFN" href="#dfn-literalstem" data-link-type="dfn">LiteralStem</a> +]? }</td>
+              <td><span class="param">stem</span>:(<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">ObjectLiteral</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a>|<a class="objref internalDFN" href="#dfn-literalstem" data-link-type="dfn">LiteralStem</a> +]? }</td>
             </tr>
             <tr class="obj">
               <th class="obj"><dfn data-dfn-type="dfn" id="dfn-languagestem">LanguageStem</dfn></th>
               <td>{</td>
-              <td><span class="param">stem</span>:<a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">ObjectLiteral</a> }</td>
+              <td><span class="param">stem</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">ObjectLiteral</a> }</td>
             </tr>
             <tr class="obj">
               <th class="obj"><dfn data-dfn-type="dfn" id="dfn-languagestemrange">LanguageStemRange</dfn></th>
               <td>{</td>
-              <td><span class="param">stem</span>:(<a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">ObjectLiteral</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a>|<a class="objref internalDFN" href="#dfn-languagestem" data-link-type="dfn">LanguageStem</a> +]? }</td>
+              <td><span class="param">stem</span>:(<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">ObjectLiteral</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a>|<a class="objref internalDFN" href="#dfn-languagestem" data-link-type="dfn">LanguageStem</a> +]? }</td>
             </tr>
             <tr class="obj">
               <th class="obj"><dfn data-dfn-type="dfn" id="dfn-wildcard">Wildcard</dfn></th>
@@ -1956,10 +1956,10 @@ _:User2
           For a node <span class="math">n</span> and constraint value <span class="math">v</span>, <code class="function">nodeSatisfies(<span class="math">n</span>, <span class="math">v</span>)</code> if:
         </p>
         <ul>
-          <li><span class="math">v</span> = "iri" and <span class="math">n</span> is an <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a>.</li>
-          <li><span class="math">v</span> = "bnode" and <span class="math">n</span> is a <a href="#dfn-blank-node" class="internalDFN" data-link-type="dfn">blank node</a>.</li>
-          <li><span class="math">v</span> = "literal" and <span class="math">n</span> is a <a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">Literal</a>.</li>
-          <li><span class="math">v</span> = "nonliteral" and <span class="math">n</span> is an <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> or <a href="#dfn-blank-node" class="internalDFN" data-link-type="dfn">blank node</a>.</li>
+          <li><span class="math">v</span> = "iri" and <span class="math">n</span> is an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a>.</li>
+          <li><span class="math">v</span> = "bnode" and <span class="math">n</span> is a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node">blank node</a>.</li>
+          <li><span class="math">v</span> = "literal" and <span class="math">n</span> is a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">Literal</a>.</li>
+          <li><span class="math">v</span> = "nonliteral" and <span class="math">n</span> is an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> or <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node">blank node</a>.</li>
         </ul>
         <div class="example">
           <div class="example-title marker"><span>Node Kind example 1</span></div>
@@ -2082,7 +2082,7 @@ _:User2
               In RDF 1.1, <dfn data-dfn-type="dfn" id="dfn-language-tagged-strings"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tagged-string">language-tagged strings</a></dfn>[<cite><a class="bibref" href="#bib-rdf11-concepts">rdf11-concepts</a></cite>] have the datatype <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</code>.
             </p>
             <p>
-              RDF 1.0 included <a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">RDF literals</a> with no datatype or language tag. These are called "<a href="https://www.w3.org/TR/sparql11-query/#simple_literal">simple literals</a>" in SPARQL11[<cite><a class="bibref" href="#bib-sparql11-query">sparql11-query</a></cite>]. In RDF 1.1, these literals have the datatype <code>http://www.w3.org/2001/XMLSchema#string</code>.
+              RDF 1.0 included <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">RDF literals</a> with no datatype or language tag. These are called "<a href="https://www.w3.org/TR/sparql11-query/#simple_literal">simple literals</a>" in SPARQL11[<cite><a class="bibref" href="#bib-sparql11-query">sparql11-query</a></cite>]. In RDF 1.1, these literals have the datatype <code>http://www.w3.org/2001/XMLSchema#string</code>.
             </p>
           </div>
         </div>
@@ -2145,12 +2145,12 @@ _:User2
           <li><a href="#pattern">XML Schema Pattern Constraints</a></li>
         </ul -->
         <p>
-          String facet constraints apply to the lexical form of the <a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">RDF Literals</a> and <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRIs</a> and <a href="#dfn-blank-node-identifier" class="internalDFN" data-link-type="dfn">blank node identifiers</a> (see <a href="#blank-node-label">note below</a> regarding access to <a href="#dfn-blank-node-identifier" class="internalDFN" data-link-type="dfn">blank node identifiers</a>).<br> Let <span class="math">lex</span> =
+          String facet constraints apply to the lexical form of the <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">RDF Literals</a> and <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRIs</a> and <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node-identifier">blank node identifiers</a> (see <a href="#blank-node-label">note below</a> regarding access to <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node-identifier">blank node identifiers</a>).<br> Let <span class="math">lex</span> =
         </p>
         <ul>
-          <li>if the value <span class="math">n</span> is an <a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">RDF Literal</a>, the <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-lexical-form">lexical form</a> of the literal (see [<cite><a class="bibref" href="#bib-rdf11-concepts">rdf11-concepts</a></cite>] <a href="https://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal">section 3.3 Literals</a>).</li>
-          <li>if the value <span class="math">n</span> is an <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a>, the <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI string</a> (see [<cite><a class="bibref" href="#bib-rdf11-concepts">rdf11-concepts</a></cite>] <a href="https://www.w3.org/TR/rdf11-concepts/#section-iris">section 3.2 IRIs</a>).</li>
-          <li>if the value <span class="math">n</span> is a <a href="#dfn-blank-node" class="internalDFN" data-link-type="dfn">blank node</a>, the <a href="#dfn-blank-node-identifier" class="internalDFN" data-link-type="dfn">blank node identifier</a> (see [<cite><a class="bibref" href="#bib-rdf11-concepts">rdf11-concepts</a></cite>] <a href="https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes">section 3.4 Blank Nodes</a>).</li>
+          <li>if the value <span class="math">n</span> is an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">RDF Literal</a>, the <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-lexical-form">lexical form</a> of the literal (see [<cite><a class="bibref" href="#bib-rdf11-concepts">rdf11-concepts</a></cite>] <a href="https://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal">section 3.3 Literals</a>).</li>
+          <li>if the value <span class="math">n</span> is an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a>, the <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI string</a> (see [<cite><a class="bibref" href="#bib-rdf11-concepts">rdf11-concepts</a></cite>] <a href="https://www.w3.org/TR/rdf11-concepts/#section-iris">section 3.2 IRIs</a>).</li>
+          <li>if the value <span class="math">n</span> is a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node">blank node</a>, the <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node-identifier">blank node identifier</a> (see [<cite><a class="bibref" href="#bib-rdf11-concepts">rdf11-concepts</a></cite>] <a href="https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes">section 3.4 Blank Nodes</a>).</li>
         </ul>
         <p>
           Let <span class="math">len</span> = the number of unicode codepoints in <span class="math">lex</span><br> For a node <span class="math">n</span> and constraint value <span class="math">v</span>, <code class="function">nodeSatisfies(<span class="math">n</span>, <span class="math">v</span>)</code>:
@@ -2199,7 +2199,7 @@ _:User2
                 <td>&lt;IssueShape&gt;</td>
                 <td>&lt;issue2&gt;</td>
                 <td>fail</td>
-                <td class="fail"><code>ex:submittedOn</code> expected to be &gt;= 10 characters,<br> 3 characters found.</td>
+                <td class="fail"><code>ex:submittedBy</code> expected to be &gt;= 10 characters,<br> 3 characters found.</td>
               </tr>
             </tbody>
           </table>
@@ -2209,7 +2209,7 @@ _:User2
           <div class="note-title marker" aria-level="5" role="heading" id="h-note3"><span>Note</span></div>
           <div class="" id="blank-node-label">
             <p>
-              Access to <a href="#dfn-blank-node-identifier" class="internalDFN" data-link-type="dfn">blank node identifiers</a> may be impossible or unadvisable for many use cases. For instance, the SPARQL Query and SPARQL Update languages treat blank nodes in the query, labeled or otherwise, as variables. Lexical constraints on <a href="#dfn-blank-node-identifier" class="internalDFN" data-link-type="dfn">blank node identifiers</a> can only be implemented in systems which preserve such labels on data import.
+              Access to <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node-identifier">blank node identifiers</a> may be impossible or unadvisable for many use cases. For instance, the SPARQL Query and SPARQL Update languages treat blank nodes in the query, labeled or otherwise, as variables. Lexical constraints on <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node-identifier">blank node identifiers</a> can only be implemented in systems which preserve such labels on data import.
             </p>
           </div>
         </div>
@@ -2329,7 +2329,7 @@ _:User2
           <li><a href="#fractiondigits">XML Schema Fractiondigits Constraints</a></li>
         </ul -->
         <p>
-          Numeric facet constraints apply to the numeric value of <a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">RDF Literals</a> with datatypes listed in <a href="https://www.w3.org/TR/sparql11-query/#operandDataTypes">SPARQL 1.1 Operand Data Types</a>[<cite><a class="bibref" href="#bib-sparql11-query">sparql11-query</a></cite>]. Numeric constraints on non-numeric values fail.
+          Numeric facet constraints apply to the numeric value of <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">RDF Literals</a> with datatypes listed in <a href="https://www.w3.org/TR/sparql11-query/#operandDataTypes">SPARQL 1.1 Operand Data Types</a>[<cite><a class="bibref" href="#bib-sparql11-query">sparql11-query</a></cite>]. Numeric constraints on non-numeric values fail.
           <code>totaldigits</code> and <code>fractiondigits</code> constraints on values not derived from <code>xsd:decimal</code> fail.
         </p>
         <p>
@@ -2425,10 +2425,10 @@ _:User2
           <li><span class="math">n = s</span>.</li>
           <li><span class="math">s</span> is a <span class="jobjref"><a class="obj internalDFN" href="#dfn-iristem" data-link-type="dfn">IriStem</a></span>, <span class="jobjref"><a class="obj internalDFN" href="#dfn-literalstem" data-link-type="dfn">LiteralStem</a></span> or <span class="jobjref"><a class="obj internalDFN" href="#dfn-languagestem" data-link-type="dfn">LanguageStem</a></span> with <span class="param">stem</span> <span class="math">st</span> and:
             <ul>
-              <li><span class="math">s</span> is a <span class="jobjref"><a class="obj internalDFN" href="#dfn-iristem" data-link-type="dfn">IriStem</a></span> and <span class="math">n</span> is an <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> and <span class="math function"><a href="https://www.w3.org/TR/xpath-functions-31/#func-starts-with">fn:starts-with</a>(n, st)</span>.</li>
-              <li><span class="math">s</span> is a <span class="jobjref"><a class="obj internalDFN" href="#dfn-literalstem" data-link-type="dfn">LiteralStem</a></span> and <span class="math">n</span> is an <a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">RDF Literal</a> with a lexical value <span class="math">l</span> and <span class="math function"><a href="https://www.w3.org/TR/xpath-functions-31/#func-starts-with">fn:starts-with</a>(l, st)</span>.</li>
-              <li><span class="math">s</span> is a <span class="jobjref"><a class="obj internalDFN" href="#dfn-languagestem" data-link-type="dfn">LanguageStem</a></span> and <span class="math">n</span> is a <a href="#dfn-language-tagged-strings" class="internalDFN" data-link-type="dfn">language-tagged string</a> with a <a href="#dfn-language-tag" class="internalDFN" data-link-type="dfn">language tag</a> <span class="math">l</span> and <span class="math function"><a href="https://www.w3.org/TR/xpath-functions-31/#func-starts-with">fn:starts-with</a>(l, st)</span>.</li>
-              <li><span class="math">n</span> is a <a href="#dfn-blank-node" class="internalDFN" data-link-type="dfn">blank node</a> with identifier <span class="math">l</span> and <span class="math function"><a href="https://www.w3.org/TR/xpath-functions-31/#func-starts-with">fn:starts-with</a>(l, st)</span>.</li>
+              <li><span class="math">s</span> is a <span class="jobjref"><a class="obj internalDFN" href="#dfn-iristem" data-link-type="dfn">IriStem</a></span> and <span class="math">n</span> is an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> and <span class="math function"><a href="https://www.w3.org/TR/xpath-functions-31/#func-starts-with">fn:starts-with</a>(n, st)</span>.</li>
+              <li><span class="math">s</span> is a <span class="jobjref"><a class="obj internalDFN" href="#dfn-literalstem" data-link-type="dfn">LiteralStem</a></span> and <span class="math">n</span> is an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">RDF Literal</a> with a lexical value <span class="math">l</span> and <span class="math function"><a href="https://www.w3.org/TR/xpath-functions-31/#func-starts-with">fn:starts-with</a>(l, st)</span>.</li>
+              <li><span class="math">s</span> is a <span class="jobjref"><a class="obj internalDFN" href="#dfn-languagestem" data-link-type="dfn">LanguageStem</a></span> and <span class="math">n</span> is a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tagged-string">language-tagged string</a> with a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tag">language tag</a> <span class="math">l</span> and <span class="math function"><a href="https://www.w3.org/TR/xpath-functions-31/#func-starts-with">fn:starts-with</a>(l, st)</span>.</li>
+              <li><span class="math">n</span> is a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node">blank node</a> with identifier <span class="math">l</span> and <span class="math function"><a href="https://www.w3.org/TR/xpath-functions-31/#func-starts-with">fn:starts-with</a>(l, st)</span>.</li>
             </ul>
           </li>
         </ul>
@@ -2650,7 +2650,7 @@ _:User2
                 <th class="obj"><dfn data-dfn-type="dfn" id="dfn-shape">Shape</dfn></th>
                 <td>{</td>
                 <td><span class="param">id</span>:<a class="nobref internalDFN" href="#dfn-shapeexprlabel" data-link-type="dfn">shapeExprLabel</a>?
-                  <!-- <span class="param">virtual</span>:<a>BOOL</a>?  --><span class="param">closed</span>:<a href="#dfn-bool" class="internalDFN" data-link-type="dfn">BOOL</a>? <span class="param">extra</span>:[<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a>]? <span class="param">expression</span>:<a class="nobref internalDFN" href="#dfn-tripleexpr" data-link-type="dfn">tripleExpr</a>?
+                  <!-- <span class="param">virtual</span>:<a>BOOL</a>?  --><span class="param">closed</span>:<a href="#dfn-bool" class="internalDFN" data-link-type="dfn">BOOL</a>? <span class="param">extra</span>:[<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a>]? <span class="param">expression</span>:<a class="nobref internalDFN" href="#dfn-tripleexpr" data-link-type="dfn">tripleExpr</a>?
                   <!-- <span class="param">inherit</span>:[<a class="nobref">shapeExprLabel</a>]? --><span class="param">semActs</span>:[<a class="objref internalDFN" href="#dfn-semact" data-link-type="dfn">SemAct</a>]? }</td>
               </tr>
               <tr class="nob">
@@ -2671,7 +2671,7 @@ _:User2
               <tr class="obj">
                 <th class="obj"><dfn data-dfn-type="dfn" id="dfn-tripleconstraint">TripleConstraint</dfn></th>
                 <td>{</td>
-                <td><span class="param">id</span>:<a class="nobref internalDFN" href="#dfn-tripleexprlabel" data-link-type="dfn">tripleExprLabel</a>? <span class="param">inverse</span>:<a href="#dfn-bool" class="internalDFN" data-link-type="dfn">BOOL</a>? <a class="param internalDFN" href="#dfn-predicate" data-link-type="dfn">predicate</a>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> <span class="param">valueExpr</span>:<a class="nobref internalDFN" href="#dfn-shapeexpr" data-link-type="dfn">shapeExpr</a>? <span class="param">min</span>:<a href="#dfn-integer" class="internalDFN" data-link-type="dfn">INTEGER</a>? <span class="param">max</span>:<a href="#dfn-integer" class="internalDFN" data-link-type="dfn">INTEGER</a>? <span class="param">semActs</span>:[<a class="objref internalDFN" href="#dfn-semact" data-link-type="dfn">SemAct</a>]? <span class="param">annotations</span>:[<a class="objref internalDFN" href="#dfn-annotation" data-link-type="dfn">Annotation</a>]? }</td>
+                <td><span class="param">id</span>:<a class="nobref internalDFN" href="#dfn-tripleexprlabel" data-link-type="dfn">tripleExprLabel</a>? <span class="param">inverse</span>:<a href="#dfn-bool" class="internalDFN" data-link-type="dfn">BOOL</a>? <a class="param" data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> <span class="param">valueExpr</span>:<a class="nobref internalDFN" href="#dfn-shapeexpr" data-link-type="dfn">shapeExpr</a>? <span class="param">min</span>:<a href="#dfn-integer" class="internalDFN" data-link-type="dfn">INTEGER</a>? <span class="param">max</span>:<a href="#dfn-integer" class="internalDFN" data-link-type="dfn">INTEGER</a>? <span class="param">semActs</span>:[<a class="objref internalDFN" href="#dfn-semact" data-link-type="dfn">SemAct</a>]? <span class="param">annotations</span>:[<a class="objref internalDFN" href="#dfn-annotation" data-link-type="dfn">Annotation</a>]? }</td>
               </tr>
               <tr class="nob">
                 <th class="nob"><dfn data-dfn-type="dfn" id="dfn-tripleexprref">tripleExprRef</dfn></th>
@@ -2681,7 +2681,7 @@ _:User2
               <tr class="nob">
                 <th class="nob"><dfn data-dfn-type="dfn" id="dfn-tripleexprlabel">tripleExprLabel</dfn></th>
                 <td>=</td>
-                <td><a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> | <a href="#dfn-bnode" class="internalDFN" data-link-type="dfn">BNODE</a> ;</td>
+                <td><a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> | <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#blank-node">BNODE</a> ;</td>
               </tr>
             </tbody>
           </table>
@@ -2692,24 +2692,24 @@ _:User2
         <h4 id="h-triple-expressions-semantics" resource="#h-triple-expressions-semantics"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.5.2 </span>Semantics</span>
         </h4>
         <p id="satisfies-Shape">
-          The <code><a href="#satisfies">satisfies</a></code> semantics for a <span class="jobjref"><a class="obj internalDFN" href="#dfn-shape" data-link-type="dfn">Shape</a></span> depend on a <code>matches</code> function <a href="#matches">defined below</a>. For a <a href="#dfn-node" class="internalDFN" data-link-type="dfn">node</a> <span class="math">n</span>, <a href="#dfn-shape" class="internalDFN" data-link-type="dfn">shape</a> <span class="math">S</span>, <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">graph</a> <span class="math">G</span>, and <a href="#dfn-shapemap" class="internalDFN" data-link-type="dfn">shapeMap</a> <span class="math">m</span>, <code class="function">satisfies(<span class="math">n</span>, <span class="math">S</span>, <span class="math">G</span>, <span class="math">m</span>)</code> if and only if:
+          The <code><a href="#satisfies">satisfies</a></code> semantics for a <span class="jobjref"><a class="obj internalDFN" href="#dfn-shape" data-link-type="dfn">Shape</a></span> depend on a <code>matches</code> function <a href="#matches">defined below</a>. For a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">node</a> <span class="math">n</span>, <a href="#dfn-shape" class="internalDFN" data-link-type="dfn">shape</a> <span class="math">S</span>, <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">graph</a> <span class="math">G</span>, and <a href="#dfn-shapemap" class="internalDFN" data-link-type="dfn">shapeMap</a> <span class="math">m</span>, <code class="function">satisfies(<span class="math">n</span>, <span class="math">S</span>, <span class="math">G</span>, <span class="math">m</span>)</code> if and only if:
         </p>
         <ul>
           <li>
             <code class="function"><a href="#dfn-neigh" class="internalDFN" data-link-type="dfn">neigh</a>(<span class="math">G</span>, <span class="math">n</span>)</code> can be partitioned into two sets <span class="math">matched</span> and <span class="math">remainder</span> such that <code class="function">matches(<span class="math">matched</span>, <span class="param">expression</span>, <span class="math">m</span>)</code>. If <span class="param">expression</span> is absent, <code class="function"><span class="math">remainder</span> = <a href="#dfn-neigh" class="internalDFN" data-link-type="dfn">neigh</a>(<span class="math">G</span>, <span class="math">n</span>)</code>.<br> Let <span class="label">outs</span> be the <span class="math"><a href="#dfn-arcsout" class="internalDFN" data-link-type="dfn">arcsOut</a></span> in <span class="math">remainder</span>:
-            <code class="function"><span class="math">outs</span> = <span class="math">remainder</span> ∩ <a href="#dfn-arcsout" class="internalDFN" data-link-type="dfn">arcsOut</a>(<span class="math">G</span>, <span class="math">n</span>)</code>.<br> Let <span class="label">matchables</span> be the triples in <span class="math">outs</span> whose <a href="#dfn-predicate" class="internalDFN" data-link-type="dfn">predicate</a> appears in a <span class="jobjref"><a class="obj internalDFN" href="#dfn-tripleconstraint" data-link-type="dfn">TripleConstraint</a></span> in <span class="param">expression</span>. If <span class="param">expression</span> is absent, <code class="function"><span class="math">matchables</span> = <span class="math">Ø</span> (the empty set)</code>.<br> The complexity of partitioning is described briefly in the <a href="http://shex.io/primer/#partition-complexity">ShEx2 Primer</a>.
+            <code class="function"><span class="math">outs</span> = <span class="math">remainder</span> ∩ <a href="#dfn-arcsout" class="internalDFN" data-link-type="dfn">arcsOut</a>(<span class="math">G</span>, <span class="math">n</span>)</code>.<br> Let <span class="label">matchables</span> be the triples in <span class="math">outs</span> whose <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a> appears in a <span class="jobjref"><a class="obj internalDFN" href="#dfn-tripleconstraint" data-link-type="dfn">TripleConstraint</a></span> in <span class="param">expression</span>. If <span class="param">expression</span> is absent, <code class="function"><span class="math">matchables</span> = <span class="math">Ø</span> (the empty set)</code>.<br> The complexity of partitioning is described briefly in the <a href="../primer/#partition-complexity">ShEx2 Primer</a>.
           </li>
           <li>
             There is no triple in <span class="label">matchables</span> which matches a <span class="jobjref"><a class="obj internalDFN" href="#dfn-tripleconstraint" data-link-type="dfn">TripleConstraint</a></span> in <span class="param">expression</span>.<br> Let <span class="label">unmatchables</span> be the triples in <span class="math">outs</span> which are not in <span class="math">matchables</span>.
             <code class="function"><span class="math">matchables</span> ∪ <span class="math">unmatchables</span> = <span class="math">outs</span></code>.
           </li>
           <li>
-            There is no triple in <span class="math">matchables</span> whose <a href="#dfn-predicate" class="internalDFN" data-link-type="dfn">predicate</a> does not appear in <span class="param">extra</span>.
+            There is no triple in <span class="math">matchables</span> whose <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a> does not appear in <span class="param">extra</span>.
           </li>
           <li><span class="param">closed</span> is false or <span class="math">unmatchables</span> is empty.</li>
         </ul>
         <p>
-          <span class="label" id="matches">matches</span>: asserts that a <a href="#dfn-triple-expression" class="internalDFN" data-link-type="dfn">triple expression</a> is matched by a set of triples that come from the neighbourhood of a node in an <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF graph</a>. The expression <code>matches(<span class="math">T</span>, <span class="math">expr</span>, <span class="math">m</span>)</code> indicates that a set of triples <span class="math">T</span> can satisfy these rules:
+          <span class="label" id="matches">matches</span>: asserts that a <a href="#dfn-triple-expression" class="internalDFN" data-link-type="dfn">triple expression</a> is matched by a set of triples that come from the neighbourhood of a node in an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF graph</a>. The expression <code>matches(<span class="math">T</span>, <span class="math">expr</span>, <span class="math">m</span>)</code> indicates that a set of triples <span class="math">T</span> can satisfy these rules:
         </p>
         <ul>
           <li>
@@ -2775,7 +2775,7 @@ _:User2
               m)</div>
             </div>
             <div style="clear:both;">evaluates as:</div>
-            <div class="math"><div style="float:left;">Let subExpr = </div><div style="float:left;">
+            <div class="math"><div style="float:left;">Let subExpr = </div><div style="float:left;">
             <div class="inline json">
               <pre>{ "type": "OneOf", "shapeExprs": [<span class="comment">te<sub>1</sub></span>, <span class="comment">te<sub>2</sub>, …</span>] }</pre></div></div>
             </div>
@@ -2786,7 +2786,7 @@ _:User2
               m)</div>
             </div>
             <div style="clear:both;"></div>
-            <div class="math"><div style="float:left;">and matches(</div><div style="float:left;"><span class="math">T<sub>2</sub></span>,<br/>
+            <div class="math"><div style="float:left;">and matches(</div><div style="float:left;"><span class="math">T<sub>2</sub></span>,<br/>
             <div class="inline json">
               <pre>{ "type": "OneOf", "shapeExprs": [<span class="comment">te<sub>1</sub></span>, <span class="comment">te<sub>2</sub>, …</span>] }</pre></div>,<br/>
               m)</div>
@@ -2896,7 +2896,7 @@ _:User2
                 <span class="math">T</span> is a set of one triple.<br> Let <span class="label">t</span> be the soul triple in <span class="math">T</span>.
               </li>
               <li>
-                <span class="math">t</span>'s <a class="param internalDFN" href="#dfn-predicate" data-link-type="dfn">predicate</a> equals <span class="math">expr</span>'s <a href="#dfn-predicate" class="internalDFN" data-link-type="dfn">predicate</a>.<br> Let <span class="label">value</span> be <span class="math">t</span>'s subject if <span class="param">inverse</span> is true, else <span class="math">t</span>'s object.
+                <span class="math">t</span>'s <a class="param" data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a> equals <span class="math">expr</span>'s <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a>.<br> Let <span class="label">value</span> be <span class="math">t</span>'s subject if <span class="param">inverse</span> is true, else <span class="math">t</span>'s object.
               </li>
               <li>
                 if <span class="param">inverse</span> is true, <span class="math">t</span> is in <span class="math"><a href="#dfn-arcsin" class="internalDFN" data-link-type="dfn">arcsIn</a></span>, else <span class="math">t</span> is in <span class="math"><a href="#dfn-arcsout" class="internalDFN" data-link-type="dfn">arcsOut</a></span>.
@@ -2920,7 +2920,7 @@ _:User2
                       <div style="clear:both;">holds if
                         <ul class="tight">
                           <li><span class="math">T</span> has exactly one triple <span class="math">t</span>.</li>
-                          <li><span class="math">t</span> has the <a href="#dfn-predicate" class="internalDFN" data-link-type="dfn">predicate</a> "<code>http://xmlns.com/foaf/0.1/givenName</code>"</li>
+                          <li><span class="math">t</span> has the <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a> "<code>http://xmlns.com/foaf/0.1/givenName</code>"</li>
                         </ul>
                       </div>
                     </div>
@@ -2944,7 +2944,7 @@ _:User2
                       <div style="clear:both;">holds if
                         <ul class="tight">
                           <li><span class="math">T</span> has exactly one triple <span class="math">t</span>.</li>
-                          <li><span class="math">t</span> has the <a href="#dfn-predicate" class="internalDFN" data-link-type="dfn">predicate</a> "<code>http://purl.org/dc/elements/1.1/author</code>"</li>
+                          <li><span class="math">t</span> has the <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a> "<code>http://purl.org/dc/elements/1.1/author</code>"</li>
                           <li><span class="math">t</span> has a subject <span class="math">n2</span></li>
                           <li>The schema's <a class="param internalDFN" href="#dfn-shapes" data-link-type="dfn">shapes</a> maps "<code>http://schema.example/IssueShape</code>" to <span class="math">se2</span></li>
                           <li><span class="math function">satisfies(n2, se2, G, m)</span></li>
@@ -3058,10 +3058,10 @@ _:User2
         <h4 id="h-validation-requirement" resource="#h-validation-requirement"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.6.1 </span>Schema Validation Requirement</span>
         </h4>
 
-        <p>A <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">graph</a> <span class="math">G</span> is said to <dfn data-dfn-type="dfn" id="dfn-conform">conform</dfn> with a <a href="#dfn-schema" class="internalDFN" data-link-type="dfn">schema</a> <span class="math">S</span> with a <a href="#dfn-shapemap" class="internalDFN" data-link-type="dfn">ShapeMap</a> <span class="math">m</span> when:</p>
+        <p>A <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">graph</a> <span class="math">G</span> is said to <dfn data-dfn-type="dfn" id="dfn-conform">conform</dfn> with a <a href="#dfn-schema" class="internalDFN" data-link-type="dfn">schema</a> <span class="math">S</span> with a <a href="#dfn-shapemap" class="internalDFN" data-link-type="dfn">ShapeMap</a> <span class="math">m</span> when:</p>
         <ol class="algorithm">
           <li>Every, <a href="#dfn-semact" class="internalDFN" data-link-type="dfn">SemAct</a> in the <a href="#dfn-startacts" class="internalDFN" data-link-type="dfn">startActs</a> of <span class="math">S</span> has a successful evaluation of <a href="#sumActsSatisfied">semActsSatisfied</a>.</li>
-          <li>Every <a href="#dfn-node" class="internalDFN" data-link-type="dfn">node</a> <span class="math">n</span> in <span class="math">m</span> <a href="#dfn-conform" class="internalDFN" data-link-type="dfn">conforms</a> to its associated
+          <li>Every <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">node</a> <span class="math">n</span> in <span class="math">m</span> <a href="#dfn-conform" class="internalDFN" data-link-type="dfn">conforms</a> to its associated
             <a href="#dfn-shapeexprref" class="internalDFN" data-link-type="dfn">shapeExprRefs</a> <span class="math">se<sub>n</sub></span> where for each <a href="#dfn-shapeexprref" class="internalDFN" data-link-type="dfn">shapeExprRef</a> <span class="math">se<sub>i</sub></span> in <span class="math">se<sub>n</sub></span>:
             <ol class="algorithm">
               <li><span class="math">se<sub>i</sub></span> references a <a href="#dfn-shapeexpr" class="internalDFN" data-link-type="dfn">ShapeExpr</a> in <a href="#dfn-shapes" class="internalDFN" data-link-type="dfn">shapes</a>, and</li>
@@ -3322,10 +3322,10 @@ _:User2
             </div>
           </li>
           <li>
-            a <span class="param">valueExpr</span> in a <span class="jobjref"><a href="#dfn-tripleconstraint" class="internalDFN" data-link-type="dfn">TripleConstraint</a></span> with <a class="param internalDFN" href="#dfn-predicate" data-link-type="dfn">predicate</a> <span class="math">p</span> inside a <span class="jobjref"><a href="#dfn-shape" class="internalDFN" data-link-type="dfn">Shape</a></span> with <span class="param">extra</span> <span class="math">p</span>
+            a <span class="param">valueExpr</span> in a <span class="jobjref"><a href="#dfn-tripleconstraint" class="internalDFN" data-link-type="dfn">TripleConstraint</a></span> with <a class="param" data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a> <span class="math">p</span> inside a <span class="jobjref"><a href="#dfn-shape" class="internalDFN" data-link-type="dfn">Shape</a></span> with <span class="param">extra</span> <span class="math">p</span>
             <div class="example">
               <p>
-                This self-reference on a <a href="#dfn-predicate" class="internalDFN" data-link-type="dfn">predicate</a> designated as <span class="param">extra</span> violates the negation requirement:
+                This self-reference on a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a> designated as <span class="param">extra</span> violates the negation requirement:
               </p>
               <div class="repchoice error">
                 <pre class="json repchosen hljs" aria-busy="false" aria-live="polite">{ <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Schema"</span>, <span class="hljs-attr">"shapes"</span>: [
@@ -3392,7 +3392,7 @@ _:User2
             <tr class="obj">
               <th class="obj"><dfn data-dfn-type="dfn" id="dfn-semact">SemAct</dfn></th>
               <td>{</td>
-              <td><span class="param">name</span>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> <span class="param">code</span>:<a href="#dfn-string" class="internalDFN" data-link-type="dfn">STRING</a>? }</td>
+              <td><span class="param">name</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> <span class="param">code</span>:<a href="#dfn-string" class="internalDFN" data-link-type="dfn">STRING</a>? }</td>
             </tr>
           </tbody>
         </table>
@@ -3410,7 +3410,7 @@ _:User2
         <h4 id="h-semantic-actions-uses" resource="#h-semantic-actions-uses"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.7.2 </span>Use - informative</span>
         </h4>
         <p>
-          A practical evaluation of a <span class="jobjref"><a href="#dfn-semact" class="internalDFN" data-link-type="dfn">SemAct</a></span> will provide access to some context. For instance, the <a href="http://shex.io/extensions/Test/#def">http://shex.io/extensions/Test/</a> extension requires access to the subject, <a href="#dfn-predicate" class="internalDFN" data-link-type="dfn">predicate</a> and object of a triple matching a <span class="jobjref"><a href="#dfn-tripleconstraint" class="internalDFN" data-link-type="dfn">TripleConstraint</a></span>. These are used in a <code>print</code> function.
+          A practical evaluation of a <span class="jobjref"><a href="#dfn-semact" class="internalDFN" data-link-type="dfn">SemAct</a></span> will provide access to some context. For instance, the <a href="http://shex.io/extensions/Test/#def">http://shex.io/extensions/Test/</a> extension requires access to the subject, <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a> and object of a triple matching a <span class="jobjref"><a href="#dfn-tripleconstraint" class="internalDFN" data-link-type="dfn">TripleConstraint</a></span>. These are used in a <code>print</code> function.
         </p>
         <div class="example">
           <div class="example-title marker"><span>Semantic Actions example 1</span></div>
@@ -3484,7 +3484,7 @@ _:User2
             <tr class="obj">
               <th class="obj"><dfn data-dfn-type="dfn" id="dfn-annotation">Annotation</dfn></th>
               <td>{</td>
-              <td><span class="param"><a href="#dfn-predicate" class="internalDFN" data-link-type="dfn">predicate</a></span>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> <span class="param">object</span>:<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a> }</td>
+              <td><span class="param"><a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a></span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> <span class="param">object</span>:<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a> }</td>
             </tr>
           </tbody>
         </table>
@@ -3637,7 +3637,7 @@ PREFIX xsd: <span class="hljs-tag">&lt;<span class="hljs-name">http:</span>//<sp
           </div>
           <div style="clear:both;" class="validation"><span>Validate</span> <span class="hljs-name">&lt;Alice&gt;</span> as <span class="hljs-string">http://schema.example/UserShape</span>:</div>
           <ul class="trace followup">
-            <li>G = [<span class="lineno data">t1</span>] <span class="comment">The <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">graph</a> G consists of one <a href="#dfn-triples" class="internalDFN" data-link-type="dfn">triple</a>.</span></li>
+            <li>G = [<span class="lineno data">t1</span>] <span class="comment">The <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">graph</a> G consists of one <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-triple">triple</a>.</span></li>
             <li><a href="#satisfies-Shape">satisfies Shape</a> (&lt;Alice&gt;, <span class="lineno schema">S1</span>, G, m)
               <ul>
                 <li><a href="#dfn-neigh" class="internalDFN" data-link-type="dfn">neigh</a>(G, &lt;Alice&gt;) = [<span class="lineno data">t1</span>] <span class="comment">/* The neighborhood around &lt;Alice&gt; consists of one triple. */</span></li>
@@ -3738,7 +3738,7 @@ PREFIX xsd: <span class="hljs-tag">&lt;<span class="hljs-name">http:</span>//<sp
             </li>
           </ul>
           <p>
-            The non-empty matchables is permitted because the triple <code>t3</code> has a <a href="#dfn-predicate" class="internalDFN" data-link-type="dfn">predicate</a> which appears in the "extra" list: <span class="json">["http://schema.example/Teacher"]</span>.
+            The non-empty matchables is permitted because the triple <code>t3</code> has a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a> which appears in the "extra" list: <span class="json">["http://schema.example/Teacher"]</span>.
           </p>
         </div>
       </section>
@@ -3991,7 +3991,7 @@ PREFIX foaf: <span class="hljs-tag">&lt;<span class="hljs-name">http:</span>//<s
           </ul>
 
           <p class="leadup">
-            Adding a <code>foaf:familyName</code> to <span class="math"><span class="lineno schema">S1</span></span>'s <span class="param">extra</span> would allow this <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">graph</a> to satisfy the schema.
+            Adding a <code>foaf:familyName</code> to <span class="math"><span class="lineno schema">S1</span></span>'s <span class="param">extra</span> would allow this <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">graph</a> to satisfy the schema.
           </p>
           <pre class="line-labels hljs undefined" aria-busy="false" aria-live="polite"> 
 
@@ -4699,7 +4699,7 @@ inst:Testgrammer23
         <h4 id="h-example-negation" resource="#h-example-negation"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.9.7 </span>Negation Example</span>
         </h4>
         <p>
-          Setting the maximum <a href="#dfn-cardinality" class="internalDFN" data-link-type="dfn">cardinality</a> of a TripleConstraint with <a href="#dfn-predicate" class="internalDFN" data-link-type="dfn">predicate</a> <span class="math">p</span> to zero (i.e. <span>"max": 0</span> in <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a> or <code>{0}</code> or <code>{0, 0}</code> in <a href="#dfn-shexc" class="internalDFN" data-link-type="dfn">ShExC</a>) asserts that matching nodes must have no triples with <a href="#dfn-predicate" class="internalDFN" data-link-type="dfn">predicate</a> <span class="math">p</span>.
+          Setting the maximum <a href="#dfn-cardinality" class="internalDFN" data-link-type="dfn">cardinality</a> of a TripleConstraint with <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a> <span class="math">p</span> to zero (i.e. <span>"max": 0</span> in <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a> or <code>{0}</code> or <code>{0, 0}</code> in <a href="#dfn-shexc" class="internalDFN" data-link-type="dfn">ShExC</a>) asserts that matching nodes must have no triples with <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a> <span class="math">p</span>.
         </p>
         <!--
               BASE <http://schema.example/>
@@ -5235,7 +5235,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
               <td></td>
               <td><a class="obj internalDFN" href="#dfn-nodeconstraint" data-link-type="dfn">NodeConstraint</a></td>
               <td>{</td>
-              <td><span class="param">nodeKind</span>:(<span class="literal">"iri"</span> | <span class="literal">"bnode"</span> | <span class="literal">"nonliteral"</span> | <span class="literal">"literal"</span>)? <span class="param">datatype</span>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a>? <a class="nobref internalDFN" href="#dfn-xsfacet" data-link-type="dfn">xsFacet</a>* <span class="param">values</span>:[<a class="nobref internalDFN" href="#dfn-valuesetvalue" data-link-type="dfn">valueSetValue</a>]? }</td>
+              <td><span class="param">nodeKind</span>:(<span class="literal">"iri"</span> | <span class="literal">"bnode"</span> | <span class="literal">"nonliteral"</span> | <span class="literal">"literal"</span>)? <span class="param">datatype</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a>? <a class="nobref internalDFN" href="#dfn-xsfacet" data-link-type="dfn">xsFacet</a>* <span class="param">values</span>:[<a class="nobref internalDFN" href="#dfn-valuesetvalue" data-link-type="dfn">valueSetValue</a>]? }</td>
             </tr>
             <tr style="vertical-align: baseline">
               <td id="prod-nonLiteralKind">[<span class="prodNo">26</span>]&nbsp;&nbsp;&nbsp;</td>
@@ -5305,7 +5305,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
             <tr>
               <td colspan="4">
                 <p>
-                  Shape defintions associate a <a href="#dfn-triple-expression" class="internalDFN" data-link-type="dfn">triple expression</a> with a closed flag and a list of partially constrained (extra) <a data-lt="predicate" href="#dfn-predicates" class="internalDFN" data-link-type="dfn">predicates</a>. Any <a href="#dfn-predicate" class="internalDFN" data-link-type="dfn">predicate</a> appearing in a <a href="#dfn-triple-expression" class="internalDFN" data-link-type="dfn">triple expression</a> is fully constrained unless it appears in the list of extras.
+                  Shape defintions associate a <a href="#dfn-triple-expression" class="internalDFN" data-link-type="dfn">triple expression</a> with a closed flag and a list of partially constrained (extra) <a data-lt="predicate" href="#dfn-predicates" class="internalDFN" data-link-type="dfn">predicates</a>. Any <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a> appearing in a <a href="#dfn-triple-expression" class="internalDFN" data-link-type="dfn">triple expression</a> is fully constrained unless it appears in the list of extras.
                 </p>
               </td>
             </tr>
@@ -5331,7 +5331,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
               <td>
                 <!-- <span class="param">virtual</span>:<a>BOOL</a>? -->
                 <span class="param">closed</span>:<a href="#dfn-bool" class="internalDFN" data-link-type="dfn">BOOL</a>?
-                <span class="param">extra</span>:[<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a>]?
+                <span class="param">extra</span>:[<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a>]?
                 <span class="param">expression</span>:<a class="nobref internalDFN" href="#dfn-tripleexpr" data-link-type="dfn">tripleExpr</a>?
                 <!-- <span class="param">inherit</span>:[<a class="nobref">shapeExprLabel</a>]? -->
                 <span class="param">annotations</span>:[<a class="objref internalDFN" href="#dfn-annotation" data-link-type="dfn">Annotation</a>]?
@@ -5500,7 +5500,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
               <td></td>
               <td><a class="obj internalDFN" href="#dfn-tripleconstraint" data-link-type="dfn">TripleConstraint</a></td>
               <td>{</td>
-              <td><span class="param">inverse</span>:<a href="#dfn-bool" class="internalDFN" data-link-type="dfn">BOOL</a>? <span class="param">predicate</span>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> <span class="param">valueExpr</span>:<a class="nobref internalDFN" href="#dfn-shapeexpr" data-link-type="dfn">shapeExpr</a>? <span class="param">min</span>:<a href="#dfn-integer" class="internalDFN" data-link-type="dfn">INTEGER</a>? <span class="param">max</span>:<a href="#dfn-integer" class="internalDFN" data-link-type="dfn">INTEGER</a>? <span class="param">semActs</span>:[<a class="objref internalDFN" href="#dfn-semact" data-link-type="dfn">SemAct</a>]? <span class="param">annotations</span>:[<a class="objref internalDFN" href="#dfn-annotation" data-link-type="dfn">Annotation</a>]? }</td>
+              <td><span class="param">inverse</span>:<a href="#dfn-bool" class="internalDFN" data-link-type="dfn">BOOL</a>? <span class="param">predicate</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> <span class="param">valueExpr</span>:<a class="nobref internalDFN" href="#dfn-shapeexpr" data-link-type="dfn">shapeExpr</a>? <span class="param">min</span>:<a href="#dfn-integer" class="internalDFN" data-link-type="dfn">INTEGER</a>? <span class="param">max</span>:<a href="#dfn-integer" class="internalDFN" data-link-type="dfn">INTEGER</a>? <span class="param">semActs</span>:[<a class="objref internalDFN" href="#dfn-semact" data-link-type="dfn">SemAct</a>]? <span class="param">annotations</span>:[<a class="objref internalDFN" href="#dfn-annotation" data-link-type="dfn">Annotation</a>]? }</td>
             </tr>
 
             <tr class="params">
@@ -5508,7 +5508,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
               <td colspan="3">
                 <ul>
                   <li><span class="param">inverse</span> is true if the <span class="prod"><a class="grammarRef" href="#prod-senseFlags">senseFlags</a></span> matched "<code>^</code>".</li>
-                  <li><a class="param internalDFN" href="#dfn-predicate" data-link-type="dfn">predicate</a> comes from the <a class="grammarRef" href="#prod-predicate">predicate</a> production.</li>
+                  <li><a class="param" data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a> comes from the <a class="grammarRef" href="#prod-predicate">predicate</a> production.</li>
                   <li><span class="param">valueExpr</span> comes from the <a class="grammarRef" href="#prod-inlineShapeExpression">inlineShapeExpression</a> production. It it is an empty shape <code>{"type": "Shape"}</code>, <span class="param">valueExpr</span> is not assigned.</li>
                   <li><span class="param">min</span> comes from the <a class="grammarRef" href="#prod-cardinality">cardinality</a> production.</li>
                   <li><span class="param">max</span> comes from the <a class="grammarRef" href="#prod-cardinality">cardinality</a> production.</li>
@@ -5573,19 +5573,19 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
               <td></td>
               <td><a class="obj internalDFN" href="#dfn-iristemrange" data-link-type="dfn">IriStemRange</a></td>
               <td>{</td>
-              <td><span class="param">stem</span>:(<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-valuesetvalue" data-link-type="dfn">valueSetValue</a>]? }</td>
+              <td><span class="param">stem</span>:(<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-valuesetvalue" data-link-type="dfn">valueSetValue</a>]? }</td>
             </tr>
             <tr class="obj">
               <td></td>
               <td><a class="obj internalDFN" href="#dfn-literalstemrange" data-link-type="dfn">LiteralStemRange</a></td>
               <td>{</td>
-              <td><span class="param">stem</span>:(<a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">LITERAL</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-valuesetvalue" data-link-type="dfn">valueSetValue</a>]? }</td>
+              <td><span class="param">stem</span>:(<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">LITERAL</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-valuesetvalue" data-link-type="dfn">valueSetValue</a>]? }</td>
             </tr>
             <tr class="obj">
               <td></td>
               <td><a class="obj internalDFN" href="#dfn-languagestemrange" data-link-type="dfn">LanguageStemRange</a></td>
               <td>{</td>
-              <td><span class="param">stem</span>:(<a href="#dfn-language-tag" class="internalDFN" data-link-type="dfn">language tag</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-valuesetvalue" data-link-type="dfn">valueSetValue</a>]? }</td>
+              <td><span class="param">stem</span>:(<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tag">language tag</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-valuesetvalue" data-link-type="dfn">valueSetValue</a>]? }</td>
             </tr>
             <tr class="params">
               <td></td>
@@ -5623,7 +5623,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
               <td></td>
               <td><a class="obj internalDFN" href="#dfn-iristem" data-link-type="dfn">IriStem</a></td>
               <td>{</td>
-              <td><span class="param">stem</span>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> }</td>
+              <td><span class="param">stem</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> }</td>
             </tr>
             <tr class="params">
               <td></td>
@@ -5655,7 +5655,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
               <td></td>
               <td><a class="obj internalDFN" href="#dfn-literalstem" data-link-type="dfn">LiteralStem</a></td>
               <td>{</td>
-              <td><span class="param">stem</span>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> }</td>
+              <td><span class="param">stem</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> }</td>
             </tr>
             <tr class="params">
               <td></td>
@@ -5687,7 +5687,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
               <td></td>
               <td><a class="obj internalDFN" href="#dfn-languagestem" data-link-type="dfn">LanguageStem</a></td>
               <td>{</td>
-              <td><span class="param">stem</span>:<a href="#dfn-language-tag" class="internalDFN" data-link-type="dfn">language tag</a> }</td>
+              <td><span class="param">stem</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tag">language tag</a> }</td>
             </tr>
             <tr class="params">
               <td></td>
@@ -5753,7 +5753,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
               <td></td>
               <td><a class="obj internalDFN" href="#dfn-annotation" data-link-type="dfn">Annotation</a></td>
               <td>{</td>
-              <td><a class="param internalDFN" href="#dfn-predicate" data-link-type="dfn">predicate</a>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> <span class="param">object</span>:<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a> }</td>
+              <td><a class="param" data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> <span class="param">object</span>:<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a> }</td>
             </tr>
           </tbody>
 
@@ -5784,16 +5784,16 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
               <td></td>
               <td><a class="obj internalDFN" href="#dfn-semact" data-link-type="dfn">SemAct</a></td>
               <td>{</td>
-              <td><span class="param">name</span>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> <span class="param">code</span>:<a href="#dfn-string" class="internalDFN" data-link-type="dfn">STRING</a>? }</td>
+              <td><span class="param">name</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> <span class="param">code</span>:<a href="#dfn-string" class="internalDFN" data-link-type="dfn">STRING</a>? }</td>
             </tr>
           </tbody>
 
           <!-- 
 <tbody class="prod">
 <tr style="vertical-align: baseline">
-<td id="prod-includeSet">[<span class="prodNo">64</span>]   </td>
+<td id="prod-includeSet">[<span class="prodNo">64</span>]   </td>
 <td><code class="production prod">includeSet</code></td>
-<td>   ::=   </td>
+<td>   ::=   </td>
 <td><code class="content">'&amp;' <span class="prod"><a class="grammarRef" href="#prod-shapeExprLabel">shapeExprLabel</a></span>+</code></td>
 </tr>
 </tbody>
@@ -5869,9 +5869,9 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
             </tr>
             <tr id="handle-RDFLiteral" class="params">
               <td></td>
-              <td>returns: <a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">            literal     </a></td>
+              <td>returns: <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">            literal     </a></td>
               <td></td>
-              <td>The literal has a lexical form of the first rule argument, <code>String</code>. If the <code>'^^' iri</code> rule matched, the datatype is <code>iri</code> and the literal has no <a href="#dfn-language-tag" class="internalDFN" data-link-type="dfn">language tag</a>. If the <code>langString</code> rule matched, the datatype is <code>rdf:langString</code> and the <a href="#dfn-language-tag" class="internalDFN" data-link-type="dfn">language tag</a> is extracted from <code>langTag</code>. If neither matched, the datatype is <code>xsd:string</code> and the literal has no <a href="#dfn-language-tag" class="internalDFN" data-link-type="dfn">language tag</a>.</td>
+              <td>The literal has a lexical form of the first rule argument, <code>String</code>. If the <code>'^^' iri</code> rule matched, the datatype is <code>iri</code> and the literal has no <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tag">language tag</a>. If the <code>langString</code> rule matched, the datatype is <code>rdf:langString</code> and the <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tag">language tag</a> is extracted from <code>langTag</code>. If neither matched, the datatype is <code>xsd:string</code> and the literal has no <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tag">language tag</a>.</td>
             </tr>
           </tbody>
 
@@ -5884,7 +5884,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
             </tr>
             <tr id="handle-BooleanLiteral" class="params">
               <td></td>
-              <td>returns: <a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">            literal     </a></td>
+              <td>returns: <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">            literal     </a></td>
               <td></td>
               <td>The literal has a lexical form of the <code>true</code> or <code>false</code>, depending on which matched the input, and a datatype of <code>xsd:boolean</code>.</td>
             </tr>
@@ -5945,7 +5945,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
                   Terminals return:
                 </p>
                 <ul>
-                  <li>the RDF abstract types <a class="math internalDFN" href="#dfn-iri" data-link-type="dfn">IRI</a>, <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-lexical-form">lexical form</a>, <a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">literal</a>, <dfn data-dfn-type="dfn" id="dfn-language-tag"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tag">language tag</a></dfn>.</li>
+                  <li>the RDF abstract types <a class="math" data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a>, <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-lexical-form">lexical form</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">literal</a>, <dfn data-dfn-type="dfn" id="dfn-language-tag"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tag">language tag</a></dfn>.</li>
                   <li>a string of unicode codepoints for <a href="#term-CODE">CODE</a>.</li>
                   <li>a <code>repeat range</code> for <a href="#term-REPEAT_RANGE">REPEAT_RANGE</a>. A <code>repeat range</code> is a tuple of non-negative integers or a non-negative integer and a token for <code>*</code>.</li>
                 </ul>
@@ -5992,7 +5992,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
             </tr>
             <tr id="handle-RDF_TYPE" class="params">
               <td></td>
-              <td> returns: <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">      IRI </a></td>
+              <td> returns: <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">      IRI </a></td>
               <td></td>
               <td>The <code>iri</code> <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code> is returned.</td>
             </tr>
@@ -6007,7 +6007,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
             </tr>
             <tr id="handle-IRIREF" class="params">
               <td></td>
-              <td>returns: <a class="math internalDFN" href="#dfn-iri" data-link-type="dfn">IRI</a></td>
+              <td>returns: <a class="math" data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a></td>
               <td></td>
               <td>The characters between "&lt;" and "&gt;" are taken, with the <a href="https://www.w3.org/TR/turtle/#numeric">numeric escape sequences</a> unescaped, to form the unicode string of the IRI. Relative IRI resolution is performed per Turtle <a class="sectionRef" href="https://www.w3.org/TR/turtle/#sec-iri-references">Section 6.3</a>.</td>
             </tr>
@@ -6028,7 +6028,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
             </tr>
             <tr id="handle-PNAME_NS2" class="params">
               <td></td>
-              <td> returns: <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">      IRI </a></td>
+              <td> returns: <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">      IRI </a></td>
               <td></td>
               <td>When used elsewhere, the <code>iri</code> is the value in the <a href="#dfn-prefixes-map" class="internalDFN" data-link-type="dfn">prefixes map</a> corresponding to the first argument of the rule.</td>
             </tr>
@@ -6043,7 +6043,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
             </tr>
             <tr id="handle-PNAME_LN" class="params">
               <td></td>
-              <td>returns: <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">      IRI         </a></td>
+              <td>returns: <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">      IRI         </a></td>
               <td></td>
               <td>A potentially empty <a href="#dfn-prefixes-map" class="internalDFN" data-link-type="dfn">prefix</a> is identified by the first token, <code>PNAME_NS</code>. The <a href="#dfn-prefixes-map" class="internalDFN" data-link-type="dfn">prefixes map</a> <em class="rfc2119"><em class="rfc2119" title="MUST"><em class="rfc2119" title="MUST">MUST</em></em>
                 </em> have a corresponding <code>namespace</code>. The unicode string of the IRI is formed by unescaping the <a href="#reserved">reserved characters</a> in the second argument, <code>PN_LOCAL</code>, and concatenating this onto the <code>namespace</code>.</td>
@@ -6059,7 +6059,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
             </tr>
             <tr id="handle-ATPNAME_NS" class="params">
               <td></td>
-              <td> returns: <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">      IRI </a></td>
+              <td> returns: <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">      IRI </a></td>
               <td></td>
               <td>The <code>iri</code> is the value in the <a href="#dfn-prefixes-map" class="internalDFN" data-link-type="dfn">prefixes map</a> corresponding to the second token of the rule.</td>
             </tr>
@@ -6074,7 +6074,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
             </tr>
             <tr id="handle-ATPNAME_LN" class="params">
               <td></td>
-              <td>returns: <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">      IRI         </a></td>
+              <td>returns: <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">      IRI         </a></td>
               <td></td>
               <td>A potentially empty <a href="#dfn-prefixes-map" class="internalDFN" data-link-type="dfn">prefix</a> is identified by the second token, <code>PNAME_NS</code>. The <a href="#dfn-prefixes-map" class="internalDFN" data-link-type="dfn">prefixes map</a> <em class="rfc2119"><em class="rfc2119" title="MUST"><em class="rfc2119" title="MUST">MUST</em></em>
                 </em> have a corresponding <code>namespace</code>. The unicode string of the IRI is formed by unescaping the <a href="#reserved">reserved characters</a> in the third token, <code>PN_LOCAL</code>, and concatenating this onto the <code>namespace</code>.</td>
@@ -6118,9 +6118,9 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
             </tr>
             <tr id="handle-BLANK_NODE_LABEL" class="params">
               <td></td>
-              <td>returns: <a href="#dfn-bnode" class="internalDFN" data-link-type="dfn">BNode</a></td>
+              <td>returns: <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#blank-node">BNode</a></td>
               <td></td>
-              <td>The characters following the "<code>_:</code>" form a <a href="#dfn-blank-node-identifier" class="internalDFN" data-link-type="dfn">blank node identifier</a>. This corresponds to any <a href="#dfn-blank-node" class="internalDFN" data-link-type="dfn">blank node</a> in the input dataset that had the same label.</td>
+              <td>The characters following the "<code>_:</code>" form a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node-identifier">blank node identifier</a>. This corresponds to any <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node">blank node</a> in the input dataset that had the same label.</td>
             </tr>
           </tbody>
 
@@ -6133,9 +6133,9 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
             </tr>
             <tr id="handle-LANGTAG" class="params">
               <td></td>
-              <td>returns: <a href="#dfn-language-tag" class="internalDFN" data-link-type="dfn">language tag</a></td>
+              <td>returns: <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tag">language tag</a></td>
               <td></td>
-              <td>The characters following the <code>@</code> form the unicode string of the <a href="#dfn-language-tag" class="internalDFN" data-link-type="dfn">language tag</a>.</td>
+              <td>The characters following the <code>@</code> form the unicode string of the <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tag">language tag</a>.</td>
             </tr>
           </tbody>
 
@@ -6148,7 +6148,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
             </tr>
             <tr id="handle-INTEGER" class="params">
               <td></td>
-              <td>returns: <a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">            literal     </a></td>
+              <td>returns: <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">            literal     </a></td>
               <td></td>
               <td>The literal has a lexical form of the input string, and a datatype of <code>xsd:integer</code>.</td>
             </tr>
@@ -6163,7 +6163,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
             </tr>
             <tr id="handle-DECIMAL" class="params">
               <td></td>
-              <td>returns: <a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">            literal     </a></td>
+              <td>returns: <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">            literal     </a></td>
               <td></td>
               <td>The literal has a lexical form of the input string, and a datatype of <code>xsd:double</code>.</td>
             </tr>
@@ -6178,7 +6178,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
             </tr>
             <tr id="handle-DOUBLE" class="params">
               <td></td>
-              <td>returns: <a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">            literal     </a></td>
+              <td>returns: <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">            literal     </a></td>
               <td></td>
               <td>The literal has a lexical form of the input string, and a datatype of <code>xsd:double</code>.</td>
             </tr>
@@ -6264,7 +6264,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
               <td></td>
               <td>returns: <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-lexical-form">                         lexical form</a></td>
               <td></td>
-              <td>The characters between the outermost "'"s are taken, with <a href="https://www.w3.org/TR/turtle/#numeric">numeric</a> and <a href="https://www.w3.org/TR/turtle/#string">string</a> escape sequences unescaped, to form the unicode string of a lexical form. The trailing <span class="prod"><a class="grammarRef" href="#term-LANGTAG">LANGTAG</a></span> is used to create a <a href="#dfn-language-tagged-strings" class="internalDFN" data-link-type="dfn">language-tagged string</a>.</td>
+              <td>The characters between the outermost "'"s are taken, with <a href="https://www.w3.org/TR/turtle/#numeric">numeric</a> and <a href="https://www.w3.org/TR/turtle/#string">string</a> escape sequences unescaped, to form the unicode string of a lexical form. The trailing <span class="prod"><a class="grammarRef" href="#term-LANGTAG">LANGTAG</a></span> is used to create a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tagged-string">language-tagged string</a>.</td>
             </tr>
           </tbody>
 
@@ -6279,7 +6279,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
               <td></td>
               <td>returns: <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-lexical-form">                         lexical form</a></td>
               <td></td>
-              <td>The characters between the outermost '"'s are taken, with <a href="https://www.w3.org/TR/turtle/#numeric">numeric</a> and <a href="https://www.w3.org/TR/turtle/#string">string</a> escape sequences unescaped, to form the unicode string of a lexical form. The trailing <span class="prod"><a class="grammarRef" href="#term-LANGTAG">LANGTAG</a></span> is used to create a <a href="#dfn-language-tagged-strings" class="internalDFN" data-link-type="dfn">language-tagged string</a>.</td>
+              <td>The characters between the outermost '"'s are taken, with <a href="https://www.w3.org/TR/turtle/#numeric">numeric</a> and <a href="https://www.w3.org/TR/turtle/#string">string</a> escape sequences unescaped, to form the unicode string of a lexical form. The trailing <span class="prod"><a class="grammarRef" href="#term-LANGTAG">LANGTAG</a></span> is used to create a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tagged-string">language-tagged string</a>.</td>
             </tr>
           </tbody>
 
@@ -6294,7 +6294,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
               <td></td>
               <td>returns: <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-lexical-form">                         lexical form</a></td>
               <td></td>
-              <td>The characters between the outermost "'''"s are taken, with <a href="https://www.w3.org/TR/turtle/#numeric">numeric</a> and <a href="https://www.w3.org/TR/turtle/#string">string</a> escape sequences unescaped, to form the unicode string of a lexical form. The trailing <span class="prod"><a class="grammarRef" href="#term-LANGTAG">LANGTAG</a></span> is used to create a <a href="#dfn-language-tagged-strings" class="internalDFN" data-link-type="dfn">language-tagged string</a>.</td>
+              <td>The characters between the outermost "'''"s are taken, with <a href="https://www.w3.org/TR/turtle/#numeric">numeric</a> and <a href="https://www.w3.org/TR/turtle/#string">string</a> escape sequences unescaped, to form the unicode string of a lexical form. The trailing <span class="prod"><a class="grammarRef" href="#term-LANGTAG">LANGTAG</a></span> is used to create a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tagged-string">language-tagged string</a>.</td>
             </tr>
           </tbody>
 
@@ -6309,7 +6309,7 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
               <td></td>
               <td>returns: <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-lexical-form">                         lexical form</a></td>
               <td></td>
-              <td>The characters between the outermost '"""'s are taken, with <a href="https://www.w3.org/TR/turtle/#numeric">numeric</a> and <a href="https://www.w3.org/TR/turtle/#string">string</a> escape sequences unescaped, to form the unicode string of a lexical form. The trailing <span class="prod"><a class="grammarRef" href="#term-LANGTAG">LANGTAG</a></span> is used to create a <a href="#dfn-language-tagged-strings" class="internalDFN" data-link-type="dfn">language-tagged string</a>.</td>
+              <td>The characters between the outermost '"""'s are taken, with <a href="https://www.w3.org/TR/turtle/#numeric">numeric</a> and <a href="https://www.w3.org/TR/turtle/#string">string</a> escape sequences unescaped, to form the unicode string of a lexical form. The trailing <span class="prod"><a class="grammarRef" href="#term-LANGTAG">LANGTAG</a></span> is used to create a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tagged-string">language-tagged string</a>.</td>
             </tr>
           </tbody>
 
@@ -6441,9 +6441,9 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
     </h2>
     <p><em>This section is non-normative.</em></p>
 
-    <p>This API provides a clean mechanism that enables developers to determine conformance of <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF Graphs</a> to a ShEx <a href="#dfn-schema" class="internalDFN" data-link-type="dfn">Schema</a>.</p>
+    <p>This API provides a clean mechanism that enables developers to determine conformance of <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF Graphs</a> to a ShEx <a href="#dfn-schema" class="internalDFN" data-link-type="dfn">Schema</a>.</p>
 
-    <p>The JSON-LD API uses <a href="#dfn-promise" class="internalDFN" data-link-type="dfn">Promises</a> to represent the result of the various asynchronous operations.
+    <p>The JSON-LD API uses <a data-link-type="dfn" href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-promise-objects">Promises</a> to represent the result of the various asynchronous operations.
       <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-promise-objects">Promises</a> are defined in [<cite><a class="bibref" href="#bib-ECMASCRIPT-6.0">ECMASCRIPT-6.0</a></cite>]. General use within specifications can be found in [<cite><a class="bibref" href="#bib-promises-guide">promises-guide</a></cite>].</p>
 
     <section class="informative" id="the-shexprocessor-interface" typeof="bibo:Chapter" resource="#the-shexprocessor-interface" property="bibo:hasPart">
@@ -6453,9 +6453,9 @@ PREFIX ex: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">
 
       <p>The <a href="#dom-shexprocessor" class="internalDFN" data-link-type="dfn"><code>ShExProcessor</code></a> interface is the high-level programming structure that developers use to access the JSON-LD transformation methods.</p>
 
-      <p>The <a href="#dom-shexprocessor" class="internalDFN" data-link-type="dfn"><code>ShExProcessor</code></a> interface is the high-level programming structure that developers use to determine conformance of <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF Graphs</a> to a ShEx <a href="#dfn-schema" class="internalDFN" data-link-type="dfn">Schema</a>.</p>
+      <p>The <a href="#dom-shexprocessor" class="internalDFN" data-link-type="dfn"><code>ShExProcessor</code></a> interface is the high-level programming structure that developers use to determine conformance of <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF Graphs</a> to a ShEx <a href="#dfn-schema" class="internalDFN" data-link-type="dfn">Schema</a>.</p>
 
-      <p>It is important to highlight that implementations do not modify the input parameters. If an error is detected, the <a href="#dfn-promise" class="internalDFN" data-link-type="dfn">Promise</a> is rejected passing a <a href="#dom-shexerror" class="internalDFN" data-link-type="dfn"><code>ShExError</code></a> with the corresponding error
+      <p>It is important to highlight that implementations do not modify the input parameters. If an error is detected, the <a data-link-type="dfn" href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-promise-objects">Promise</a> is rejected passing a <a href="#dom-shexerror" class="internalDFN" data-link-type="dfn"><code>ShExError</code></a> with the corresponding error
         <a data-link-for="ShExError" href="#dom-shexerror-code" class="internalDFN" data-link-type="dfn"><code>code</code></a>.</p>
 
       <pre class="def idl"><span class="idlInterface" id="idl-def-shexprocessor" data-idl="" data-title="ShExProcessor">[<span class="idlCtor"><span class="extAttrName"><a href="https://www.w3.org/TR/WebIDL-1/#Constructor">Constructor</a></span></span>]
@@ -6474,28 +6474,28 @@ interface <span class="idlInterfaceID"><a data-lt="ShExProcessor" href="#dom-she
           <a href="#validation-requirement" class="sectionRef sec-ref">section <span class="secno">5.6.1</span> <span class="sec-title">Schema Validation Requirement</span></a>.
 
           <ol class="algorithm">
-            <li>Create a new <a href="#dfn-promise" class="internalDFN" data-link-type="dfn">Promise</a> <em>promise</em> and return it. The following steps are then executed asynchronously.</li>
-            <li>If <a data-lt="ShExProcessor.validate.schema" href="#dfn-shexprocessor.validate.schema" class="internalDFN" data-link-type="dfn">validate.schema</a> has the form of an <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a>, set <em>schema</em> to the result of dereferencing the IRI, treating the result as <a href="#dfn-shexc" class="internalDFN" data-link-type="dfn">ShExC</a>, <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a>, or some other RDF serialization, depending on the content-type of the result, and transforming into the <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a> abstract syntax for processing.</li>
+            <li>Create a new <a data-link-type="dfn" href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-promise-objects">Promise</a> <em>promise</em> and return it. The following steps are then executed asynchronously.</li>
+            <li>If <a data-lt="ShExProcessor.validate.schema" href="#dfn-shexprocessor.validate.schema" class="internalDFN" data-link-type="dfn">validate.schema</a> has the form of an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a>, set <em>schema</em> to the result of dereferencing the IRI, treating the result as <a href="#dfn-shexc" class="internalDFN" data-link-type="dfn">ShExC</a>, <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a>, or some other RDF serialization, depending on the content-type of the result, and transforming into the <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a> abstract syntax for processing.</li>
             <li>Otherwise, if a <a href="https://www.w3.org/TR/WebIDL-1/#idl-USVString">USVString</a>, <a data-lt="ShExProcessor.validate.schema" href="#dfn-shexprocessor.validate.schema" class="internalDFN" data-link-type="dfn">validate.schema</a> is treated as a string, and parsed into the <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a> abstract syntax, using
               <a data-link-for="ShExOptions" href="#dom-shexoptions-format" class="internalDFN" data-link-type="dfn"><code>format</code></a> as a hint to determine the content-type.
             </li>
-            <li>Otherwise, if an <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF Graph</a>, <a href="#dfn-schema" class="internalDFN" data-link-type="dfn">schema</a> is transforming into the <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a> abstract syntax for processing.</li>
+            <li>Otherwise, if an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF Graph</a>, <a href="#dfn-schema" class="internalDFN" data-link-type="dfn">schema</a> is transforming into the <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a> abstract syntax for processing.</li>
             <li>If <a data-lt="ShExProcessor.validate.schema" href="#dfn-shexprocessor.validate.schema" class="internalDFN" data-link-type="dfn">validate.schema</a> is parsed as <a href="#dfn-shexc" class="internalDFN" data-link-type="dfn">ShExC</a>, and a syntax error is found, reject <em>promise</em> passing <a data-link-for="ShExErrorCode" href="#dom-shexerrorcode-syntax error" class="internalDFN" data-link-type="dfn"><code>syntax error</code></a>.</li>
             <li>If a transformation to the <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a> abstract syntax does not result in valid ShExJ, reject <em>promise</em>, passing <a data-link-for="ShExErrorCode" href="#dom-shexerrorcode-invalid schema" class="internalDFN" data-link-type="dfn"><code>invalid schema</code></a>.</li>
-            <li>If <a data-lt="ShExProcessor.validate.graph" href="#dfn-shexprocessor.validate.graph" class="internalDFN" data-link-type="dfn">validate.graph</a> has the form of an <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a>, set <em>graph</em> to the result of dereferencing the IRI, treating the result an <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF Graph</a> serialization, depending on the content-type of the result. Otherwise, <a data-lt="ShExProcessor.validate.graph" href="#dfn-shexprocessor.validate.graph" class="internalDFN" data-link-type="dfn">validate.graph</a> either is an <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF Graph</a>, or a processor should use other means to transform it into an <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF Graph</a>.</li>
+            <li>If <a data-lt="ShExProcessor.validate.graph" href="#dfn-shexprocessor.validate.graph" class="internalDFN" data-link-type="dfn">validate.graph</a> has the form of an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a>, set <em>graph</em> to the result of dereferencing the IRI, treating the result an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF Graph</a> serialization, depending on the content-type of the result. Otherwise, <a data-lt="ShExProcessor.validate.graph" href="#dfn-shexprocessor.validate.graph" class="internalDFN" data-link-type="dfn">validate.graph</a> either is an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF Graph</a>, or a processor should use other means to transform it into an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF Graph</a>.</li>
             <li>Process <em>schema</em> and <em>graph</em> according to the requirements in
-              <a href="#validation-requirement" class="sectionRef sec-ref">section <span class="secno">5.6.1</span> <span class="sec-title">Schema Validation Requirement</span></a>, creating <span class="math">shapeResults</span>, a <a href="#dom-shaperesults" class="internalDFN" data-link-type="dfn"><code>ShapeResults</code></a> dictionary based on a copy of <a data-lt="ShExProcessor.validate.shapeMap" href="#dfn-shexprocessor.validate.shapemap" class="internalDFN" data-link-type="dfn">validate.shapeMap</a> with entries added, as necessary, for each focus node <span class="math">f<sub>i</sub></span> in <a data-link-for="ShExOptions" href="#dom-shexoptions-focusnodes" class="internalDFN" data-link-type="dfn"><code>focusNodes</code></a> associated with <code>http://www.w3.org/ns/shex#Start</code> as a <a href="#dfn-shapeexprlabel" class="internalDFN" data-link-type="dfn">shapeExprLabel</a>, a <a href="#dfn-bool" class="internalDFN" data-link-type="dfn">BOOL</a> result value, depending on if the <a href="#dfn-node" class="internalDFN" data-link-type="dfn">node</a> conforms with the referenced <a data-link-for="" data-lt="shape" href="#dfn-shape" class="internalDFN" data-link-type="dfn">shape(s)</a>, and an optional message, describing details conformance, and <em>promise</em> is fulfilled using <span class="math">shapeResults</span>.</li>
+              <a href="#validation-requirement" class="sectionRef sec-ref">section <span class="secno">5.6.1</span> <span class="sec-title">Schema Validation Requirement</span></a>, creating <span class="math">shapeResults</span>, a <a href="#dom-shaperesults" class="internalDFN" data-link-type="dfn"><code>ShapeResults</code></a> dictionary based on a copy of <a data-lt="ShExProcessor.validate.shapeMap" href="#dfn-shexprocessor.validate.shapemap" class="internalDFN" data-link-type="dfn">validate.shapeMap</a> with entries added, as necessary, for each focus node <span class="math">f<sub>i</sub></span> in <a data-link-for="ShExOptions" href="#dom-shexoptions-focusnodes" class="internalDFN" data-link-type="dfn"><code>focusNodes</code></a> associated with <code>http://www.w3.org/ns/shex#Start</code> as a <a href="#dfn-shapeexprlabel" class="internalDFN" data-link-type="dfn">shapeExprLabel</a>, a <a href="#dfn-bool" class="internalDFN" data-link-type="dfn">BOOL</a> result value, depending on if the <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">node</a> conforms with the referenced <a data-link-for="" data-lt="shape" href="#dfn-shape" class="internalDFN" data-link-type="dfn">shape(s)</a>, and an optional message, describing details conformance, and <em>promise</em> is fulfilled using <span class="math">shapeResults</span>.</li>
             <li>If <em>graph</em> is found not to <a href="#dfn-conform" class="internalDFN" data-link-type="dfn">conform</a> using
               <em>schema</em> and <a data-lt="ShExProcessor.validate.shapeMap" href="#dfn-shexprocessor.validate.shapemap" class="internalDFN" data-link-type="dfn">validate.shapeMap</a>, reject <em>promise</em>, passing <a data-link-for="ShExErrorCode" href="#dom-shexerrorcode-non-conforming graph" class="internalDFN" data-link-type="dfn"><code>non-conforming graph</code></a> along with <span class="math">shapeResults</span>.</li>
           </ol>
 
           <dl class="parameters">
             <dt><dfn data-lt-nodefault="" data-dfn-type="dfn" id="dfn-shexprocessor.validate.schema">schema</dfn></dt>
-            <dd>The ShEx Schema, either as a dereferencable <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> (URL), an inline data string, or an <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF Graph</a> which is transformed into the <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a> abstract syntax.</dd>
+            <dd>The ShEx Schema, either as a dereferencable <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> (URL), an inline data string, or an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF Graph</a> which is transformed into the <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a> abstract syntax.</dd>
             <dt><dfn data-lt-nodefault="" data-dfn-type="dfn" id="dfn-shexprocessor.validate.graph">graph</dfn></dt>
-            <dd>The graph to check <a href="#dfn-conform" class="internalDFN" data-link-type="dfn">conformance</a> with, either as a a dereferencable <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> to some RDF serialization, or as an accessable <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF Graph</a>.</dd>
+            <dd>The graph to check <a href="#dfn-conform" class="internalDFN" data-link-type="dfn">conformance</a> with, either as a a dereferencable <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> to some RDF serialization, or as an accessable <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF Graph</a>.</dd>
             <dt><dfn data-lt-nodefault="" data-dfn-type="dfn" id="dfn-shexprocessor.validate.shapemap">shapeMap</dfn></dt>
-            <dd>A dictionary mapping a <a href="#dfn-node" class="internalDFN" data-link-type="dfn">node</a> in <a data-lt="ShExProcessor.validate.graph" href="#dfn-shexprocessor.validate.graph" class="internalDFN" data-link-type="dfn">validate.graph</a> to one ore more <a href="#dfn-shapeexprlabel" class="internalDFN" data-link-type="dfn">shapeExprLabel</a>.</dd>
+            <dd>A dictionary mapping a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">node</a> in <a data-lt="ShExProcessor.validate.graph" href="#dfn-shexprocessor.validate.graph" class="internalDFN" data-link-type="dfn">validate.graph</a> to one ore more <a href="#dfn-shapeexprlabel" class="internalDFN" data-link-type="dfn">shapeExprLabel</a>.</dd>
             <dt><dfn data-lt-nodefault="" data-dfn-type="dfn" id="dfn-shexprocessor.validate.options">options</dfn></dt>
             <dd>A set of options to configure the algorithms.</dd>
           </dl>
@@ -6509,7 +6509,7 @@ interface <span class="idlInterfaceID"><a data-lt="ShExProcessor" href="#dom-she
       </h3>
       <p><em>This section is non-normative.</em></p>
 
-      <p>The <dfn data-dfn-for="" data-dfn-type="dfn" id="dom-rdfgraph" data-idl="" data-title="RDFGraph"><code>RDFGraph</code></dfn> type is describe an <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF Graph</a> accessed as described in <a href="#graph-access" class="sectionRef">Graph access</a>.</p>
+      <p>The <dfn data-dfn-for="" data-dfn-type="dfn" id="dom-rdfgraph" data-idl="" data-title="RDFGraph"><code>RDFGraph</code></dfn> type is describe an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF Graph</a> accessed as described in <a href="#graph-access" class="sectionRef">Graph access</a>.</p>
 
       <pre class="def idl"><span class="idlInterface" id="idl-def-rdfgraph" data-idl="" data-title="RDFGraph">interface <span class="idlInterfaceID"><a data-lt="RDFGraph" href="#dom-rdfgraph" class="internalDFN" data-link-type="dfn" data-for=""><code>RDFGraph</code></a></span> {
 <span class="idlMethod" id="idl-def-rdfgraph-bgp()" data-idl="" data-title="bgp" data-dfn-for="rdfgraph">    <span class="idlMethType">void</span> <span class="idlMethName"><a data-lt="bgp" href="#dom-rdfgraph-bgp" class="internalDFN" data-link-type="dfn" data-for="RDFGraph"><code>bgp</code></a></span>();</span>
@@ -6543,7 +6543,7 @@ interface <span class="idlInterfaceID"><a data-lt="ShExProcessor" href="#dom-she
         <dt><dfn data-dfn-for="shexoptions" data-dfn-type="dfn" id="dom-shexoptions-base" data-idl="" data-title="base"><code>base</code></dfn></dt>
         <dd>The base IRI to use when parsing <a data-lt="ShExProcessor.validate.schema" href="#dfn-shexprocessor.validate.schema" class="internalDFN" data-link-type="dfn">validate.schema</a>. If set, this overrides the <a data-lt="ShExProcessor.validate.schema" href="#dfn-shexprocessor.validate.schema" class="internalDFN" data-link-type="dfn">validate.schema</a>'s IRI.</dd>
         <dt><dfn data-dfn-for="shexoptions" data-dfn-type="dfn" id="dom-shexoptions-focusnodes" data-idl="" data-title="focusNodes"><code>focusNodes</code></dfn></dt>
-        <dd>One or more <a href="#dfn-node" class="internalDFN" data-link-type="dfn">nodes</a> in
+        <dd>One or more <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">nodes</a> in
           <a data-lt="ShExProcessor.validate.graph" href="#dfn-shexprocessor.validate.graph" class="internalDFN" data-link-type="dfn">validate.graph</a> which are are checked for <a href="#dfn-conform" class="internalDFN" data-link-type="dfn">conformance</a> against <a href="#dfn-start" class="internalDFN" data-link-type="dfn">start</a>.</dd>
         <dt><dfn data-dfn-for="shexoptions" data-dfn-type="dfn" id="dom-shexoptions-format" data-idl="" data-title="format"><code>format</code></dfn></dt>
         <dd>One of <code>ShExC</code> or <code>ShExJ</code>.</dd>
@@ -6559,9 +6559,9 @@ interface <span class="idlInterfaceID"><a data-lt="ShExProcessor" href="#dom-she
       <p><em>This section is non-normative.</em></p>
 
       <p>The <dfn data-dfn-for="" data-dfn-type="dfn" id="dom-shaperesults" data-idl="" data-title="ShapeResults"><code>ShapeResults</code></dfn> type is used for reporting the result of
-        <a href="#dfn-conform" class="internalDFN" data-link-type="dfn">conformance</a> checking of an <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF Graph</a> against a <a href="#dfn-schema" class="internalDFN" data-link-type="dfn">schema</a>.</p>
+        <a href="#dfn-conform" class="internalDFN" data-link-type="dfn">conformance</a> checking of an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF Graph</a> against a <a href="#dfn-schema" class="internalDFN" data-link-type="dfn">schema</a>.</p>
 
-      <p><a href="#dom-shaperesults" class="internalDFN" data-link-type="dfn"><code>ShapeResults</code></a> is a dictionary mapping a <a href="#dfn-node" class="internalDFN" data-link-type="dfn">node</a> in
+      <p><a href="#dom-shaperesults" class="internalDFN" data-link-type="dfn"><code>ShapeResults</code></a> is a dictionary mapping a <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">node</a> in
         <a data-lt="ShExProcessor.validate.graph" href="#dfn-shexprocessor.validate.graph" class="internalDFN" data-link-type="dfn">validate.graph</a> to a sequence of <dfn data-dfn-for="" data-dfn-type="dfn" id="dom-shaperesult" data-idl="" data-title="ShapeResult"><code>ShapeResult</code></dfn> entries.</p>
 
       <pre class="def idl"><span class="idlTypedef" id="idl-def-shaperesults" data-idl="" data-title="ShapeResults">typedef <span class="idlTypedefType">dictionary</span> <span class="idlTypedefID"><a data-lt="ShapeResults" href="#dom-shaperesults" class="internalDFN" data-link-type="dfn" data-for=""><code>ShapeResults</code></a></span>;</span>
@@ -6574,7 +6574,7 @@ interface <span class="idlInterfaceID"><a data-lt="ShExProcessor" href="#dom-she
 
       <dl>
         <dt><dfn data-dfn-for="shaperesult" data-dfn-type="dfn" id="dom-shaperesult-shape" data-idl="" data-title="shape"><code>shape</code></dfn></dt>
-        <dd>A <a href="#dfn-shapeexprlabel" class="internalDFN" data-link-type="dfn">shapeExprLabel</a> in <a data-lt="ShExProcessor.validate.schema" href="#dfn-shexprocessor.validate.schema" class="internalDFN" data-link-type="dfn">validate.schema</a> against which <a href="#dfn-node" class="internalDFN" data-link-type="dfn">node</a> <a href="#dfn-conform" class="internalDFN" data-link-type="dfn">conformance</a> was checked.</dd>
+        <dd>A <a href="#dfn-shapeexprlabel" class="internalDFN" data-link-type="dfn">shapeExprLabel</a> in <a data-lt="ShExProcessor.validate.schema" href="#dfn-shexprocessor.validate.schema" class="internalDFN" data-link-type="dfn">validate.schema</a> against which <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">node</a> <a href="#dfn-conform" class="internalDFN" data-link-type="dfn">conformance</a> was checked.</dd>
         <dt><dfn data-dfn-for="shaperesult" data-dfn-type="dfn" id="dom-shaperesult-result" data-idl="" data-title="result"><code>result</code></dfn></dt>
         <dd>The result of the <a href="#dfn-conform" class="internalDFN" data-link-type="dfn">conformance</a> check.</dd>
         <dt><dfn data-dfn-for="shaperesult" data-dfn-type="dfn" id="dom-shaperesult-reason" data-idl="" data-title="reason"><code>reason</code></dfn></dt>
@@ -6654,7 +6654,7 @@ interface <span class="idlInterfaceID"><a data-lt="ShExProcessor" href="#dom-she
       <em class="rfc2119" title="MUST">MUST</em> include a <code>@context</code> property referencing <code>http://www.w3.org/ns/shex.jsonld</code>, and <em class="rfc2119" title="MAY">MAY</em> include additional contexts and term definitions. In the absense of a top-level <code>@context</code>, ShEx Processors <em class="rfc2119" title="MUST">MUST</em> act as if a <code>@context</code> property is present with the value <code>http://www.w3.org/ns/shex.jsonld</code>.
     </p>
 
-    <p>A ShExJ document can also be thought of as the serialization of an <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF Graph</a> using the Shape Expression Vocabulary [<cite><a class="bibref" href="#bib-shex-vocab">shex-vocab</a></cite>] which conforms to the shape defined in <a href="#shexr" class="secionRef sec-ref"><span class="secno">C.</span> <span class="sec-title">ShEx Shape</span></a>. Processors <em class="rfc2119" title="MAY">MAY</em> choose to interpret a ShExJ document as an RDF Graph and process using RDF Graph semantics. Processors may also transform arbitrary RDF Graphs conforming to <a href="#shexr" class="secionRef sec-ref"><span class="secno">C.</span> <span class="sec-title">ShEx Shape</span></a> into ShExJ using a mechanism not described within this specification.</p>
+    <p>A ShExJ document can also be thought of as the serialization of an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF Graph</a> using the Shape Expression Vocabulary [<cite><a class="bibref" href="#bib-shex-vocab">shex-vocab</a></cite>] which conforms to the shape defined in <a href="#shexr" class="secionRef sec-ref"><span class="secno">C.</span> <span class="sec-title">ShEx Shape</span></a>. Processors <em class="rfc2119" title="MAY">MAY</em> choose to interpret a ShExJ document as an RDF Graph and process using RDF Graph semantics. Processors may also transform arbitrary RDF Graphs conforming to <a href="#shexr" class="secionRef sec-ref"><span class="secno">C.</span> <span class="sec-title">ShEx Shape</span></a> into ShExJ using a mechanism not described within this specification.</p>
 
     <p>In ShExJ, the unbounded cardinality constraint is <code>-1</code>, rather than <code>"*"</code>.</p>
 
@@ -6692,12 +6692,12 @@ interface <span class="idlInterfaceID"><a data-lt="ShExProcessor" href="#dom-she
           <tr class="obj">
             <th class="obj"><a href="#dfn-nodeconstraint" class="internalDFN" data-link-type="dfn">NodeConstraint</a></th>
             <td>{</td>
-            <td><span class="param">nodeKind</span>:(<span class="literal">"iri"</span> | <span class="literal">"bnode"</span> | <span class="literal">"nonliteral"</span> | <span class="literal">"literal"</span>)? <span class="param">datatype</span>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a>? <a class="nobref internalDFN" href="#dfn-xsfacet" data-link-type="dfn">xsFacet</a>* <span class="param">values</span>:[<a class="nobref internalDFN" href="#dfn-valuesetvalue" data-link-type="dfn">valueSetValue</a>+]? }</td>
+            <td><span class="param">nodeKind</span>:(<span class="literal">"iri"</span> | <span class="literal">"bnode"</span> | <span class="literal">"nonliteral"</span> | <span class="literal">"literal"</span>)? <span class="param">datatype</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a>? <a class="nobref internalDFN" href="#dfn-xsfacet" data-link-type="dfn">xsFacet</a>* <span class="param">values</span>:[<a class="nobref internalDFN" href="#dfn-valuesetvalue" data-link-type="dfn">valueSetValue</a>+]? }</td>
           </tr>
           <tr class="obj">
             <th class="obj"><a href="#dfn-shape" class="internalDFN" data-link-type="dfn">Shape</a></th>
             <td>{</td>
-            <td><span class="param">virtual</span>:<a href="#dfn-bool" class="internalDFN" data-link-type="dfn">BOOL</a>? <span class="param">closed</span>:<a href="#dfn-bool" class="internalDFN" data-link-type="dfn">BOOL</a>? <span class="param">extra</span>:[<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a>+]? <span class="param">expression</span>:<a class="nobref internalDFN" href="#dfn-tripleexpr" data-link-type="dfn">tripleExpr</a>?
+            <td><span class="param">virtual</span>:<a href="#dfn-bool" class="internalDFN" data-link-type="dfn">BOOL</a>? <span class="param">closed</span>:<a href="#dfn-bool" class="internalDFN" data-link-type="dfn">BOOL</a>? <span class="param">extra</span>:[<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a>+]? <span class="param">expression</span>:<a class="nobref internalDFN" href="#dfn-tripleexpr" data-link-type="dfn">tripleExpr</a>?
               <!-- <span class="param">inherit</span>:[<a class="nobref">shapeExprLabel</a>]?--><span class="param">semActs</span>:[<a class="objref internalDFN" href="#dfn-semact" data-link-type="dfn">SemAct</a>+]? }</td>
           </tr>
           <tr class="obj">
@@ -6733,7 +6733,7 @@ interface <span class="idlInterfaceID"><a data-lt="ShExProcessor" href="#dom-she
           <tr class="obj">
             <th class="obj"><a href="#dfn-tripleconstraint" class="internalDFN" data-link-type="dfn">TripleConstraint</a></th>
             <td>{</td>
-            <td><span class="param">id</span>:<a class="nobref internalDFN" href="#dfn-tripleexprlabel" data-link-type="dfn">tripleExprLabel</a>? <span class="param">inverse</span>:<a href="#dfn-bool" class="internalDFN" data-link-type="dfn">BOOL</a>? <a class="param internalDFN" href="#dfn-predicate" data-link-type="dfn">predicate</a>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> <span class="param">valueExpr</span>:<a class="nobref internalDFN" href="#dfn-shapeexpr" data-link-type="dfn">shapeExpr</a>? <span class="param">min</span>:<a href="#dfn-integer" class="internalDFN" data-link-type="dfn">INTEGER</a>? <span class="param">max</span>:<a href="#dfn-integer" class="internalDFN" data-link-type="dfn">INTEGER</a>? <span class="param">semActs</span>:[<a class="objref internalDFN" href="#dfn-semact" data-link-type="dfn">SemAct</a>+]? <span class="param">annotations</span>:[<a class="objref internalDFN" href="#dfn-annotation" data-link-type="dfn">Annotation</a>+]? }</td>
+            <td><span class="param">id</span>:<a class="nobref internalDFN" href="#dfn-tripleexprlabel" data-link-type="dfn">tripleExprLabel</a>? <span class="param">inverse</span>:<a href="#dfn-bool" class="internalDFN" data-link-type="dfn">BOOL</a>? <a class="param" data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> <span class="param">valueExpr</span>:<a class="nobref internalDFN" href="#dfn-shapeexpr" data-link-type="dfn">shapeExpr</a>? <span class="param">min</span>:<a href="#dfn-integer" class="internalDFN" data-link-type="dfn">INTEGER</a>? <span class="param">max</span>:<a href="#dfn-integer" class="internalDFN" data-link-type="dfn">INTEGER</a>? <span class="param">semActs</span>:[<a class="objref internalDFN" href="#dfn-semact" data-link-type="dfn">SemAct</a>+]? <span class="param">annotations</span>:[<a class="objref internalDFN" href="#dfn-annotation" data-link-type="dfn">Annotation</a>+]? }</td>
           </tr>
           <tr class="nob">
             <th class="nob"><a href="#dfn-xsfacet" class="internalDFN" data-link-type="dfn">xsFacet</a></th>
@@ -6763,38 +6763,38 @@ interface <span class="idlInterfaceID"><a data-lt="ShExProcessor" href="#dom-she
           <tr class="nob">
             <th class="nob"><a href="#dfn-objectvalue" class="internalDFN" data-link-type="dfn">objectValue</a></th>
             <td>=</td>
-            <td><a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> | <a class="objref internalDFN" href="#dfn-objectliteral" data-link-type="dfn">ObjectLiteral</a> ;</td>
+            <td><a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> | <a class="objref" data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">ObjectLiteral</a> ;</td>
           </tr>
           <tr class="obj">
             <th class="obj"><a href="#dfn-iristem" class="internalDFN" data-link-type="dfn">IRIStem</a></th>
             <td>{</td>
-            <td><span class="param">stem</span>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> }</td>
+            <td><span class="param">stem</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> }</td>
           </tr>
           <tr class="obj">
             <th class="obj"><a href="#dfn-iristemrange" class="internalDFN" data-link-type="dfn">IRIStemRange</a></th>
             <td>{</td>
-            <td><span class="param">stem</span>:(<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a>|<a class="objref internalDFN" href="#dfn-iristem" data-link-type="dfn">IRIStem</a> +]? }</td>
+            <td><span class="param">stem</span>:(<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a>|<a class="objref internalDFN" href="#dfn-iristem" data-link-type="dfn">IRIStem</a> +]? }</td>
           </tr>
 
           <tr class="obj">
             <th class="obj"><a href="#dfn-literalstem" class="internalDFN" data-link-type="dfn">LiteralStem</a></th>
             <td>{</td>
-            <td><span class="param">stem</span>:<a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">ObjectLiteral</a> }</td>
+            <td><span class="param">stem</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">ObjectLiteral</a> }</td>
           </tr>
           <tr class="obj">
             <th class="obj"><a href="#dfn-literalstemrange" class="internalDFN" data-link-type="dfn">LiteralStemRange</a></th>
             <td>{</td>
-            <td><span class="param">stem</span>:(<a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">ObjectLiteral</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a>|<a class="objref internalDFN" href="#dfn-literalstem" data-link-type="dfn">LiteralStem</a> +]? }</td>
+            <td><span class="param">stem</span>:(<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">ObjectLiteral</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a>|<a class="objref internalDFN" href="#dfn-literalstem" data-link-type="dfn">LiteralStem</a> +]? }</td>
           </tr>
           <tr class="obj">
             <th class="obj"><a href="#dfn-languagestem" class="internalDFN" data-link-type="dfn">LanguageStem</a></th>
             <td>{</td>
-            <td><span class="param">stem</span>:<a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">ObjectLiteral</a> }</td>
+            <td><span class="param">stem</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">ObjectLiteral</a> }</td>
           </tr>
           <tr class="obj">
             <th class="obj"><a href="#dfn-languagestemrange" class="internalDFN" data-link-type="dfn">LanguageStemRange</a></th>
             <td>{</td>
-            <td><span class="param">stem</span>:(<a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">ObjectLiteral</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a>|<a class="objref internalDFN" href="#dfn-languagestem" data-link-type="dfn">LanguageStem</a> +]? }</td>
+            <td><span class="param">stem</span>:(<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">ObjectLiteral</a> | <a class="objref internalDFN" href="#dfn-wildcard" data-link-type="dfn">Wildcard</a>) <span class="param">exclusions</span>:[<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a>|<a class="objref internalDFN" href="#dfn-languagestem" data-link-type="dfn">LanguageStem</a> +]? }</td>
           </tr>
           <tr class="obj">
             <th class="obj"><a href="#dfn-wildcard" class="internalDFN" data-link-type="dfn">Wildcard</a></th>
@@ -6805,22 +6805,22 @@ interface <span class="idlInterfaceID"><a data-lt="ShExProcessor" href="#dom-she
           <tr class="obj">
             <th class="obj"><a href="#dfn-semact" class="internalDFN" data-link-type="dfn">SemAct</a></th>
             <td>{</td>
-            <td><span class="param">name</span>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> <span class="param">code</span>:<a href="#dfn-string" class="internalDFN" data-link-type="dfn">STRING</a>? }</td>
+            <td><span class="param">name</span>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> <span class="param">code</span>:<a href="#dfn-string" class="internalDFN" data-link-type="dfn">STRING</a>? }</td>
           </tr>
           <tr class="obj">
             <th class="obj"><a href="#dfn-annotation" class="internalDFN" data-link-type="dfn">Annotation</a></th>
             <td>{</td>
-            <td><a class="param internalDFN" href="#dfn-predicate" data-link-type="dfn">predicate</a>:<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> <span class="param">object</span>:<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a> }</td>
+            <td><a class="param" data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a>:<a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> <span class="param">object</span>:<a class="nobref internalDFN" href="#dfn-objectvalue" data-link-type="dfn">objectValue</a> }</td>
           </tr>
           <tr class="nob">
             <th class="nob"><a href="#dfn-shapeexprlabel" class="internalDFN" data-link-type="dfn">shapeExprLabel</a></th>
             <td>=</td>
-            <td><a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> | <a href="#dfn-bnode" class="internalDFN" data-link-type="dfn">BNODE</a> ;</td>
+            <td><a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> | <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#blank-node">BNODE</a> ;</td>
           </tr>
           <tr class="nob">
             <th class="nob"><a href="#dfn-tripleexprlabel" class="internalDFN" data-link-type="dfn">tripleExprLabel</a></th>
             <td>=</td>
-            <td><a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> | <a href="#dfn-bnode" class="internalDFN" data-link-type="dfn">BNODE</a> ;</td>
+            <td><a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> | <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#blank-node">BNODE</a> ;</td>
           </tr>
           <tr class="nob">
             <th class="nob"><a href="#dfn-numericliteral" class="internalDFN" data-link-type="dfn">numericLiteral</a></th>
@@ -6828,7 +6828,7 @@ interface <span class="idlInterfaceID"><a data-lt="ShExProcessor" href="#dom-she
             <td><a href="#dfn-integer" class="internalDFN" data-link-type="dfn">INTEGER</a> | <a href="#dfn-decimal" class="internalDFN" data-link-type="dfn">DECIMAL</a> | <a href="#dfn-double" class="internalDFN" data-link-type="dfn">DOUBLE</a> ;</td>
           </tr>
           <tr class="obj">
-            <th class="obj"><a href="#dfn-objectliteral" class="internalDFN" data-link-type="dfn">ObjectLiteral</a></th>
+            <th class="obj"><a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-literal">ObjectLiteral</a></th>
             <td>{</td>
             <td><span class="param">value</span>:<a href="#dfn-string" class="internalDFN" data-link-type="dfn">STRING</a> <span class="param">language</span>:<a href="#dfn-string" class="internalDFN" data-link-type="dfn">STRING</a>? <span class="param">type</span>:<a href="#dfn-string" class="internalDFN" data-link-type="dfn">STRING</a>? }</td>
           </tr>
@@ -6844,12 +6844,12 @@ interface <span class="idlInterfaceID"><a data-lt="ShExProcessor" href="#dom-she
             <td><a class="grammarRef" href="#term-PN_PREFIX">PN_PREFIX</a></td>
           </tr>
           <tr class="trm">
-            <th class="trm"><a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a></th>
+            <th class="trm"><a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a></th>
             <td>:</td>
             <td>( [^#0000- &lt;&gt;\"{}|^`\\] | <span class="prod"><a class="grammarRef" href="#term-UCHAR">UCHAR</a></span> )* <span class="comment"># (<a class="grammarRef" href="#term-IRIREF">IRIREF</a> without the enclosing "&lt;&gt;"s)</span></td>
           </tr>
           <tr class="trm">
-            <th class="trm"><a href="#dfn-bnode" class="internalDFN" data-link-type="dfn">BNODE</a></th>
+            <th class="trm"><a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#blank-node">BNODE</a></th>
             <td>:</td>
             <td><a class="grammarRef" href="#term-BLANK_NODE_LABEL">BLANK_NODE_LABEL</a></td>
           </tr>
@@ -6881,7 +6881,7 @@ interface <span class="idlInterfaceID"><a data-lt="ShExProcessor" href="#dom-she
           <tr class="trm">
             <th class="trm"><dfn data-dfn-type="dfn" id="dfn-datatype_string">DATATYPE_STRING</dfn></th>
             <td>:</td>
-            <td>'"' .* '"' ( [^#0000- &lt;&gt;\"{}|^`\\] | <span class="prod"><a class="grammarRef" href="#term-UCHAR">UCHAR</a></span> )* <span class="comment"># a JSON string starting with U+0022 ("), followed by the lexical form of the string, then U+0022 U+005E U+005E ("^^) and the <a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a> of the datatype</span></td>
+            <td>'"' .* '"' ( [^#0000- &lt;&gt;\"{}|^`\\] | <span class="prod"><a class="grammarRef" href="#term-UCHAR">UCHAR</a></span> )* <span class="comment"># a JSON string starting with U+0022 ("), followed by the lexical form of the string, then U+0022 U+005E U+005E ("^^) and the <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-iri">IRI</a> of the datatype</span></td>
           </tr>
           <tr class="trm">
             <th class="trm"><dfn data-dfn-type="dfn" id="dfn-lang_string">LANG_STRING</dfn></th>
@@ -6903,7 +6903,7 @@ interface <span class="idlInterfaceID"><a data-lt="ShExProcessor" href="#dom-she
     </h2>
     <p><em>This section is non-normative.</em></p>
 
-    <p>The following schema describes the form of an <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF Graph</a> conforming to a Shape Expression <a href="#dfn-schema" class="internalDFN" data-link-type="dfn">schema</a>, consisten with the description of <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a>.</p>
+    <p>The following schema describes the form of an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF Graph</a> conforming to a Shape Expression <a href="#dfn-schema" class="internalDFN" data-link-type="dfn">schema</a>, consisten with the description of <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a>.</p>
 
     <div class="example">
       <div class="example-title marker"><span>Example 1</span><span style="text-transform: none">: ShExR Shape Expression Schema</span></div>
@@ -6938,7 +6938,7 @@ start=@<span class="hljs-tag">&lt;<span class="hljs-name">Schema</span>&gt;</spa
 }
 
 <span class="hljs-tag">&lt;<span class="hljs-name">NodeConstraint</span>&gt;</span> CLOSED {
-  a [sx:NodeConstraint] ;
+  a [sx:NodeConstraint] ; 
   sx:nodeKind [sx:iri sx:bnode sx:literal sx:nonliteral]?;
   sx:datatype IRI ? ;
   &amp;<span class="hljs-tag">&lt;<span class="hljs-name">xsFacets</span>&gt;</span>  ;
@@ -6989,25 +6989,13 @@ start=@<span class="hljs-tag">&lt;<span class="hljs-name">Schema</span>&gt;</spa
 }
 <span class="hljs-tag">&lt;<span class="hljs-name">numericLiteral</span>&gt;</span> xsd:integer OR xsd:decimal OR xsd:double
 
-<span class="hljs-tag">&lt;<span class="hljs-name">valueSetValue</span>&gt;</span> @<span class="hljs-tag">&lt;<span class="hljs-name">objectValue</span>&gt;</span> OR @<span class="hljs-tag">&lt;<span class="hljs-name">IriStem</span>&gt;</span> OR @<span class="hljs-tag">&lt;<span class="hljs-name">IriStemRange</span>&gt;</span> OR @<span class="hljs-tag">&lt;<span class="hljs-name">LiteralStem</span>&gt;</span> OR @<span class="hljs-tag">&lt;<span class="hljs-name">LiteralStemRange</span>&gt;</span> OR @<span class="hljs-tag">&lt;<span class="hljs-name">LanguageStem</span>&gt;</span> OR @<span class="hljs-tag">&lt;<span class="hljs-name">LanguageStemRange</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">valueSetValue</span>&gt;</span> @<span class="hljs-tag">&lt;<span class="hljs-name">objectValue</span>&gt;</span> OR @<span class="hljs-tag">&lt;<span class="hljs-name">Stem</span>&gt;</span> OR @<span class="hljs-tag">&lt;<span class="hljs-name">StemRange</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">objectValue</span>&gt;</span> IRI OR LITERAL # rdf:langString breaks on Annotation.object
-<span class="hljs-tag">&lt;<span class="hljs-name">IriStem</span>&gt;</span> CLOSED { a [sx:IriStem]; sx:stem xsd:anyUri }
-<span class="hljs-tag">&lt;<span class="hljs-name">IriStemRange</span>&gt;</span> CLOSED {
-  a [sx:IriStemRange];
+<span class="hljs-tag">&lt;<span class="hljs-name">Stem</span>&gt;</span> CLOSED { a [sx:Stem]; sx:stem xsd:anyUri }
+<span class="hljs-tag">&lt;<span class="hljs-name">StemRange</span>&gt;</span> CLOSED {
+  a [sx:StemRange];
   sx:stem xsd:anyUri OR @<span class="hljs-tag">&lt;<span class="hljs-name">Wildcard</span>&gt;</span>;
-  sx:exclusion @<span class="hljs-tag">&lt;<span class="hljs-name">objectValue</span>&gt;</span> OR @<span class="hljs-tag">&lt;<span class="hljs-name">IriStem</span>&gt;</span>*
-}
-<span class="hljs-tag">&lt;<span class="hljs-name">LiteralStem</span>&gt;</span> CLOSED { a [sx:LiteralStem]; sx:stem xsd:string }
-<span class="hljs-tag">&lt;<span class="hljs-name">LiteralStemRange</span>&gt;</span> CLOSED {
-  a [sx:LiteralStemRange];
-  sx:stem xsd:string OR @<span class="hljs-tag">&lt;<span class="hljs-name">Wildcard</span>&gt;</span>;
-  sx:exclusion @<span class="hljs-tag">&lt;<span class="hljs-name">objectValue</span>&gt;</span> OR @<span class="hljs-tag">&lt;<span class="hljs-name">LiteralStem</span>&gt;</span>*
-}
-<span class="hljs-tag">&lt;<span class="hljs-name">LanguageStem</span>&gt;</span> CLOSED { a [sx:LanguageStem]; sx:stem xsd:string }
-<span class="hljs-tag">&lt;<span class="hljs-name">LanguageStemRange</span>&gt;</span> CLOSED {
-  a [sx:LanguageStemRange];
-  sx:stem xsd:string OR @<span class="hljs-tag">&lt;<span class="hljs-name">Wildcard</span>&gt;</span>;
-  sx:exclusion @<span class="hljs-tag">&lt;<span class="hljs-name">objectValue</span>&gt;</span> OR @<span class="hljs-tag">&lt;<span class="hljs-name">LanguageStem</span>&gt;</span>*
+  sx:exclusion @<span class="hljs-tag">&lt;<span class="hljs-name">objectValue</span>&gt;</span> OR @<span class="hljs-tag">&lt;<span class="hljs-name">Stem</span>&gt;</span>*
 }
 <span class="hljs-tag">&lt;<span class="hljs-name">Wildcard</span>&gt;</span> BNODE CLOSED {
   a [sx:Wildcard]
@@ -7138,7 +7126,7 @@ start=@<span class="hljs-tag">&lt;<span class="hljs-name">Schema</span>&gt;</spa
       <div class="issue-title marker" aria-level="3" role="heading" id="h-issue1"><span>Issue 1</span></div>
       <p class="">Consider requirements from <a href="https://w3ctag.github.io/security-questionnaire/">Self-Review Questionnaire: Security and Privacy</a>.</p>
     </div>
-    <p>Since <a href="#dfn-shex" class="internalDFN" data-link-type="dfn">ShEx</a> is intended to be a pure data exchange format for validating <a href="#dfn-graph" class="internalDFN" data-link-type="dfn">RDF graphs</a>, the <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a> serialization <em class="rfc2119" title="SHOULD NOT">SHOULD NOT</em> be passed through a code execution mechanism such as JavaScript's <code>eval()</code> function to be parsed. An (invalid) document may contain code that, when executed, could lead to unexpected side effects compromising the security of a system.</p>
+    <p>Since <a href="#dfn-shex" class="internalDFN" data-link-type="dfn">ShEx</a> is intended to be a pure data exchange format for validating <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF graphs</a>, the <a href="#dfn-shexj" class="internalDFN" data-link-type="dfn">ShExJ</a> serialization <em class="rfc2119" title="SHOULD NOT">SHOULD NOT</em> be passed through a code execution mechanism such as JavaScript's <code>eval()</code> function to be parsed. An (invalid) document may contain code that, when executed, could lead to unexpected side effects compromising the security of a system.</p>
     <p>See also, <a href="#iana-considerations" class="sectionRef sec-ref">section <span class="secno">D.</span> <span class="sec-title">IANA Considerations</span></a></p>
   </section>
 
