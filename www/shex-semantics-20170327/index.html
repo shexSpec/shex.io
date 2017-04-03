@@ -6938,7 +6938,7 @@ start=@<span class="hljs-tag">&lt;<span class="hljs-name">Schema</span>&gt;</spa
 }
 
 <span class="hljs-tag">&lt;<span class="hljs-name">NodeConstraint</span>&gt;</span> CLOSED {
-  a [sx:NodeConstraint] ; 
+  a [sx:NodeConstraint] ;
   sx:nodeKind [sx:iri sx:bnode sx:literal sx:nonliteral]?;
   sx:datatype IRI ? ;
   &amp;<span class="hljs-tag">&lt;<span class="hljs-name">xsFacets</span>&gt;</span>  ;
@@ -6999,16 +6999,16 @@ start=@<span class="hljs-tag">&lt;<span class="hljs-name">Schema</span>&gt;</spa
   sx:stem xsd:anyUri OR @<span class="hljs-tag">&lt;<span class="hljs-name">Wildcard</span>&gt;</span>;
   sx:exclusion @<span class="hljs-tag">&lt;<span class="hljs-name">objectValue</span>&gt;</span> OR @<span class="hljs-tag">&lt;<span class="hljs-name">IriStem</span>&gt;</span>*
 }
-<span class="hljs-tag">&lt;<span class="hljs-name">LiteralStem</span>&gt;</span> CLOSED { a [sx:LiteralStem]; sx:stem xsd:anyUri }
+<span class="hljs-tag">&lt;<span class="hljs-name">LiteralStem</span>&gt;</span> CLOSED { a [sx:LiteralStem]; sx:stem xsd:string }
 <span class="hljs-tag">&lt;<span class="hljs-name">LiteralStemRange</span>&gt;</span> CLOSED {
   a [sx:LiteralStemRange];
-  sx:stem xsd:anyUri OR @<span class="hljs-tag">&lt;<span class="hljs-name">Wildcard</span>&gt;</span>;
+  sx:stem xsd:string OR @<span class="hljs-tag">&lt;<span class="hljs-name">Wildcard</span>&gt;</span>;
   sx:exclusion @<span class="hljs-tag">&lt;<span class="hljs-name">objectValue</span>&gt;</span> OR @<span class="hljs-tag">&lt;<span class="hljs-name">LiteralStem</span>&gt;</span>*
 }
-<span class="hljs-tag">&lt;<span class="hljs-name">LanguageStem</span>&gt;</span> CLOSED { a [sx:LanguageStem]; sx:stem xsd:anyUri }
+<span class="hljs-tag">&lt;<span class="hljs-name">LanguageStem</span>&gt;</span> CLOSED { a [sx:LanguageStem]; sx:stem xsd:string }
 <span class="hljs-tag">&lt;<span class="hljs-name">LanguageStemRange</span>&gt;</span> CLOSED {
   a [sx:LanguageStemRange];
-  sx:stem xsd:anyUri OR @<span class="hljs-tag">&lt;<span class="hljs-name">Wildcard</span>&gt;</span>;
+  sx:stem xsd:string OR @<span class="hljs-tag">&lt;<span class="hljs-name">Wildcard</span>&gt;</span>;
   sx:exclusion @<span class="hljs-tag">&lt;<span class="hljs-name">objectValue</span>&gt;</span> OR @<span class="hljs-tag">&lt;<span class="hljs-name">LanguageStem</span>&gt;</span>*
 }
 <span class="hljs-tag">&lt;<span class="hljs-name">Wildcard</span>&gt;</span> BNODE CLOSED {
