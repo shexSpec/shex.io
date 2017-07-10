@@ -20,5 +20,9 @@ RewriteRule    ^spec$             shex-semantics/ [R=301,L]
 RewriteRule    ^spec/$            shex-semantics/ [R=301,L]
 RewriteRule    ^spec/(.*)$        shex-semantics/$1  [P,L]
 
+RewriteRule    ^shape-map$        http://shexspec.github.io/shape-map/ [R=301,L]
+RewriteRule    ^shape-map/$       http://shexspec.github.io/shape-map/ [R=301,L]
+RewriteRule    ^shape-map/(.*)$   http://shexspec.github.io/shape-map/$1 [R=301,L]
+
 # # ProxyPassReverse / http://shexspec.github.io
 
