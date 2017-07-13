@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html typeof="bibo:Document " prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta property="dc:language" content="en" lang="">
+    <style>
+        /*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+        .hljs {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            color: #333;
+            background: #f8f8f8;
+        }
+
+        .hljs-comment,
+        .hljs-quote {
+            color: #998;
+            font-style: italic;
+        }
+
+        .hljs-keyword,
+        .hljs-selector-tag,
+        .hljs-subst {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .hljs-number,
+        .hljs-literal,
+        .hljs-variable,
+        .hljs-template-variable,
+        .hljs-tag .hljs-attr {
+            color: #008080;
+        }
+
+        .hljs-string,
+        .hljs-doctag {
+            color: #d14;
+        }
+
+        .hljs-title,
+        .hljs-section,
+        .hljs-selector-id {
+            color: #900;
+            font-weight: bold;
+        }
+
+        .hljs-subst {
+            font-weight: normal;
+        }
+
+        .hljs-type,
+        .hljs-class .hljs-title {
+            color: #458;
+            font-weight: bold;
+        }
+
+        .hljs-tag,
+        .hljs-name,
+        .hljs-attribute {
+            color: #000080;
+            font-weight: normal;
+        }
+
+        .hljs-regexp,
+        .hljs-link {
+            color: #009926;
+        }
+
+        .hljs-symbol,
+        .hljs-bullet {
+            color: #990073;
+        }
+
+        .hljs-built_in,
+        .hljs-builtin-name {
+            color: #0086b3;
+        }
+
+        .hljs-meta {
+            color: #999;
+            font-weight: bold;
+        }
+
+        .hljs-deletion {
+            background: #fdd;
+        }
+
+        .hljs-addition {
+            background: #dfd;
+        }
+
+        .hljs-emphasis {
+            font-style: italic;
+        }
+
+        .hljs-strong {
+            font-weight: bold;
+        }
+    </style>
+    <style>
+        /* --- EXAMPLES --- */
+
+        div.example-title {
+            min-width: 7.5em;
+            color: #b9ab2d;
+        }
+
+        div.example-title span {
+            text-transform: uppercase;
+        }
+
+        aside.example,
+        div.example,
+        div.illegal-example {
+            padding: 0.5em;
+            margin: 1em 0;
+            position: relative;
+            clear: both;
+        }
+
+        div.illegal-example {
+            color: red
+        }
+
+        div.illegal-example p {
+            color: black
+        }
+
+        aside.example,
+        div.example {
+            padding: .5em;
+            border-left-width: .5em;
+            border-left-style: solid;
+            border-color: #e0cb52;
+            background: #fcfaee;
+        }
+
+        aside.example div.example {
+            border-left-width: .1em;
+            border-color: #999;
+            background: #fff;
+        }
+
+        aside.example div.example div.example-title {
+            color: #999;
+        }
+    </style>
+
+
+    <title>ShapeMap Structure and Language</title>
+    <!-- link rel="stylesheet" href="css/wgio.min.css"/ ask Iovka -->
+    <link rel="stylesheet" href="../primer/local.css">
+    <style>
+        .error {
+            border: medium solid #efe7e7;
+        }
+
+        .error {
+            background-color: #fff7f7;
+        }
+
+        .example pre {
+            border: medium solid #efe7e7;
+            background-color: #f7fff7;
+            display: inline-block;
+        }
+    </style>
+
+
+
+
+    <script type="text/javascript" src="scripts.js"></script>
+    <style id="respec-mainstyle">
+        /*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+        /* Override code highlighter background */
+
+        .hljs {
+            background: transparent !important;
+        }
+        /* --- INLINES --- */
+
+        em.rfc2119 {
+            text-transform: lowercase;
+            font-style: normal;
+            color: #900;
+        }
+
+        h1 abbr,
+        h2 abbr,
+        h3 abbr,
+        h4 abbr,
+        h5 abbr,
+        h6 abbr,
+        a abbr {
+            border: none;
+        }
+
+        dfn {
+            font-weight: bold;
+        }
+
+        a.internalDFN {
+            color: inherit;
+            border-bottom: 1px solid #99c;
+            text-decoration: none;
+        }
+
+        a.externalDFN {
+            color: inherit;
+            border-bottom: 1px dotted #ccc;
+            text-decoration: none;
+        }
+
+        a.bibref {
+            text-decoration: none;
+        }
+
+        cite .bibref {
+            font-style: normal;
+        }
+
+        code {
+            color: #C83500;
+        }
+
+        th code {
+            color: inherit;
+        }
+        /* --- TOC --- */
+
+        .toc a,
+        .tof a {
+            text-decoration: none;
+        }
+
+        a .secno,
+        a .figno {
+            color: #000;
+        }
+
+        ul.tof,
+        ol.tof {
+            list-style: none outside none;
+        }
+
+        .caption {
+            margin-top: 0.5em;
+            font-style: italic;
+        }
+        /* --- TABLE --- */
+
+        table.simple {
+            border-spacing: 0;
+            border-collapse: collapse;
+            border-bottom: 3px solid #005a9c;
+        }
+
+        .simple th {
+            background: #005a9c;
+            color: #fff;
+            padding: 3px 5px;
+            text-align: left;
+        }
+
+        .simple th[scope="row"] {
+            background: inherit;
+            color: inherit;
+            border-top: 1px solid #ddd;
+        }
+
+        .simple td {
+            padding: 3px 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        .simple tr:nth-child(even) {
+            background: #f0f6ff;
+        }
+        /* --- DL --- */
+
+        .section dd>p:first-child {
+            margin-top: 0;
+        }
+
+        .section dd>p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section dd {
+            margin-bottom: 1em;
+        }
+
+        .section dl.attrs dd,
+        .section dl.eldef dd {
+            margin-bottom: 0;
+        }
+
+        #issue-summary>ul,
+        .respec-dfn-list {
+            column-count: 2;
+        }
+
+        #issue-summary li,
+        .respec-dfn-list li {
+            list-style: none;
+        }
+
+        @media print {
+            .removeOnSave {
+                display: none;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft">
+    <link rel="canonical" href="https://www.w3.org/TR/shape-map/">
+    <meta name="generator" content="ReSpec 15.2.1">
+    <script id="initialUserConfig" type="application/json">
+        {
+            "localBiblio": {
+                "shex-semantics": {
+                    "authors": [
+                        "Gregg Kellogg"
+                    ],
+                    "title": "Shape Expression Language",
+                    "href": "http://shex.io/semantics"
+                }
+            },
+            "specStatus": "CG-DRAFT",
+            "shortName": "shape-map",
+            "latestVersion": "http://shex.io/shape-map/",
+            "thisVersion": "http://shex.io/shape-map-20170713",
+            "edDraftURI": "https://shexspec.github.io/shape-map/",
+            "testSuiteURI": "https://github.com/shexSpec/shexTest",
+            "issueBase": "https://github.com/shexSpec/shex/issues",
+            "githubAPI": "https://api.github.com/repos/shexSpec/shex",
+            "editors": [{
+                    "name": "Eric Prud'hommeaux",
+                    "url": "http://www.w3.org/People/Eric/",
+                    "company": "W3C/MIT",
+                    "companyURL": "http://www.w3.org/"
+                },
+                {
+                    "name": "Thomas Baker",
+                    "company": "Dublin Core Metadata Initiative",
+                    "companyURL": "http://dublincore.org/"
+                }
+            ],
+            "wg": "Shape Expressions Community Group",
+            "wgURI": "https://www.w3.org/community/shex/",
+            "wgPublicList": "public-shex",
+            "bugTracker": {
+                "open": "https://github.com/shexSpec/ShapeMap/issues",
+                "new": "https://github.com/shexSpec/ShapeMap/issues/new"
+            },
+            "otherLinks": [{
+                "key": "Version control",
+                "data": [{
+                    "value": "Github Repository",
+                    "href": "https://github.com/shexSpec/ShapeMap"
+                }]
+            }],
+            "publishISODate": "2017-07-13T00:00:00.000Z",
+            "generatedSubtitle": "Draft Community Group Report 13 July 2017"
+        }
+    </script>
+</head>
+
+<body aria-busy="false" class="h-entry toc-inline" id="respecDocument">
+    <div class="head" role="contentinfo" id="respecHeader">
+        <p>
+            <a class="logo" href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C" width="72" height="48"></a>
+        </p>
+        <h1 class="title p-name" id="title" property="dc:title">ShapeMap Structure and Language</h1>
+        <h2 id="draft-community-group-report-13-july-2017">Draft Community Group Report <time property="dc:issued" class="dt-published" datetime="2017-07-13">13 July 2017</time></h2>
+        <dl>
+            <dt>This version:</dt>
+            <dd><a class="u-url" href="http://shex.io/shape-map-20170713">http://shex.io/shape-map-20170713</a></dd>
+            <dt>Latest published version:</dt>
+            <dd><a href="http://shex.io/shape-map/">http://shex.io/shape-map/</a></dd>
+            <dt>Latest editor's draft:</dt>
+            <dd><a href="https://shexspec.github.io/shape-map/">https://shexspec.github.io/shape-map/</a></dd>
+            <dt>Test suite:</dt>
+            <dd><a href="https://github.com/shexSpec/shexTest">https://github.com/shexSpec/shexTest</a></dd>
+            <dt>Bug tracker:</dt>
+            <dd><a href="https://github.com/shexSpec/ShapeMap/issues/new">File a bug</a> (<a href="https://github.com/shexSpec/ShapeMap/issues">open bugs</a>)</dd>
+            <dt>Editors:</dt>
+            <dd class="p-author h-card vcard" property="bibo:editor" resource="_:editor0"><span property="rdf:first" typeof="foaf:Person"><meta property="foaf:name" content="Eric Prud" hommeaux'=""><a class="u-url url p-name fn" property="foaf:homepage" href="http://www.w3.org/People/Eric/">Eric Prud'hommeaux</a>, <a property="foaf:workplaceHomepage" class="p-org org h-org h-card" href="http://www.w3.org/">W3C/MIT</a></span>
+                <span property="rdf:rest" resource="_:editor1"></span>
+            </dd>
+            <dd class="p-author h-card vcard" resource="_:editor1"><span property="rdf:first" typeof="foaf:Person"><span property="foaf:name" class="p-name fn">Thomas Baker</span>, <a property="foaf:workplaceHomepage" class="p-org org h-org h-card" href="http://dublincore.org/">Dublin Core Metadata Initiative</a></span>
+                <span property="rdf:rest" resource="rdf:nil"></span>
+            </dd>
+
+            <dt>Version control:</dt>
+            <dd>
+                <a href="https://github.com/shexSpec/ShapeMap">
+                      Github Repository
+                    </a>
+            </dd>
+        </dl>
+        <p class="copyright">
+            <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2017 the Contributors to the ShapeMap Structure and Language Specification, published by the
+            <a href="https://www.w3.org/community/shex/">Shape Expressions Community Group</a> under the
+            <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a> is available.
+        </p>
+        <hr title="Separator for header">
+    </div>
+    <section id="abstract" class="introductory" property="dc:abstract">
+        <h2 id="abstract-0" resource="#abstract-0"><span property="xhv:role" resource="xhv:heading">Abstract</span></h2>
+        <p>
+            The Shape Expressions (ShEx) language describes <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">RDF nodes</a> and <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">graph</a> structures.
+            A <span class="math">node constraint</span> describes an RDF node (<a href="#dfn-iri" class="internalDFN" data-link-type="dfn">IRI</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node">blank node</a> or
+            <a
+                href="#dfn-literal" class="internalDFN" data-link-type="dfn">literal</a>) and a <span class="math">shape</span> describes the <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-triple">triples</a> involving nodes in an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">RDF graph</a>.
+                The ShapeMap language associates RDF nodes with ShEx shapes. These associations can be used to state candidate shape maps as an input to the validation process. They can be the output of a validation process, where the ShEx engine reports
+                the conformance of RDF nodes with respect to ShEx shapes.
+        </p>
+        <p>
+            This document defines the ShapeMap language. See the <a href="../primer/index.html">Shape Expressions Primer</a> for an introduction to ShEx validation and the <a href="../spec/index.html">Shape Expressions Language</a> for a formal definition
+            of ShEx.
+        </p>
+    </section>
+
+    <section id="sotd" class="introductory">
+        <h2 id="status-of-this-document" resource="#status-of-this-document"><span property="xhv:role" resource="xhv:heading">Status of This Document</span></h2>
+        <p>
+            This specification was published by the <a href="https://www.w3.org/community/shex/">Shape Expressions Community Group</a>. It is not a W3C Standard nor is it on the W3C Standards Track. Please note that under the
+            <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a> there is a limited opt-out and other conditions apply. Learn more about
+            <a href="https://www.w3.org/community/">W3C Community and Business Groups</a>.
+        </p>
+
+        <p>This document has been developed by the
+            <a href="https://www.w3.org/community/shex/">Shape Expressions Community Group</a>.
+        </p>
+
+        <p>This version is an initial editor's proposal to the CG.</p>
+
+        <p>If you wish to make comments regarding this document, please send them to
+            <a href="mailto:public-shex@w3.org">public-shex@w3.org</a> (<a href="mailto:public-shex-request@w3.org?subject=subscribe">subscribe</a>,
+            <a href="https://lists.w3.org/Archives/Public/public-shex/">archives</a>).</p>
+
+    </section>
+    <nav id="toc">
+        <h2 class="introductory" id="table-of-contents" resource="#table-of-contents"><span property="xhv:role" resource="xhv:heading">Table of Contents</span></h2>
+        <ol class="toc" role="directory">
+            <li class="tocline"><a href="#notation" class="tocxref"><span class="secno">1. </span>Notation and Terminology</a></li>
+            <li class="tocline"><a href="#conformance" class="tocxref"><span class="secno">2. </span>Conformance</a></li>
+            <li class="tocline"><a href="#shapemap-structure" class="tocxref"><span class="secno">3. </span>ShapeMap structure</a></li>
+            <li class="tocline"><a href="#usage" class="tocxref"><span class="secno">4. </span>ShapeMap usage</a></li>
+            <li class="tocline"><a href="#syntax" class="tocxref"><span class="secno">5. </span>Query and Fixed ShapeMap syntax</a></li>
+            <li class="tocline"><a href="#grammar" class="tocxref"><span class="secno">6. </span>ShapeMap grammar</a></li>
+            <li class="tocline"><a href="#references" class="tocxref"><span class="secno">A. </span>References</a>
+                <ol class="toc">
+                    <li class="tocline"><a href="#normative-references" class="tocxref"><span class="secno">A.1 </span>Normative references</a></li>
+                    <li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">A.2 </span>Informative references</a></li>
+                </ol>
+            </li>
+        </ol>
+    </nav>
+
+    <section id="notation" typeof="bibo:Chapter" resource="#notation" property="bibo:hasPart">
+        <!--OddPage-->
+        <h2 id="x1.-notation-and-terminology" resource="#x1.-notation-and-terminology"><span property="xhv:role" resource="xhv:heading"><span class="secno">1. </span>Notation and Terminology</span>
+        </h2>
+        <p>
+            This document assumes an understanding of the ShEx notation and terminology.
+            <!-- Please see the associated sections of the <a href="../spec/index.html">Shape Expressions Language</a>. -->
+        </p>
+        <ul>
+            <li><dfn data-dfn-type="dfn" id="dfn-shapeexpression"><a href="http://shex.io/semantics#dfn-shapeexpr">ShapeExpression</a></dfn>: a Boolean expression of ShEx shapes.</li>
+            <li><dfn data-dfn-type="dfn" id="dfn-focus-node">focus node</dfn>: a node, potentially in an RDF graph, to be inspected for conformance with a shape expression.</li>
+        </ul>
+        <p>
+            ShExMap uses the following terms from RDF semantics [<cite><a class="bibref" href="#bib-rdf11-mt">rdf11-mt</a></cite>]:
+        </p>
+        <ul>
+            <li><dfn data-dfn-type="dfn" id="dfn-node"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">Node</a></dfn>: one of <dfn data-dfn-type="dfn" id="dfn-iri">IRI</dfn>, <dfn data-dfn-type="dfn" id="dfn-blank-node"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node">blank node</a></dfn>,
+                <dfn data-dfn-type="dfn" id="dfn-literal">Literal</dfn>.</li>
+            <li><dfn data-dfn-type="dfn" id="dfn-graph"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph">Graph</a></dfn>: a set of <dfn data-dfn-type="dfn" id="dfn-triples"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-triple">Triples</a></dfn>                of (<dfn data-dfn-type="dfn" id="dfn-subject"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-subject">subject</a></dfn>, <dfn data-dfn-type="dfn" id="dfn-predicate"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a></dfn>,
+                <dfn data-dfn-type="dfn" id="dfn-object"><a href="https://www.w3.org/TR/rdf11-concepts/#dfn-object">object</a></dfn>).</li>
+        </ul>
+    </section>
+
+    <section id="conformance" typeof="bibo:Chapter" resource="#conformance" property="bibo:hasPart">
+        <!--OddPage-->
+        <h2 id="x2.-conformance" resource="#x2.-conformance"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span>Conformance</span>
+        </h2>
+        <p>
+            As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.
+        </p>
+
+
+        <p>Conformance criteria are relevant to authors and authoring tool implementers. As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this
+            specification is normative.</p>
+
+        <ul>
+            <li>A <a data-link-type="dfn" href="http://shex.io/semantics#dfn-shapemap">ShapeMap</a> document complies with this specification if it conforms to the grammar described in <a href="#grammar" class="sectionRef sec-ref">section <span class="secno">6.</span> <span class="sec-title">ShapeMap grammar</span></a>                resulting in a valid <a data-link-type="dfn" href="http://shex.io/semantics#dfn-shapemap">ShapeMap</a> structure.</li>
+        </ul>
+    </section>
+
+    <section id="shapemap-structure" typeof="bibo:Chapter" resource="#shapemap-structure" property="bibo:hasPart">
+        <!--OddPage-->
+        <h2 id="x3.-shapemap-structure" resource="#x3.-shapemap-structure"><span property="xhv:role" resource="xhv:heading"><span class="secno">3. </span>ShapeMap structure</span>
+        </h2>
+        <p class="leadup">
+            <dfn data-dfn-type="dfn" id="dfn-shapemap"><a href="http://shex.io/semantics#dfn-shapemap">ShapeMap</a></dfn>: a set of <dfn data-dfn-type="dfn" id="dfn-shape-association">shape association</dfn>s. Each shape association has at least two members:
+            a <a href="#dfn-nodeselector" class="internalDFN" data-link-type="dfn">nodeSelector</a> and a <a href="#dfn-shapelabel" class="internalDFN" data-link-type="dfn">shapeLabel</a>, and when used for the result of validation, may have any of
+            <a
+                href="#dfn-status" class="internalDFN" data-link-type="dfn">status</a>, <a href="#dfn-reason" class="internalDFN" data-link-type="dfn">reason</a>, or <a href="#dfn-appinfo" class="internalDFN" data-link-type="dfn">appInfo</a>:
+        </p>
+        <ul class="followup">
+            <li class="         leadup"><dfn data-dfn-type="dfn" id="dfn-nodeselector">nodeSelector</dfn>: an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">RDF node</a>, or a <a href="#dfn-triple-pattern" class="internalDFN" data-link-type="dfn">triple pattern</a>                which is used to select RDF nodes.</li>
+            <li class="followup leadup"><dfn data-dfn-type="dfn" id="dfn-shapelabel">shapeLabel</dfn>: <a href="http://shex.io/shex-semantics-20170327/#dfn-shapeexprlabel">ShEx shapeExprLabel</a> or the string "<code>START</code>" for the <a href="http://rawgit.com/shexSpec/spec/separate-APIs/index.html#dfn-start-shape-expression">start shape expression</a>.</li>
+            <li class="followup leadup"><dfn data-dfn-type="dfn" id="dfn-status">status</dfn>: <em>[default="conformant"]</em> "nonconformant" or "conformant".</li>
+            <li class="followup leadup"><dfn data-dfn-type="dfn" id="dfn-reason">reason</dfn>: <em>[optional]</em> a string stating a reason for failure or success.</li>
+            <li class="followup       "><dfn data-dfn-type="dfn" id="dfn-appinfo">appInfo</dfn>: <em>[optional]</em> an application-specific JSON-LD structure</li>
+        </ul>
+
+        <p>
+            In this document, these members can be addressed with a '<code>.</code>' operator. For instance, a shape association <code>A</code> would have an <code>A.nodeSelector</code> member.
+        </p>
+
+        <p>
+            If the <a href="#dfn-status" class="internalDFN" data-link-type="dfn">status</a> member is absent, the <a href="#dfn-status" class="internalDFN" data-link-type="dfn">status</a> is assumed to be "conformant". The <a href="#dfn-reason" class="internalDFN"
+                data-link-type="dfn">reason</a> and <a href="#dfn-appinfo" class="internalDFN" data-link-type="dfn">appInfo</a> members may also be absent but have no default value.
+        </p>
+
+        <p>
+            A <dfn data-dfn-type="dfn" id="dfn-triple-pattern">triple pattern</dfn> has a subject pattern, predicate IRI and object pattern.
+        </p>
+        <ul>
+            <li>The subject pattern may be an IRI, a <a href="#dfn-focus-selector" class="internalDFN" data-link-type="dfn">focus selector</a> or a <a href="#dfn-wildcard" class="internalDFN" data-link-type="dfn">wildcard</a>.</li>
+            <li>The object pattern may be an IRI, literal, <a href="#dfn-focus-selector" class="internalDFN" data-link-type="dfn">focus selector</a> or a <a href="#dfn-wildcard" class="internalDFN" data-link-type="dfn">wildcard</a>.</li>
+        </ul>
+        <p>
+            A <dfn data-dfn-type="dfn" id="dfn-focus-selector">focus selector</dfn> identifies the slot (subject or object) to be validated. A <dfn data-dfn-type="dfn" id="dfn-wildcard">wildcard</dfn> indicates that the slot may hold any value. A triple
+            pattern has exactly one focus selector. A triple pattern maps to a <dfn data-dfn-type="dfn" id="dfn-sparql-triple-pattern"><a href="https://www.w3.org/TR/sparql11-query/#sparqlTriplePatterns">SPARQL triple pattern</a></dfn> with the following
+            restrictions:
+        </p>
+        <ul>
+            <li><code>V</code> (the set of variables) is either a fresh variable or a known token to identify the <a href="#dfn-focus-node" class="internalDFN" data-link-type="dfn">focus node</a>.</li>
+            <li>The focus node token appears in either the subject or the object position.</li>
+            <li>The predicate position is filled by an IRI (<code>I</code> in the SPARQL definitions).</li>
+        </ul>
+
+        <p>
+            A <dfn data-dfn-type="dfn" id="dfn-query-shapemap">query ShapeMap</dfn> is a ShapeMap in which each shape association has only the members <a href="#dfn-nodeselector" class="internalDFN" data-link-type="dfn">nodeSelector</a> and <a href="#dfn-shapelabel"
+                class="internalDFN" data-link-type="dfn">shapeLabel</a>.
+        </p>
+
+        <p>
+            A <dfn data-dfn-type="dfn" id="dfn-fixed-shapemap">fixed ShapeMap</dfn> is a query ShapeMap in which each nodeSelector is an RDF node. The ShEx validation process takes as input a fixed ShapeMap.
+        </p>
+
+        <p>
+            A <dfn data-dfn-type="dfn" id="dfn-result-shapemap">result ShapeMap</dfn> is a fixed ShapeMap with the addition of optional members <a href="#dfn-status" class="internalDFN" data-link-type="dfn">status</a>, <a href="#dfn-reason" class="internalDFN"
+                data-link-type="dfn">reason</a> and <a href="#dfn-appinfo" class="internalDFN" data-link-type="dfn">appInfo</a>.
+        </p>
+
+        <p>
+            No two <a href="#dfn-shape-association" class="internalDFN" data-link-type="dfn">shape associations</a> in a ShapeMap may have the same combination of nodeSelector and shapeLabel.
+        </p>
+
+        <aside class="example">
+            <div class="example-title marker"><span>Example 1</span><span style="text-transform: none">: invalid ShapeMaps - duplicate nodeSelector/shapeLabel pairs</span></div>
+            <p class="leadup">
+                This JSON ShapeMap would not be valid as it has two entries for a nodeSelector/shapeLabel pair:
+            </p>
+            <pre class="error nohighlight">[
+  { "nodeSelector": "&lt;http://data.example/node1&gt;,
+    "shapeLabel": "&lt;http://schema.example/Shape2&gt;,
+    <span class="lookit">"status": "nonconformant"</span> },
+  { "nodeSelector": "&lt;http://data.example/node1&gt;,
+    "shapeLabel": "&lt;http://schema.example/Shape2&gt; }
+]</pre>
+            <p class="leadup followup">
+                The above example has conflicting values for the <a href="#dfn-status" class="internalDFN" data-link-type="dfn">status</a>: the first asserts that <code>node1</code> does not conform to <code>Shape2</code>; the second has no status and
+                so asserts the default which is that it does conform. The following example is also invalid because it has duplicates even though they do not conflict:
+            </p>
+            <pre class="error nohighlight leadup">[
+  { "nodeSelector": "&lt;http://data.example/node1&gt;,
+    "shapeLabel": "&lt;http://schema.example/Shape2&gt; },
+  { "nodeSelector": "&lt;http://data.example/node1&gt;,
+    "shapeLabel": "&lt;http://schema.example/Shape2&gt; }
+]</pre>
+        </aside>
+
+    </section>
+
+    <section id="usage" typeof="bibo:Chapter" resource="#usage" property="bibo:hasPart">
+        <!--OddPage-->
+        <h2 id="x4.-shapemap-usage" resource="#x4.-shapemap-usage"><span property="xhv:role" resource="xhv:heading"><span class="secno">4. </span>ShapeMap usage</span>
+        </h2>
+        <p>
+            ShapeMaps are designed to express the <a href="#dfn-goal" class="internalDFN" data-link-type="dfn">goal</a> or the <a href="#dfn-result" class="internalDFN" data-link-type="dfn">result</a> of validating an RDF node against a ShEx schema:
+        </p>
+
+        <ul>
+            <li>if expressing the <dfn data-dfn-type="dfn" id="dfn-goal">goal</dfn>, the <a href="#dfn-query-shapemap" class="internalDFN" data-link-type="dfn">query ShapeMap</a> or <a href="#dfn-fixed-shapemap" class="internalDFN" data-link-type="dfn">fixed ShapeMap</a>                expresses the question posed, e.g., "does node1 conform to shape2?"</li>
+            <li>if expressing the <dfn data-dfn-type="dfn" id="dfn-result">result</dfn>, the <a href="#dfn-result-shapemap" class="internalDFN" data-link-type="dfn">result ShapeMap</a> expresses the outcome of a conformance check, e.g., "node1 conforms to
+                shape2."</li>
+        </ul>
+
+        <p>
+            A query ShapeMap is converted to a fixed ShapeMap to be used as the input to the validation process. This process takes as input a query ShapeMap and a graph and produces a fixed ShapeMap. For a query ShapeMap <code>Q</code> and a graph <code>G</code>,
+            for each <a href="#dfn-shape-association" class="internalDFN" data-link-type="dfn">shape association</a> <code>A</code> in <code>Q</code>:
+        </p>
+        <ul>
+            <li>If <code>A</code>.nodeSelector is an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">RDF node</a>, <code>A</code> is in the fixed ShapeMap.</li>
+            <li>If <code>A</code>.nodeSelector is a <a href="#dfn-triple-pattern" class="internalDFN" data-link-type="dfn">triple pattern</a>, let <code>P</code> be a <a href="https://www.w3.org/TR/sparql11-query/#defn_TriplePattern">SPARQL Triple Pattern</a>                where
+                <ul>
+                    <li>If <code>A</code>'s subject is a <a href="#dfn-focus-selector" class="internalDFN" data-link-type="dfn">focus selector</a> or a <a href="#dfn-wildcard" class="internalDFN" data-link-type="dfn">wildcard</a>, <code>P</code>'s subject
+                        is a fresh variable, otherwise <code>P</code>'s subject is <code>A</code>'s subject.</li>
+                    <li><code>P</code>'s predicate is <code>A</code>'s predicate.</li>
+                    <li>If <code>A</code>'s object is a <a href="#dfn-focus-selector" class="internalDFN" data-link-type="dfn">focus selector</a> or a <a href="#dfn-wildcard" class="internalDFN" data-link-type="dfn">wildcard</a>, <code>P</code>'s object is
+                        a fresh variable, otherwise <code>P</code>'s subject is <code>A</code>'s object.</li>
+                </ul>
+                For each triple <code>T</code> in <code>G</code> which matches <code>P</code>, the fixed ShapeMap has a <a href="#dfn-shape-association" class="internalDFN" data-link-type="dfn">shape association</a> <code>F</code> where <code>F</code>.shapeLabel
+                = <code>A</code>.shapeLabel and
+                <ul>
+                    <li>If <code>A</code>'s subject is a <a href="#dfn-focus-selector" class="internalDFN" data-link-type="dfn">focus selector</a>, <code>F</code>.nodeSelector is <code>T</code>'s subject.</li>
+                    <li>If <code>A</code>'s object is a <a href="#dfn-focus-selector" class="internalDFN" data-link-type="dfn">focus selector</a>, <code>F</code>.nodeSelector is <code>T</code>'s object.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="syntax" typeof="bibo:Chapter" resource="#syntax" property="bibo:hasPart">
+        <!--OddPage-->
+        <h2 id="x5.-query-and-fixed-shapemap-syntax" resource="#x5.-query-and-fixed-shapemap-syntax"><span property="xhv:role" resource="xhv:heading"><span class="secno">5. </span>Query and Fixed ShapeMap syntax</span>
+        </h2>
+        <p>
+            ShapeMaps can be easily transmitted and understood with a specialized syntax.
+        </p>
+        <aside class="example">
+            <div class="example-title marker"><span>Example 2</span><span style="text-transform: none">: simple fixed ShapeMap</span></div>
+            <p class="leadup">
+                A simple <a href="#dfn-fixed-shapemap" class="internalDFN" data-link-type="dfn">fixed ShapeMap</a> might look like this:
+            </p>
+            <pre class="nohighlight"><span class="comment"># a simple nodeSelector/shapeLabel pair</span>
+&lt;http://data.example/#n1&gt; @ &lt;http://data.example/#S2&gt;,</pre>
+            <p class="leadup followup">
+                and a <a href="#dfn-result-shapemap" class="internalDFN" data-link-type="dfn">result ShapeMap</a> might look the same if there were no errors. It also could include a <code>status="conformant"</code> if there were no errors.
+            </p>
+        </aside>
+
+        <p>
+            A query ShapeMap can include <a href="#dfn-shape-association" class="internalDFN" data-link-type="dfn">shape associations</a> with both <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">RDF nodes</a> and <a href="#dfn-triple-pattern"
+                class="internalDFN" data-link-type="dfn">triple patterns</a>.
+        </p>
+        <aside class="example">
+            <div class="example-title marker"><span>Example 3</span><span style="text-transform: none">: query ShapeMap with four shape associations</span></div>
+            <pre class="nohighlight leadup"><span class="comment"># Validate a simple nodeSelector/shapeLabel pair.</span>
+&lt;http://data.example/#n1&gt; @ &lt;http://data.example/#S2&gt;,
+<span class="comment"># Validate a literal as S3.</span>
+"chat"@en-fr@&lt;http://...S3&gt;,
+<span class="comment"># validate everything with type Some/Type as the START shape.</span>
+{<span class="keyword">FOCUS</span> <span class="keyword">a</span> &lt;http://schema.example/Some/Type&gt;}@<span class="keyword">START</span>,
+<span class="comment"># Validate all objects of p3.</span>
+{<span class="keyword">_</span> &lt;http://...p3&gt; <span class="keyword">FOCUS</span>}@<span class="keyword">START</span></pre>
+        </aside>
+        <ul>
+            <li>The <a href="#dfn-nodeselector" class="internalDFN" data-link-type="dfn">nodeSelector</a> (an <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node">RDF node</a> or <a href="#dfn-triple-pattern" class="internalDFN" data-link-type="dfn">triple pattern</a>)
+                is before the '@'.</li>
+            <li>The <a href="#dfn-shapelabel" class="internalDFN" data-link-type="dfn">shapeLabel</a> is immediately after the '@'.</li>
+            <li>The '<span class="keyword">FOCUS</span>' keyword is a <a href="#dfn-focus-selector" class="internalDFN" data-link-type="dfn">focus selector</a>.</li>
+            <li>The '<span class="keyword">_</span>' character is a <a href="#dfn-wildcard" class="internalDFN" data-link-type="dfn">wildcard</a>.</li>
+            <li>The keyword "<span class="keyword">a</span>" is a shortcut for the <code>rdf:type</code> (<code>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt;</code>) property.</li>
+        </ul>
+    </section>
+
+    <section id="grammar" typeof="bibo:Chapter" resource="#grammar" property="bibo:hasPart">
+        <!--OddPage-->
+        <h2 id="x6.-shapemap-grammar" resource="#x6.-shapemap-grammar"><span property="xhv:role" resource="xhv:heading"><span class="secno">6. </span>ShapeMap grammar</span>
+        </h2>
+        <p>
+            Production numbers followed by a letter correspond to productions in other grammars:
+        </p>
+        <ul>
+            <li class="leadup followup"><span class="new">t</span>: <a href="http://www.w3.org/TR/turtle/#sec-grammar-grammar">RDF 1.1 Turtle</a></li>
+            <li class="leadup followup"><span class="new">s</span>: <a href="http://www.w3.org/TR/sparql11-query/#sparqlGrammar">SPARQL 1.1</a></li>
+            <li class="leadup followup"><span class="new">x</span>: <a href="http://shex.io/shex-semantics-20170327/#shexc">ShEx 2</a></li>
+        </ul>
+
+        <div class="grammarTable">
+            <table style="border: 0; border-top: thick solid white; ">
+
+                <tbody class="prod">
+                    <tr style="vertical-align: baseline">
+                        <td id="prod-shapeMap">[<span class="prodNo">1 </span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="production prod">shapeMap</code></td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content"><span class="prod"><a class="grammarRef" href="#prod-shapeAssociation">shapeAssociation</a></span> (',' <span class="prod"><a class="grammarRef" href="#prod-shapeAssociation">shapeAssociation</a></span>)*</code></td>
+                    </tr>
+                    <tr style="vertical-align: baseline">
+                        <td id="prod-shapeAssociation">[<span class="prodNo">2 </span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="production prod">shapeAssociation</code></td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content"><span class="prod"><a class="grammarRef" href="#prod-nodeSelector">nodeSelector</a></span> <span class="prod"><a class="grammarRef" href="#prod-shapeLabel">shapeLabel</a></span><!-- <span class="prod"><a class="grammarRef" href="#prod-status">status</a></span>? <span class="prod"><a class="grammarRef" href="#prod-reason">reason</a></span>? <span class="prod"><a class="grammarRef" href="#prod-jsonAttributes">jsonAttributes</a></span>? --></code></td>
+                    </tr>
+                    <tr style="vertical-align: baseline">
+                        <td id="prod-nodeSelector">[<span class="prodNo">3 </span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="production prod">nodeSelector</code></td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content"><span class="prod"><a class="grammarRef" href="#prod-objectTerm">objectTerm</a></span> | <span class="prod"><a class="grammarRef" href="#prod-triplePattern">triplePattern</a></span></code></td>
+                    </tr>
+                    <tr style="vertical-align: baseline">
+                        <td id="prod-subjectTerm">[<span class="prodNo">4 </span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="production prod">subjectTerm</code></td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content"><span class="prod"><a class="grammarRef" href="#prod-iri">iri</a></span> | 'a'<!-- | <span class="prod"><a class="grammarRef" href="#term-BLANK_NODE_LABEL">BLANK_NODE_LABEL</a></span> --></code></td>
+                    </tr>
+                    <tr style="vertical-align: baseline">
+                        <td id="prod-objectTerm">[<span class="prodNo">5 </span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="production prod">objectTerm</code></td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content"><span class="prod"><a class="grammarRef" href="#prod-subjectTerm">subjectTerm</a></span> | <span class="prod"><a class="grammarRef" href="#prod-literal">literal</a></span></code></td>
+                    </tr>
+                    <tr style="vertical-align: baseline">
+                        <td id="prod-triplePattern">[<span class="prodNo">6 </span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="production prod">triplePattern</code></td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">&nbsp;&nbsp;'{' "FOCUS" <span class="prod"><a class="grammarRef" href="#prod-iri">iri</a></span> (<span class="prod"><a class="grammarRef" href="#prod-objectTerm">objectTerm</a></span> | '_') '}'<br>
+                                                                                                                                                                                                                          | '{' (<span class="prod"><a class="grammarRef" href="#prod-subjectTerm">subjectTerm</a></span> | '_') <span class="prod"><a class="grammarRef" href="#prod-iri">iri</a></span> "FOCUS" '}'</code></td>
+                    </tr>
+                    <!-- tr style="vertical-align: baseline"><td id="prod-triplePatternLL" >[<span class="prodNo">6LL</span>]   </td>   <td><code class="production prod">triplePatternLL</code></td>  <td>   ::=   </td><td><code class="content">'{' (<br/>
+                                                                                                                                                                                                                              "FOCUS" <span class="prod"><a class="grammarRef" href="#prod-iri">iri</a></span> (<span class="prod"><a class="grammarRef" href="#prod-objectTerm">objectTerm</a></span> | '_')<br/>
+                                                                                                                                                                                                                            | (<span class="prod"><a class="grammarRef" href="#prod-subjectTerm">subjectTerm</a></span> | '_') <span class="prod"><a class="grammarRef" href="#prod-iri">iri</a></span> "FOCUS"<br/>
+                                                                                                                                                                                                                           ) '}'</code></td></tr -->
+                    <tr style="vertical-align: baseline">
+                        <td id="prod-shapeLabel">[<span class="prodNo">7 </span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="production prod">shapeLabel</code></td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">'@' (<span class="prod"><a class="grammarRef" href="#prod-iri">iri</a></span> | "START") | <span class="prod"><a class="grammarRef" href="#term-AT_START">AT_START</a></span><!-- | <span class="prod"><a class="grammarRef" href="#term-ATPNAME_NS">ATPNAME_NS</a></span> | <span class="prod"><a class="grammarRef" href="#term-ATPNAME_LN">ATPNAME_LN</a></span> --></code></td>
+                    </tr>
+                    <!--
+<tr style="vertical-align: baseline"><td id="prod-status"          >[<span class="prodNo">8 </span>]   </td>   <td><code class="production prod">status</code></td>           <td>   ::=   </td><td><code class="content">'!' | '?'</code></td></tr>
+<tr style="vertical-align: baseline"><td id="prod-reason"          >[<span class="prodNo">9 </span>]   </td>   <td><code class="production prod">reason</code></td>           <td>   ::=   </td><td><code class="content">'/' <span class="prod"><a class="grammarRef" href="#prod-string">string</a></span></code></td></tr>
+<tr style="vertical-align: baseline"><td id="prod-jsonAttributes"  >[<span class="prodNo">10</span>]   </td>  <td><code class="production prod">jsonAttributes</code></td>    <td>   ::=   </td><td><code class="content">'$' '"<span class="prod"><a class="grammarRef" href="#prod-appinfo">appinfo</a></span>"' ':' <span class="prod"><a class="grammarRef" href="#prod-jsonValue">jsonValue</a></span></code></td></tr>
+<tr style="vertical-align: baseline"><td id="prod-jsonValue"       >[<span class="prodNo">11</span>]   </td>  <td><code class="production prod">jsonValue</code></td>         <td>   ::=   </td><td><code class="content">'<span class="prod"><a class="grammarRef" href="#prod-false">false</a></span>' | '<span class="prod"><a class="grammarRef" href="#prod-null">null</a></span>' | '<span class="prod"><a class="grammarRef" href="#prod-true">true</a></span>' | <span class="prod"><a class="grammarRef" href="#prod-jsonObject">jsonObject</a></span> | <span class="prod"><a class="grammarRef" href="#prod-jsonArray">jsonArray</a></span> | <span class="prod"><a class="grammarRef" href="#term-DOUBLE">DOUBLE</a></span> | <span class="prod"><a class="grammarRef" href="#term-STRING_LITERAL2">STRING_LITERAL2</a></span>;</code></td></tr>
+<tr style="vertical-align: baseline"><td id="prod-jsonObject"      >[<span class="prodNo">12</span>]   </td>  <td><code class="production prod">jsonObject</code></td>        <td>   ::=   </td><td><code class="content">'{' (<span class="prod"><a class="grammarRef" href="#prod-jsonMember">jsonMember</a></span> (',' <span class="prod"><a class="grammarRef" href="#prod-jsonMember">jsonMember</a></span>)*)? '}';</code></td></tr>
+<tr style="vertical-align: baseline"><td id="prod-jsonMember"      >[<span class="prodNo">13</span>]   </td>  <td><code class="production prod">jsonMember</code></td>        <td>   ::=   </td><td><code class="content"><span class="prod"><a class="grammarRef" href="#term-STRING_LITERAL2">STRING_LITERAL2</a></span> ':' <span class="prod"><a class="grammarRef" href="#prod-jsonValue">jsonValue</a></span>;</code></td></tr>
+<tr style="vertical-align: baseline"><td id="prod-jsonArray"       >[<span class="prodNo">14</span>]   </td>  <td><code class="production prod">jsonArray</code></td>         <td>   ::=   </td><td><code class="content">'[' (<span class="prod"><a class="grammarRef" href="#prod-jsonValue">jsonValue</a></span> (',' <span class="prod"><a class="grammarRef" href="#prod-jsonValue">jsonValue</a></span>)*)? ']';</code></td></tr>
+-->
+                </tbody>
+
+                <tbody class="prod">
+                    <tr style="vertical-align: baseline">
+                        <td id="prod-literal">[<span class="prodNo">13t</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="production prod">literal</code></td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content"><span class="prod"><a class="grammarRef" href="#prod-rdfLiteral">rdfLiteral</a></span> | <span class="prod"><a class="grammarRef" href="#prod-numericLiteral">numericLiteral</a></span> | <span class="prod"><a class="grammarRef" href="#prod-booleanLiteral">booleanLiteral</a></span></code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="prod">
+                    <tr style="vertical-align: baseline">
+                        <td id="prod-numericLiteral">[<span class="prodNo">16t</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="production prod">numericLiteral</code></td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content"><span class="prod"><a class="grammarRef" href="#term-INTEGER">INTEGER</a></span> | <span class="prod"><a class="grammarRef" href="#term-DECIMAL">DECIMAL</a></span> | <span class="prod"><a class="grammarRef" href="#term-DOUBLE">DOUBLE</a></span></code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="prod">
+                    <tr style="vertical-align: baseline">
+                        <td id="prod-rdfLiteral">[<span class="prodNo">65x</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="production prod">rdfLiteral</code></td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content"><span class="prod"><a class="grammarRef" href="#prod-langString">langString</a></span> | <span class="prod"><a class="grammarRef" href="#prod-string">string</a></span> ("^^" <span class="prod"><a class="grammarRef" href="#prod-iri">iri</a></span>)?</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="prod">
+                    <tr style="vertical-align: baseline">
+                        <td id="prod-booleanLiteral">[<span class="prodNo">134s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="production prod">booleanLiteral</code></td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">"true" | "false"</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="prod">
+                    <tr style="vertical-align: baseline">
+                        <td id="prod-string">[<span class="prodNo">135s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="production prod">string</code></td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp;&nbsp;<code class="content"><span class="prod"><a class="grammarRef" href="#term-STRING_LITERAL1">STRING_LITERAL1</a></span> | <span class="prod"><a class="grammarRef" href="#term-STRING_LITERAL_LONG1">STRING_LITERAL_LONG1</a></span><br>
+| <span class="prod"><a class="grammarRef" href="#term-STRING_LITERAL2">STRING_LITERAL2</a></span> | <span class="prod"><a class="grammarRef" href="#term-STRING_LITERAL_LONG2">STRING_LITERAL_LONG2</a></span></code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="prod">
+                    <tr style="vertical-align: baseline">
+                        <td id="prod-langString">[<span class="prodNo">66x</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="production prod">langString</code></td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp;&nbsp;<code class="content"><span class="prod"><a class="grammarRef" href="#term-LANG_STRING_LITERAL1">LANG_STRING_LITERAL1</a></span> | <span class="prod"><a class="grammarRef" href="#term-LANG_STRING_LITERAL_LONG1">LANG_STRING_LITERAL_LONG1</a></span><br>
+| <span class="prod"><a class="grammarRef" href="#term-LANG_STRING_LITERAL2">LANG_STRING_LITERAL2</a></span> | <span class="prod"><a class="grammarRef" href="#term-LANG_STRING_LITERAL_LONG2">LANG_STRING_LITERAL_LONG2</a></span></code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="prod">
+                    <tr style="vertical-align: baseline">
+                        <td id="prod-iri">[<span class="prodNo">136s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="production prod">iri</code></td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content"><span class="prod"><a class="grammarRef" href="#term-IRIREF">IRIREF</a></span><!-- | <span class="prod"><a class="grammarRef" href="#prod-prefixedName">prefixedName</a></span> --></code></td>
+                    </tr>
+                </tbody>
+
+                <!-- <tbody class="prod">
+<tr style="vertical-align: baseline">
+<td id="prod-prefixedName">[<span class="prodNo">137s</span>]   </td>
+<td><code class="production prod">prefixedName</code></td>
+<td>   ::=   </td>
+<td><code class="content"><span class="prod"><a class="grammarRef" href="#term-PNAME_LN">PNAME_LN</a></span> | <span class="prod"><a class="grammarRef" href="#term-PNAME_NS">PNAME_NS</a></span></code></td>
+</tr>
+</tbody> -->
+
+                <tbody class="grammarParagraph">
+                    <tr>
+                        <td colspan="4">
+                            <h2 id="terminals">Terminals</h2>
+                            <p>
+                                Text is matched against the longest matching terminal. The <a href="#term-PASSED_TOKENS">PASSED TOKENS</a> below may appear between any terminals or literal strings which appear in the grammar above.
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-IRIREF">[<span class="prodNo">18t</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">IRIREF</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">"&lt;" ([^#0000- &lt;&gt;\"{}|^`\\] | <span class="prod"><a class="grammarRef" href="#term-UCHAR">UCHAR</a></span>)* "&gt;"</code></td>
+                    </tr>
+                </tbody>
+
+                <!-- <tbody class="term">
+<tr style="vertical-align: baseline">
+<td id="term-PNAME_NS">[<span class="prodNo">140s</span>]   </td>
+<td>&lt;<code class="production term">PNAME_NS</code>&gt;</td>
+<td>   ::=   </td>
+<td><code class="content"><span class="prod"><a class="grammarRef" href="#term-PN_PREFIX">PN_PREFIX</a></span>? ":"</code></td>
+</tr>
+</tbody> -->
+
+                <!-- <tbody class="term">
+<tr style="vertical-align: baseline">
+<td id="term-PNAME_LN">[<span class="prodNo">141s</span>]   </td>
+<td>&lt;<code class="production term">PNAME_LN</code>&gt;</td>
+<td>   ::=   </td>
+<td><code class="content"><span class="prod"><a class="grammarRef" href="#term-PNAME_NS">PNAME_NS</a></span> <span class="prod"><a class="grammarRef" href="#term-PN_LOCAL">PN_LOCAL</a></span></code></td>
+</tr>
+</tbody> -->
+
+                <!-- <tbody class="term">
+<tr style="vertical-align: baseline">
+<td id="term-ATPNAME_NS">[<span class="prodNo">70</span>]   </td>
+<td>&lt;<code class="production term">ATPNAME_NS</code>&gt;</td>
+<td>   ::=   </td>
+<td><code class="content">"@" <span class="prod"><a class="grammarRef" href="#term-PN_PREFIX">PN_PREFIX</a></span>? ":"</code></td>
+</tr>
+</tbody>
+
+<tbody class="term">
+<tr style="vertical-align: baseline">
+<td id="term-ATPNAME_LN">[<span class="prodNo">71</span>]   </td>
+<td>&lt;<code class="production term">ATPNAME_LN</code>&gt;</td>
+<td>   ::=   </td>
+<td><code class="content">"@" <span class="prod"><a class="grammarRef" href="#term-PNAME_NS">PNAME_NS</a></span> <span class="prod"><a class="grammarRef" href="#term-PN_LOCAL">PN_LOCAL</a></span></code></td>
+</tr>
+</tbody> -->
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-BLANK_NODE_LABEL">[<span class="prodNo">142s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">BLANK_NODE_LABEL</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">"_:" (<span class="prod"><a class="grammarRef" href="#term-PN_CHARS_U">PN_CHARS_U</a></span> | [0-9]) ((<span class="prod"><a class="grammarRef" href="#term-PN_CHARS">PN_CHARS</a></span> | ".")* <span class="prod"><a class="grammarRef" href="#term-PN_CHARS">PN_CHARS</a></span>)?</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <!-- <tr style="vertical-align: baseline">
+<td id="term-AT_PNAME_NS">[<span class="prodNo">15</span>]   </td>
+<td>&lt;<code class="production term">AT_PNAME_NS</code>&gt;</td>
+<td>   ::=   </td>
+<td><code class="content">'@' <span class="prod"><a class="grammarRef" href="#term-PN_PNAME_NS">PNAME_NS</a></span></code></td>
+</tr>
+<tr style="vertical-align: baseline">
+<td id="term-AT_PNAME_LN">[<span class="prodNo">16</span>]   </td>
+<td>&lt;<code class="production term">AT_PNAME_LN</code>&gt;</td>
+<td>   ::=   </td>
+<td><code class="content">'@' <span class="prod"><a class="grammarRef" href="#term-PN_PNAME_LN">PNAME_LN</a></span></code></td>
+</tr> -->
+                    <tr style="vertical-align: baseline">
+                        <td id="term-AT_START">[<span class="prodNo">17</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">AT_START</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">"@START"</code></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">The &lt;<code>AT_START</code>&gt; terminal has precendence over <a class="grammarRef" href="#term-LANGTAG">LANGTAG</a></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-LANGTAG">[<span class="prodNo">145s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">LANGTAG</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">"@" ([a-zA-Z])+ ("-" ([a-zA-Z0-9])+)*</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-INTEGER">[<span class="prodNo">19t</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">INTEGER</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">[+-]? [0-9]+</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-DECIMAL">[<span class="prodNo">20t</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">DECIMAL</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">[+-]? [0-9]* "." [0-9]+</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-DOUBLE">[<span class="prodNo">21t</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">DOUBLE</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">[+-]? ([0-9]+ "." [0-9]* <span class="prod"><a class="grammarRef" href="#term-EXPONENT">EXPONENT</a></span> | "."? [0-9]+ <span class="prod"><a class="grammarRef" href="#term-EXPONENT">EXPONENT</a></span>)</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-EXPONENT">[<span class="prodNo">155s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">EXPONENT</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">[eE] [+-]? [0-9]+</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-STRING_LITERAL1">[<span class="prodNo">156s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">STRING_LITERAL1</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">"'" ([^'\\\n\r] | <span class="prod"><a class="grammarRef" href="#term-ECHAR">ECHAR</a></span> | <span class="prod"><a class="grammarRef" href="#term-UCHAR">UCHAR</a></span>)* "'"</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-STRING_LITERAL2">[<span class="prodNo">157s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">STRING_LITERAL2</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">'"' ([^\"\\\n\r] | <span class="prod"><a class="grammarRef" href="#term-ECHAR">ECHAR</a></span> | <span class="prod"><a class="grammarRef" href="#term-UCHAR">UCHAR</a></span>)* '"'</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-STRING_LITERAL_LONG1">[<span class="prodNo">158s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">STRING_LITERAL_LONG1</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">"'''" ( ("'" | "''")? ([^\\'\\] | <span class="prod"><a class="grammarRef" href="#term-ECHAR">ECHAR</a></span> | <span class="prod"><a class="grammarRef" href="#term-UCHAR">UCHAR</a></span>) )* "'''"</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-STRING_LITERAL_LONG2">[<span class="prodNo">159s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">STRING_LITERAL_LONG2</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">'"""' ( ('"' | '""')? ([^\"\\] | <span class="prod"><a class="grammarRef" href="#term-ECHAR">ECHAR</a></span> | <span class="prod"><a class="grammarRef" href="#term-UCHAR">UCHAR</a></span>) )* '"""'</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-LANG_STRING_LITERAL1">[<span class="prodNo">73x</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">LANG_STRING_LITERAL1</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">"'" ([^'\\\n\r] | <span class="prod"><a class="grammarRef" href="#term-ECHAR">ECHAR</a></span> | <span class="prod"><a class="grammarRef" href="#term-UCHAR">UCHAR</a></span>)* "'" <span class="prod"><a class="grammarRef" href="#term-LANGTAG">LANGTAG</a></span></code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-LANG_STRING_LITERAL2">[<span class="prodNo">74x</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">LANG_STRING_LITERAL2</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">'"' ([^\"\\\n\r] | <span class="prod"><a class="grammarRef" href="#term-ECHAR">ECHAR</a></span> | <span class="prod"><a class="grammarRef" href="#term-UCHAR">UCHAR</a></span>)* '"' <span class="prod"><a class="grammarRef" href="#term-LANGTAG">LANGTAG</a></span></code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-LANG_STRING_LITERAL_LONG1">[<span class="prodNo">75x</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">LANG_STRING_LITERAL_LONG1</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">"'''" ( ("'" | "''")? ([^\\'\\] | <span class="prod"><a class="grammarRef" href="#term-ECHAR">ECHAR</a></span> | <span class="prod"><a class="grammarRef" href="#term-UCHAR">UCHAR</a></span>) )* "'''" <span class="prod"><a class="grammarRef" href="#term-LANGTAG">LANGTAG</a></span></code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-LANG_STRING_LITERAL_LONG2">[<span class="prodNo">76x</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">LANG_STRING_LITERAL_LONG2</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">'"""' ( ('"' | '""')? ([^\"\\] | <span class="prod"><a class="grammarRef" href="#term-ECHAR">ECHAR</a></span> | <span class="prod"><a class="grammarRef" href="#term-UCHAR">UCHAR</a></span>) )* '"""' <span class="prod"><a class="grammarRef" href="#term-LANGTAG">LANGTAG</a></span></code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-UCHAR">[<span class="prodNo">26t</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">UCHAR</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp;&nbsp;<code class="content">"\\u" <span class="prod"><a class="grammarRef" href="#term-HEX">HEX</a></span> <span class="prod"><a class="grammarRef" href="#term-HEX">HEX</a></span> <span class="prod"><a class="grammarRef" href="#term-HEX">HEX</a></span> <span class="prod"><a class="grammarRef" href="#term-HEX">HEX</a></span><br>
+| "\\U" <span class="prod"><a class="grammarRef" href="#term-HEX">HEX</a></span> <span class="prod"><a class="grammarRef" href="#term-HEX">HEX</a></span> <span class="prod"><a class="grammarRef" href="#term-HEX">HEX</a></span> <span class="prod"><a class="grammarRef" href="#term-HEX">HEX</a></span> <span class="prod"><a class="grammarRef" href="#term-HEX">HEX</a></span> <span class="prod"><a class="grammarRef" href="#term-HEX">HEX</a></span> <span class="prod"><a class="grammarRef" href="#term-HEX">HEX</a></span> <span class="prod"><a class="grammarRef" href="#term-HEX">HEX</a></span></code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-ECHAR">[<span class="prodNo">160s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">ECHAR</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">"\\" [tbnrf\\\"\\']</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-PN_CHARS_BASE">[<span class="prodNo">164s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">PN_CHARS_BASE</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp;&nbsp;<code class="content">[A-Z] | [a-z]<br>
+| [#00C0-#00D6] | [#00D8-#00F6] | [#00F8-#02FF]<br>
+| [#0370-#037D] | [#037F-#1FFF]<br>
+| [#200C-#200D] | [#2070-#218F] | [#2C00-#2FEF]<br>
+| [#3001-#D7FF] | [#F900-#FDCF] | [#FDF0-#FFFD]<br>
+| [#10000-#EFFFF]</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-PN_CHARS_U">[<span class="prodNo">165s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">PN_CHARS_U</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content"><span class="prod"><a class="grammarRef" href="#term-PN_CHARS_BASE">PN_CHARS_BASE</a></span> | "_"</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-PN_CHARS">[<span class="prodNo">167s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">PN_CHARS</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp;&nbsp;<code class="content"><span class="prod"><a class="grammarRef" href="#term-PN_CHARS_U">PN_CHARS_U</a></span> | "-" | [0-9]<br>
+| [#00B7] | [#0300-#036F] | [#203F-#2040]</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-PN_PREFIX">[<span class="prodNo">168s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">PN_PREFIX</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content"><span class="prod"><a class="grammarRef" href="#term-PN_CHARS_BASE">PN_CHARS_BASE</a></span> ( (<span class="prod"><a class="grammarRef" href="#term-PN_CHARS">PN_CHARS</a></span> | ".")* <span class="prod"><a class="grammarRef" href="#term-PN_CHARS">PN_CHARS</a></span> )?</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-PN_LOCAL">[<span class="prodNo">169s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">PN_LOCAL</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">(<span class="prod"><a class="grammarRef" href="#term-PN_CHARS_U">PN_CHARS_U</a></span> | ":" | [0-9] | <span class="prod"><a class="grammarRef" href="#term-PLX">PLX</a></span>) ( (<span class="prod"><a class="grammarRef" href="#term-PN_CHARS">PN_CHARS</a></span> | "." | ":" | <span class="prod"><a class="grammarRef" href="#term-PLX">PLX</a></span>)* (<span class="prod"><a class="grammarRef" href="#term-PN_CHARS">PN_CHARS</a></span> | ":" | <span class="prod"><a class="grammarRef" href="#term-PLX">PLX</a></span>) )?</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-PLX">[<span class="prodNo">170s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">PLX</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content"><span class="prod"><a class="grammarRef" href="#term-PERCENT">PERCENT</a></span> | <span class="prod"><a class="grammarRef" href="#term-PN_LOCAL_ESC">PN_LOCAL_ESC</a></span></code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-PERCENT">[<span class="prodNo">171s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">PERCENT</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">"%" <span class="prod"><a class="grammarRef" href="#term-HEX">HEX</a></span> <span class="prod"><a class="grammarRef" href="#term-HEX">HEX</a></span></code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-HEX">[<span class="prodNo">172s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">HEX</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">[0-9] | [A-F] | [a-f]</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-PN_LOCAL_ESC">[<span class="prodNo">173s</span>]&nbsp;&nbsp;&nbsp;</td>
+                        <td>&lt;<code class="production term">PN_LOCAL_ESC</code>&gt;</td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="content">"\\" ( "_" | "~" | "." | "-" | "!" | "$" | "&amp;" | "'" | "(" | ")" | "*" | "+" | "," | ";" | "=" | "/" | "?" | "#" | "@" | "%" )</code></td>
+                    </tr>
+                </tbody>
+
+                <tbody class="term">
+                    <tr style="vertical-align: baseline">
+                        <td id="term-PASSED_TOKENS">&nbsp;&nbsp;&nbsp;</td>
+                        <td><code class="production directive">PASSED TOKENS</code></td>
+                        <td>&nbsp;&nbsp;&nbsp;::=&nbsp;&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp;&nbsp;<code class="content">[ \t\r\n]+<br>
+| "#" [^\r\n]*</code></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+
+
+    <section id="references" class="appendix" typeof="bibo:Chapter" resource="#references" property="bibo:hasPart">
+        <!--OddPage-->
+        <h2 id="a.-references" resource="#a.-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">A. </span>References</span>
+        </h2>
+        <section id="normative-references" typeof="bibo:Chapter" resource="#normative-references" property="bibo:hasPart">
+            <h3 id="a.1-normative-references" resource="#a.1-normative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.1 </span>Normative references</span>
+            </h3>
+            <dl class="bibliography" resource=""><dt id="bib-RFC2119">[RFC2119]</dt>
+                <dd><a href="https://tools.ietf.org/html/rfc2119" property="dc:requires"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner. IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119"
+                        property="dc:requires">https://tools.ietf.org/html/rfc2119</a>
+                </dd><dt id="bib-rdf11-mt">[rdf11-mt]</dt>
+                <dd><a href="https://www.w3.org/TR/rdf11-mt/" property="dc:requires"><cite>RDF 1.1 Semantics</cite></a>. Patrick Hayes; Peter Patel-Schneider. W3C. 25 February 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/rdf11-mt/" property="dc:requires">https://www.w3.org/TR/rdf11-mt/</a>
+                </dd>
+            </dl>
+        </section>
+        <section id="informative-references" typeof="bibo:Chapter" resource="#informative-references" property="bibo:hasPart">
+            <h3 id="a.2-informative-references" resource="#a.2-informative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.2 </span>Informative references</span>
+            </h3>
+            <dl class="bibliography" resource=""><dt id="bib-rdf11-concepts">[rdf11-concepts]</dt>
+                <dd><a href="https://www.w3.org/TR/rdf11-concepts/" property="dc:references"><cite>RDF 1.1 Concepts and Abstract Syntax</cite></a>. Richard Cyganiak; David Wood; Markus Lanthaler. W3C. 25 February 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/rdf11-concepts/"
+                        property="dc:references">https://www.w3.org/TR/rdf11-concepts/</a>
+                </dd><dt id="bib-shex-semantics">[shex-semantics]</dt>
+                <dd><a href="http://shex.io/semantics" property="dc:references"><cite>Shape Expression Language</cite></a>. Gregg Kellogg.URL: <a href="http://shex.io/semantics" property="dc:references">http://shex.io/semantics</a>
+                </dd><dt id="bib-sparql11-query">[sparql11-query]</dt>
+                <dd><a href="https://www.w3.org/TR/sparql11-query/" property="dc:references"><cite>SPARQL 1.1 Query Language</cite></a>. Steven Harris; Andy Seaborne. W3C. 21 March 2013. W3C Recommendation. URL: <a href="https://www.w3.org/TR/sparql11-query/"
+                        property="dc:references">https://www.w3.org/TR/sparql11-query/</a>
+                </dd>
+            </dl>
+        </section>
+    </section>
+    <p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+    <script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script>
+</body>
+
+</html>
