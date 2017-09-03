@@ -27,3 +27,5 @@ RewriteRule    ^spec/(.*)$        shex-semantics/$1  [P,L]
 
 # # ProxyPassReverse / http://shexspec.github.io
 
+Addhandler text/shex .shex
+
