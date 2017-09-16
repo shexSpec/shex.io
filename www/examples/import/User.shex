@@ -1,0 +1,8 @@
+:Person { 
+   $:name ( schema:name . 
+          | schema:givenName . ; schema:familyName .
+          ) ;
+   schema:email .               
+}
+
+# This schemas could also have a :User shape...
