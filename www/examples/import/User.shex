@@ -1,3 +1,6 @@
+PREFIX : <http://a.example/ns#>
+PREFIX schema: <http://schema.org/>
+
 :Person { 
    $:name ( schema:name . 
           | schema:givenName . ; schema:familyName .
