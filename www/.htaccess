@@ -28,3 +28,8 @@ RewriteRule    ^spec/(.*)$        shex-semantics/$1  [P,L]
 # # ProxyPassReverse / http://shexspec.github.io
 
 AddType text/shex .shex
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
