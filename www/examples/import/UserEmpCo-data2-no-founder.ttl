@@ -3,8 +3,7 @@ PREFIX schema: <http://schema.org/>
 :B schema:name "Bob" ;
    schema:worksFor :Co .
 :Co
-  schema:employee :B ;
-  schema:founder :Sue .
+  schema:employee :B .
 :Sue
   schema:name "Sue" ;
   schema:email <mailto:bob@example.com> .

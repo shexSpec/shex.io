@@ -1,6 +1,6 @@
 PREFIX : <http://a.example/ns#>
 PREFIX schema: <http://schema.org/>
-IMPORT <http://shex.io/examples/import/User.shex>
+IMPORT <User.shex>
 
 
 :Employee {
