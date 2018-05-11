@@ -30,6 +30,6 @@ RewriteRule    ^spec/(.*)$        shex-semantics/$1  [P,L]
 AddType text/shex .shex
 
 <IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Origin "*"
 </IfModule>
 
