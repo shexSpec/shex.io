@@ -15,7 +15,7 @@ RewriteRule    ^extensions/(.*)$  http://shexspec.github.io/extensions/$1  [P,L]
 RewriteRule    ^primer$           shex-primer/ [R=301,L]
 RewriteRule    ^primer/$          shex-primer/ [R=301,L]
 # RewriteRule    ^primer/(.*)$      shex-primer/$1  [P,L]
-RewriteRule    ^primer/(.*)$ shex-primer-20170713/ [R=301,L]
+RewriteRule    ^primer/(.*)$ shex-primer-20191008/$1 [R=301,L]
 
 RewriteRule    ^spec$             shex-semantics/ [R=301,L]
 RewriteRule    ^spec/$            shex-semantics/ [R=301,L]
