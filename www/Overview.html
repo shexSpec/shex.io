@@ -49,6 +49,26 @@ ul.cols {
   -moz-columns: 3;
 }
 
+.code { display: flex; padding-top: 2ex; padding-left: 1em; }
+.code li { width: 33%; }
+.code h3 { padding: 0; }
+.code table { border-collapse: true ; }
+.code th, .code td { border-left: thin solid black; }
+.code th { border-bottom: thin solid black; }
+table th, table td { padding: 0 .5em; }
+
+.tryit {
+    text-decoration: none;
+    font: menu;
+    display: inline-block;
+    padding: 2px 8px;
+    background: ButtonFace;
+    color: ButtonText;
+    border-style: solid;
+    border-width: 2px;
+    border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+    padding: 0 .2em;
+}
       /*]]>*/
   </style>
   </head>
@@ -173,7 +193,9 @@ ul.cols {
 		<li><a href="http://shexspec.github.io/primer/ShExJ#validation">JSON validation results</a></li>
 	      </ul>
 
-          <h3 id="platforms">Implementations and platforms</h3>
+	      <ul class="code">
+		      <li>
+          <h3 id="platforms">Validators</h3>
 	      <table>
 		  <tr><th>Implementation</th><th>Platform/Language</th></tr>
 		  <tr><td>shex.js</td><td>(<a href="https://github.com/shexSpec/shex.js/wiki">wiki</a>,<a href="https://github.com/shexSpec/shex.js/">repo</a>), runs on <a href="https://github.com/RubenVerborgh/N3.js">n3.js</a></td></tr>
@@ -182,12 +204,23 @@ ul.cols {
           <tr><td><a href="https://github.com/ruby-rdf/shex">Ruby ShEx</a></td><td>Ruby</td></tr>
           <tr><td><a href="https://github.com/hsolbrig/PyShEx">PyShEx</a></td><td>Python</td></tr>
 	      </table>
-
+          </li>
+		      <li>
+          <h3 id="webapps">WebApps</h3>
+	      <table>
+		  <tr><th>try it!</th> <th>repo</th> <th>Environment</th></tr>
+		  <tr><td><a class="tryit" href="http://shex.io/webapps/shex-author">shex-author</a></td><td><a href="https://github.com/weso/shex-author.git/">github</a> public</td> <td><a href="https://reactjs.org/">React</a></td></tr>
+		  <tr><td><a class="tryit" href="https://shexspec.github.io/ace-shexc-user/">ace-shexc</a></td><td><a href="https://github.com/shexSpec/ace-shexc-mode/">github</a> public</td> <td><a href="https://ace.c9.io/">Ace Editor</a></td></tr>
+		  <tr><td><a class="tryit" href="http://shex.io/webapps/shex.js/doc/shex-simple.html">shex-simple</a></td><td><a href="https://github.com/shexSpec/shex.js/">github</a> public</td> <td>custom js</td></tr>
+	      </table>
+          </li>
+		      <li>
            <h3 id="tutorials">Tutorials</h3>
            <ul>
              <li><a href="http://weso.github.io/RDFValidation_ESWC16/">RDF Validation (ShEx by example)</a></li>
            </ul>
-
+          </li>
+	      </ul>
           </div>
           <!-- /end #w3c_content_body --> </div>
         <!-- /end #w3c_mainCol --> </div>
