@@ -5806,13 +5806,13 @@ otherwise the result is the left <a class="grammarRef" href="#prod-unaryTripleEx
         </div>
 </section>
 
-<section class="appendix normative" id="iana-considerations">
-  <h2 id="c-iana-considerations"><bdi class="secno">C. </bdi>IANA Considerations<a class="self-link" aria-label="§" href="#iana-considerations"></a></h2>
+<section class="appendix normative">
+  <h2>IANA Considerations</h2>
 
   <p>This section has been submitted to the Internet Engineering Steering
     Group (IESG) for review, approval, and registration with IANA.</p>
 
-  <h3 id="text-shex">text/shex<a class="self-link" aria-label="§" href="#iana-considerations"></a></h3>
+  <h3>text/shex</h3>
   <dl>
     <dt>Type name:</dt>
     <dd>text</dd>
@@ -5820,49 +5820,59 @@ otherwise the result is the left <a class="grammarRef" href="#prod-unaryTripleEx
     <dd>shex</dd>
     <dt>Required parameters:</dt>
     <dd>None</dd>
+    <dt>Optional parameters:</dt>
+    <dd>None</dd>
     <dt>Encoding considerations:</dt>
+    <dd>8-bit text</dd>
     <dd>ShEx Compact Syntax (ShExC) is a text language which is encoded in UTF-8.</dd>
     <dt>Security considerations:</dt>
-    <dd>Given that <a href="#dfn-shexc" class="internalDFN" data-link-type="dfn">ShExC</a> allows the substitution of long IRIs with short terms,
-      <a href="#dfn-shexc" class="internalDFN" data-link-type="dfn">ShExC</a> documents may expand considerably when processed and, in the worst case,
+    <dd>Given that <a>ShExC</a> allows the substitution of long IRIs with short terms,
+      <a>ShExC</a> documents may expand considerably when processed and, in the worst case,
       the resulting data might consume all of the recipient's resources. Applications
       should treat any data with due skepticism.</dd>
     <dt>Interoperability considerations:</dt>
     <dd>Not Applicable</dd>
     <dt>Published specification:</dt>
-    <dd><a href="">This document</a></dd>
+    <dd><a href="http://shex.io/shex-semantics/">http://shex.io/shex-semantics/</a></dd>
     <dt>Applications that use this media type:</dt>
     <dd>Any programming environment that requires the exchange of
       directed graphs. Implementations of ShEx have been created for
       JavaScript, Python, Ruby, and Java.
     </dd>
-    <dt>Additional information:</dt>
+    <dt>Fragment Identifier Considerations:</dt>
     <dd>
-      <dl>
-        <dt>Magic number(s):</dt>
-        <dd>Not Applicable</dd>
-        <dt>File extension(s):</dt>
-        <dd>.shex</dd>
-        <dt>Macintosh file type code(s):</dt>
-        <dd>TEXT</dd>
-      </dl>
-    </dd>
-    <dt>Person &amp; email address to contact for further information:</dt>
-    <dd>Eric Prud'hommeaux &lt;eric@w3.org&gt;</dd>
+      The structure of a ShEx schema is defined by its representation in JSON per <a href="#shexj">ShEx JSON Syntax (ShExJ)</a>.
+      The JSON-LD context &lt;<a href="http://www.w3.org/ns/shex.jsonld">http://www.w3.org/ns/shex.jsonld</a>&gt; defines the RDF representation (ShExR) for every ShEx schema.
+      A ShEx fragment identifies an instance of either the <a href="#dfn-shapeexpr">shapeExpr</a> or <a href="#dfn-tripleexpr">tripleExpr</a> ShExJ productions, as well as the RDF resource (see <a data-cite="RDF11-CONCEPTS#section-fragID" href="https://www.w3.org/TR/rdf11-concepts/#section-fragID">RDF 1.1 Concepts and Abstract Syntax</a> §6 [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf11-concepts" title="RDF 1.1 Concepts and Abstract Syntax">RDF11-CONCEPTS<!---0.344445%--></a></cite><!---0.344445%-->]) in the corresponding ShExR.</dd>
+    <dt>Restrictions on Usage:</dt>
+    <dd>None</dd>
+    <dt>Provisional Registrations:</dt>
+    <dd>Not Applicable</dd>
+    <dt>Additional information:</dt>
+    <dd><dl>
+      <dt>Deprecated alias names for this type:</dt>
+      <dd>None</dd>
+      <dt>Magic number(s):</dt>
+      <dd></dd>
+      <dt>File extension(s):</dt>
+      <dd>.shex</dd>
+      <dt>Macintosh file type code(s):</dt>
+      <dd>TEXT</dd>
+    </dl></dd>
     <dt>Intended usage:</dt>
     <dd>Common</dd>
-    <dt>Restrictions on usage:</dt>
+    <dt>Other Information &amp; Comments:</dt>
     <dd>None</dd>
-    <dt>Author(s):</dt>
-    <dd>Eric Prud'hommeaux, Iovka Boneva, Jose Labra Gayo, Gregg Kellogg, Niklas Lindström</dd>
-    <dt>Change controller:</dt>
-    <dd>W3C</dd>
+    <dt>Contact Person:</dt>
+    <dd><dl>
+      <dt>Contact Name:</dt>
+      <dd>Eric Prud'hommeaux</dd>
+      <dt>Contact Email Address:</dt>
+      <dd>eric@w3.org</dd>
+      <dt>Change controller:</dt>
+      <dd>W3C</dd>
+    </dl></dd>
   </dl>
-
-  <p>Fragment identifiers used with <a href="https://www.w3.org/TR/2014/REC-json-ld-20140116/#application-ld-json">application/ld+json</a>
-    are treated as in RDF syntaxes, as per
-    <a href="https://www.w3.org/TR/rdf11-concepts/#section-fragID">RDF 1.1 Concepts and Abstract Syntax</a>
-    [<cite><a class="bibref" href="#bib-rdf11-concepts" title="RDF 1.1 Concepts and Abstract Syntax" data-link-type="biblio">RDF11-CONCEPTS</a></cite>].</p>
 </section>
 
     <section id="security">
