@@ -28,537 +28,520 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="pt"
      showgrid="false"
-     inkscape:zoom="1.2351878"
-     inkscape:cx="508.4247"
-     inkscape:cy="-8.5007314"
-     inkscape:window-width="1461"
-     inkscape:window-height="970"
-     inkscape:window-x="953"
-     inkscape:window-y="316"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg3069"
+     inkscape:zoom="1.9056976"
+     inkscape:cx="530.77677"
+     inkscape:cy="97.339684"
+     inkscape:window-width="3840"
+     inkscape:window-height="2136"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer4"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0" />
-  <text
-     text-anchor="middle"
-     x="33.264423"
-     y="223.77878"
-     font-family="Times, serif"
-     font-size="12.1172px"
-     id="text2884"
-     transform="scale(0.86551685,1.155379)"
-     style="stroke-width:0.865517">Namespaces:</text>
-  <text
-     text-anchor="middle"
-     x="59.22118"
-     y="236.76152"
-     font-family="Times, serif"
-     font-size="12.1172px"
-     id="text2886"
-     transform="scale(0.86551685,1.155379)"
-     style="stroke-width:0.865517">ex: http://ex.example/#</text>
-  <text
-     text-anchor="middle"
-     x="72.199577"
-     y="249.74426"
-     font-family="Times, serif"
-     font-size="12.1172px"
-     id="text2888"
-     transform="scale(0.86551685,1.155379)"
-     style="stroke-width:0.865517">foaf: http://xmlns.com/foaf/</text>
-  <text
-     text-anchor="middle"
-     x="111.13473"
-     y="262.72699"
-     font-family="Times, serif"
-     font-size="12.1172px"
-     id="text2890"
-     transform="scale(0.86551685,1.155379)"
-     style="stroke-width:0.865517">xsd: http://www.w3.org/2001/XMLSchema#</text>
   <g
-     id="node1"
-     class="node"
-     transform="matrix(0.74911937,0,0,1,-33.02867,401.31903)">
-    <title
-       id="title2892">Rhttp://a.example/Issue1</title>
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="all"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <text
+       text-anchor="middle"
+       x="33.264423"
+       y="223.77878"
+       font-family="Times, serif"
+       font-size="12.1172px"
+       id="text2884"
+       transform="scale(0.86551682,1.155379)"
+       style="stroke-width:0.865517">Namespaces:</text>
+    <text
+       text-anchor="middle"
+       x="59.22118"
+       y="236.76152"
+       font-family="Times, serif"
+       font-size="12.1172px"
+       id="text2886"
+       transform="scale(0.86551682,1.155379)"
+       style="stroke-width:0.865517">ex: http://ex.example/#</text>
+    <text
+       text-anchor="middle"
+       x="72.199577"
+       y="249.74426"
+       font-family="Times, serif"
+       font-size="12.1172px"
+       id="text2888"
+       transform="scale(0.86551682,1.155379)"
+       style="stroke-width:0.865517">foaf: http://xmlns.com/foaf/</text>
+    <text
+       text-anchor="middle"
+       x="111.13473"
+       y="262.72699"
+       font-family="Times, serif"
+       font-size="12.1172px"
+       id="text2890"
+       transform="scale(0.86551682,1.155379)"
+       style="stroke-width:0.865517">xsd: http://www.w3.org/2001/XMLSchema#</text>
+    <g
+       id="node1"
+       class="node"
+       transform="matrix(0.74911937,0,0,1,-33.02867,401.31903)">
+      <title
+         id="title2892">Rhttp://a.example/Issue1</title>
+      <ellipse
+         fill="none"
+         stroke="#0000ff"
+         cx="119.59"
+         cy="-242"
+         rx="75"
+         ry="18"
+         id="ellipse2894" />
+      <text
+         text-anchor="middle"
+         x="119.59"
+         y="-238.3"
+         font-family="Times, serif"
+         font-size="14px"
+         id="text2896">http://a.example/Issue1</text>
+    </g>
     <ellipse
        fill="none"
        stroke="#0000ff"
-       cx="119.59"
-       cy="-242"
-       rx="75"
+       cx="229.43965"
+       cy="196.31801"
+       rx="56.183952"
        ry="18"
-       id="ellipse2894" />
+       id="ellipse2901"
+       style="stroke-width:0.865517" />
     <text
        text-anchor="middle"
-       x="119.59"
-       y="-238.3"
+       x="265.08975"
+       y="173.11894"
        font-family="Times, serif"
-       font-size="14px"
-       id="text2896">http://a.example/Issue1</text>
-  </g>
-  <ellipse
-     fill="none"
-     stroke="#0000ff"
-     cx="229.43965"
-     cy="196.31801"
-     rx="56.183952"
-     ry="18"
-     id="ellipse2901"
-     style="stroke-width:0.865517" />
-  <text
-     text-anchor="middle"
-     x="265.08975"
-     y="173.11894"
-     font-family="Times, serif"
-     font-size="12.1172px"
-     id="text2903"
-     transform="scale(0.86551684,1.155379)"
-     style="stroke-width:0.865517">http://a.example/User2</text>
-  <path
-     fill="none"
-     stroke="#000000"
-     d="m 99.88451,168.65289 c 22.06485,6.00472 48.70818,13.26317 71.2749,19.39987"
-     id="path2908"
-     style="stroke-width:0.76223" />
-  <polygon
-     fill="#000000"
-     stroke="#000000"
-     points="384.73,-221.52 394.37,-217.13 384.09,-214.55 "
-     id="polygon2910"
-     transform="matrix(0.58785927,0,0,1.0035643,-54.55971,406.92003)" />
-  <text
-     text-anchor="middle"
-     x="182.97577"
-     y="128.95795"
-     font-family="Times, serif"
-     font-size="10.7532px"
-     id="text2912"
-     transform="scale(0.76535706,1.3065797)"
-     style="stroke-width:0.768085">ex:reportedBy</text>
-  <g
-     id="node3"
-     class="node"
-     transform="translate(-432.56418,401.31903)">
-    <title
-       id="title2915">Rhttp://a.example/Thompson.J</title>
-    <ellipse
-       fill="none"
-       stroke="#0000ff"
-       cx="920.09998"
-       cy="-273"
-       rx="90"
-       ry="18"
-       id="ellipse2917" />
-    <text
-       text-anchor="middle"
-       x="920.09998"
-       y="-269.29999"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text2919">http://a.example/Thompson.J</text>
-  </g>
-  <g
-     id="edge2"
-     class="edge"
-     transform="matrix(0.51463419,0,0,1.0042787,-8.0440403,397.935)">
-    <title
-       id="title2922">Rhttp://a.example/Issue1-&gt;Rhttp://a.example/Thompson.J</title>
+       font-size="12.1172px"
+       id="text2903"
+       transform="scale(0.86551682,1.155379)"
+       style="stroke-width:0.865517">http://a.example/User2</text>
     <path
        fill="none"
        stroke="#000000"
-       d="m 234.62,-247.06 c 7.63,-0.32 15.21,-0.64 22.56,-0.94 176.79,-7.22 380.18,-14.79 514.33,-19.69"
-       id="path2924" />
+       d="m 99.88451,168.65289 c 22.06485,6.00472 48.70818,13.26317 71.2749,19.39987"
+       id="path2908"
+       style="stroke-width:0.76223" />
+    <polygon
+       fill="#000000"
+       stroke="#000000"
+       points="394.37,-217.13 384.09,-214.55 384.73,-221.52 "
+       id="polygon2910"
+       transform="matrix(0.58785927,0,0,1.0035643,-54.55971,406.92003)" />
+    <g
+       id="node3"
+       class="node"
+       transform="translate(-432.56418,401.31903)">
+      <title
+         id="title2915">Rhttp://a.example/Thompson.J</title>
+      <ellipse
+         fill="none"
+         stroke="#0000ff"
+         cx="920.09998"
+         cy="-273"
+         rx="90"
+         ry="18"
+         id="ellipse2917" />
+      <text
+         text-anchor="middle"
+         x="920.09998"
+         y="-269.29999"
+         font-family="Times, serif"
+         font-size="14px"
+         id="text2919">http://a.example/Thompson.J</text>
+    </g>
+    <path
+       fill="none"
+       stroke="#000000"
+       d="m 112.69943,149.8179 c 3.92666,-0.32136 7.82759,-0.64273 11.61015,-0.94402 90.98218,-7.25089 195.65363,-14.85328 264.6918,-19.77425"
+       id="path2924"
+       style="stroke-width:0.718913" />
     <polygon
        fill="#000000"
        stroke="#000000"
        points="771.99,-264.2 771.73,-271.2 781.86,-268.06 "
-       id="polygon2926" />
-    <text
-       text-anchor="middle"
-       x="495.82001"
-       y="-264.79999"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text2928">ex:reproducedBy</text>
-  </g>
-  <g
-     id="edge6"
-     class="edge"
-     transform="matrix(0.52902328,0,0,1.0021143,-34.68899,401.82759)">
-    <title
-       id="title2931">Rhttp://a.example/User2-&gt;Rhttp://a.example/Thompson.J</title>
+       id="polygon2926"
+       transform="matrix(0.51463419,0,0,1.0042787,-8.0440401,397.935)" />
     <path
        fill="none"
        stroke="#000000"
-       d="m 581.7,-220.38 c 51.22,-7.54 117.76,-17.45 176.76,-26.62 20.6,-3.2 42.68,-6.72 63.67,-10.1"
-       id="path2933" />
+       d="m 273.04385,180.98164 c 27.09657,-7.55594 62.29778,-17.48689 93.51016,-26.67628 10.89788,-3.20677 22.57871,-6.73421 33.68291,-10.12136"
+       id="path2933"
+       style="stroke-width:0.728108" />
     <polygon
        fill="#000000"
        stroke="#000000"
        points="822.69,-253.65 821.58,-260.56 832.01,-258.7 "
-       id="polygon2935" />
-    <text
-       text-anchor="middle"
-       x="694.96002"
-       y="-250.8"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text2937">ex:representative</text>
-  </g>
-  <g
-     id="node4"
-     class="node"
-     transform="translate(-432.56383,401.31903)">
-    <title
-       id="title2940">LBob</title>
-    <polygon
-       fill="none"
-       stroke="#000000"
-       points="947.1,-230 947.1,-194 893.1,-194 893.1,-230 "
-       id="polygon2942" />
-    <text
-       text-anchor="middle"
-       x="920.09998"
-       y="-208.3"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text2944">Bob</text>
-  </g>
-  <g
-     id="edge3"
-     class="edge"
-     transform="matrix(0.58401886,0,0,1.0093321,-62.8317,403.32224)">
-    <title
-       id="title2947">Rhttp://a.example/User2-&gt;LBob</title>
+       id="polygon2935"
+       transform="matrix(0.52902328,0,0,1.0021143,-34.68899,401.82759)" />
+    <g
+       id="node4"
+       class="node"
+       transform="translate(-432.56383,401.31903)">
+      <title
+         id="title2940">LBob</title>
+      <polygon
+         fill="none"
+         stroke="#000000"
+         points="947.1,-230 947.1,-194 893.1,-194 893.1,-230 "
+         id="polygon2942" />
+      <text
+         text-anchor="middle"
+         x="920.09998"
+         y="-208.3"
+         font-family="Times, serif"
+         font-size="14px"
+         id="text2944">Bob</text>
+    </g>
     <path
        fill="none"
        stroke="#000000"
-       d="m 613.72,-208.08 c 45.21,-0.12 97.39,-0.39 144.74,-0.92 42.6,-0.48 91.55,-1.45 124.1,-2.16"
-       id="path2949" />
+       d="m 295.59235,193.30042 c 26.4035,-0.12112 56.8776,-0.39364 84.53089,-0.92859 24.87921,-0.48448 53.46693,-1.46353 72.47675,-2.18016"
+       id="path2949"
+       style="stroke-width:0.767769" />
     <polygon
        fill="#000000"
        stroke="#000000"
        points="882.87,-214.67 892.94,-211.39 883.02,-207.67 "
-       id="polygon2951" />
-    <text
-       text-anchor="middle"
-       x="694.96002"
-       y="-212.8"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text2953">foaf:givenName</text>
-  </g>
-  <g
-     id="node5"
-     class="node"
-     transform="translate(-432.56383,401.31903)">
-    <title
-       id="title2956">LSmith</title>
-    <polygon
-       fill="none"
-       stroke="#000000"
-       points="949.6,-175 949.6,-139 890.6,-139 890.6,-175 "
-       id="polygon2958" />
-    <text
-       text-anchor="middle"
-       x="920.09998"
-       y="-153.3"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text2960">Smith</text>
-  </g>
-  <g
-     id="edge4"
-     class="edge"
-     transform="matrix(0.5666443,0,0,1.0030043,-47.5236,401.85851)">
-    <title
-       id="title2963">Rhttp://a.example/User2-&gt;LSmith</title>
+       id="polygon2951"
+       transform="matrix(0.58401886,0,0,1.0093321,-62.8317,403.32224)" />
+    <g
+       id="node5"
+       class="node"
+       transform="translate(-432.56383,401.31903)">
+      <title
+         id="title2956">LSmith</title>
+      <polygon
+         fill="none"
+         stroke="#000000"
+         points="949.6,-175 949.6,-139 890.6,-139 890.6,-175 "
+         id="polygon2958" />
+      <text
+         text-anchor="middle"
+         x="920.09998"
+         y="-153.3"
+         font-family="Times, serif"
+         font-size="14px"
+         id="text2960">Smith</text>
+    </g>
     <path
        fill="none"
        stroke="#000000"
-       d="m 581.52,-195.66 c 16.55,2.3 33.78,4.62 49.94,6.66 88.98,11.23 193.71,22.35 248.97,28.06"
-       id="path2965" />
+       d="m 282.97205,206.00421 c 9.37796,2.30691 19.14124,4.63388 28.29821,6.68001 50.42001,11.26374 109.76467,22.41714 141.07744,28.1443"
+       id="path2965"
+       style="stroke-width:0.753888" />
     <polygon
        fill="#000000"
        stroke="#000000"
-       points="880.18,-157.44 880.9,-164.41 890.48,-159.9 "
-       id="polygon2967" />
-    <text
-       text-anchor="middle"
-       x="694.96002"
-       y="-192.8"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text2969">foaf:familyName</text>
-  </g>
-  <g
-     id="node6"
-     class="node"
-     transform="translate(-423.56689,401.31903)">
-    <title
-       id="title2972">Rmail:bob@example.org</title>
-    <ellipse
-       fill="none"
-       stroke="#0000ff"
-       cx="920.09998"
-       cy="-102"
-       rx="70"
-       ry="18"
-       id="ellipse2974" />
-    <text
-       text-anchor="middle"
-       x="920.09998"
-       y="-98.300003"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text2976">mail:bob@example.org</text>
-  </g>
-  <g
-     id="edge5"
-     class="edge"
-     transform="matrix(0.58162967,0,0,1.0024279,-43.56166,401.68633)">
-    <title
-       id="title2979">Rhttp://a.example/User2-&gt;Rmail:bob@example.org</title>
+       points="880.9,-164.41 890.48,-159.9 880.18,-157.44 "
+       id="polygon2967"
+       transform="matrix(0.5666443,0,0,1.0030043,-46.542946,402.25203)" />
+    <g
+       id="node6"
+       class="node"
+       transform="translate(-423.56689,401.31903)">
+      <title
+         id="title2972">Rmail:bob@example.org</title>
+      <ellipse
+         fill="none"
+         stroke="#0000ff"
+         cx="920.09998"
+         cy="-102"
+         rx="70"
+         ry="18"
+         id="ellipse2974" />
+      <text
+         text-anchor="middle"
+         x="920.09998"
+         y="-98.300003"
+         font-family="Times, serif"
+         font-size="14px"
+         id="text2976">mail:bob@example.org</text>
+    </g>
     <path
        fill="none"
        stroke="#000000"
-       d="m 534.44,-190.93 c 26.64,11.53 63.45,26.33 97.02,35.93 62.06,17.75 133.41,30.94 189.52,39.72"
-       id="path2981" />
+       d="m 267.2845,210.29277 c 15.49462,11.55799 36.9044,26.39393 56.42971,36.01724 36.09594,17.79309 77.59522,31.01511 110.23046,39.81643"
+       id="path2981"
+       style="stroke-width:0.763572" />
     <polygon
        fill="#000000"
        stroke="#000000"
        points="821.57,-118.73 830.91,-113.74 820.5,-111.81 "
-       id="polygon2983" />
-    <text
-       text-anchor="middle"
-       x="694.96002"
-       y="-158.8"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text2985">foaf:mbox</text>
-  </g>
-  <g
-     id="node7"
-     class="node"
-     transform="matrix(0.76242934,0,0,1,-233.14635,401.31903)">
-    <title
-       id="title2988">LJoe</title>
-    <polygon
-       fill="none"
-       stroke="#000000"
-       points="1305.12,-365 1305.12,-401 1359.12,-401 1359.12,-365 "
-       id="polygon2990" />
-    <text
-       text-anchor="middle"
-       x="1332.12"
-       y="-379.29999"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text2992">Joe</text>
-  </g>
-  <g
-     id="edge7"
-     class="edge"
-     transform="matrix(0.76242934,0,0,1,-233.14635,401.31903)">
-    <title
-       id="title2995">Rhttp://a.example/Thompson.J-&gt;LJoe</title>
+       id="polygon2983"
+       transform="matrix(0.58162967,0,0,1.0024279,-43.56166,401.68633)" />
+    <g
+       id="node7"
+       class="node"
+       transform="matrix(0.76242933,0,0,1,-233.14635,401.31903)">
+      <title
+         id="title2988">LJoe</title>
+      <polygon
+         fill="none"
+         stroke="#000000"
+         points="1305.12,-365 1305.12,-401 1359.12,-401 1359.12,-365 "
+         id="polygon2990" />
+      <text
+         text-anchor="middle"
+         x="1332.12"
+         y="-379.29999"
+         font-family="Times, serif"
+         font-size="14px"
+         id="text2992">Joe</text>
+    </g>
     <path
        fill="none"
        stroke="#000000"
-       d="m 965.64,-290.17 c 31.98,-11.93 76.29,-27.63 116.09,-38.83 74.89,-21.08 164.39,-38.65 213.22,-47.6"
-       id="path2997" />
+       d="m 503.08591,111.14903 c 24.38249,-11.93 58.16573,-27.63 88.51042,-38.83 57.09833,-21.08 125.33576,-38.65 162.56518,-47.6"
+       id="path2997"
+       style="stroke-width:0.873172" />
     <polygon
        fill="#000000"
        stroke="#000000"
        points="1305.02,-378.44 1295.8,-373.2 1294.55,-380.09 "
-       id="polygon2999" />
-    <text
-       text-anchor="middle"
-       x="1140.73"
-       y="-360.79999"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text3001">foaf:givenName</text>
-  </g>
-  <g
-     id="node8"
-     class="node"
-     transform="matrix(0.76242934,0,0,1,-233.14635,401.31903)">
-    <title
-       id="title3004">LJoseph</title>
-    <polygon
-       fill="none"
-       stroke="#000000"
-       points="1300.12,-310 1300.12,-346 1364.12,-346 1364.12,-310 "
-       id="polygon3006" />
-    <text
-       text-anchor="middle"
-       x="1332.12"
-       y="-324.29999"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text3008">Joseph</text>
-  </g>
-  <g
-     id="edge8"
-     class="edge"
-     transform="matrix(0.76242934,0,0,1,-233.14635,401.31903)">
-    <title
-       id="title3011">Rhttp://a.example/Thompson.J-&gt;LJoseph</title>
+       id="polygon2999"
+       transform="matrix(0.76242933,0,0,1,-233.14635,401.31903)" />
+    <g
+       id="node8"
+       class="node"
+       transform="matrix(0.76242933,0,0,1,-233.14635,401.31903)">
+      <title
+         id="title3004">LJoseph</title>
+      <polygon
+         fill="none"
+         stroke="#000000"
+         points="1300.12,-310 1300.12,-346 1364.12,-346 1364.12,-310 "
+         id="polygon3006" />
+      <text
+         text-anchor="middle"
+         x="1332.12"
+         y="-324.29999"
+         font-family="Times, serif"
+         font-size="14px"
+         id="text3008">Joseph</text>
+    </g>
     <path
        fill="none"
        stroke="#000000"
-       d="m 1018.79,-286.1 c 86.38,-11.59 208.17,-27.93 271.1,-36.37"
-       id="path3013" />
+       d="m 543.60903,115.21903 c 65.85864,-11.59 158.71491,-27.93 206.69459,-36.37"
+       id="path3013"
+       style="stroke-width:0.873172" />
     <polygon
        fill="#000000"
        stroke="#000000"
        points="1299.84,-323.8 1290.39,-319.01 1289.46,-325.94 "
-       id="polygon3015" />
-    <text
-       text-anchor="middle"
-       x="1140.73"
-       y="-313.79999"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text3017">foaf:givenName</text>
-  </g>
-  <g
-     id="node9"
-     class="node"
-     transform="matrix(0.76242934,0,0,1,-233.14635,401.31903)">
-    <title
-       id="title3020">LThompson</title>
-    <polygon
-       fill="none"
-       stroke="#000000"
-       points="1287.12,-255 1287.12,-291 1377.12,-291 1377.12,-255 "
-       id="polygon3022" />
-    <text
-       text-anchor="middle"
-       x="1332.12"
-       y="-269.29999"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text3024">Thompson</text>
-  </g>
-  <g
-     id="edge9"
-     class="edge"
-     transform="matrix(0.76242934,0,0,1,-233.14635,401.31903)">
-    <title
-       id="title3027">Rhttp://a.example/Thompson.J-&gt;LThompson</title>
+       id="polygon3015"
+       transform="matrix(0.76242933,0,0,1,-233.14635,401.31903)" />
+    <g
+       id="node9"
+       class="node"
+       transform="matrix(0.76242933,0,0,1,-233.14635,401.31903)">
+      <title
+         id="title3020">LThompson</title>
+      <polygon
+         fill="none"
+         stroke="#000000"
+         points="1287.12,-255 1287.12,-291 1377.12,-291 1377.12,-255 "
+         id="polygon3022" />
+      <text
+         text-anchor="middle"
+         x="1332.12"
+         y="-269.29999"
+         font-family="Times, serif"
+         font-size="14px"
+         id="text3024">Thompson</text>
+    </g>
     <path
        fill="none"
        stroke="#000000"
-       d="m 1063.93,-273 c 73.6,0 159.02,0 213.08,0"
-       id="path3029" />
+       d="m 578.02509,128.31903 c 56.1148,0 121.24151,0 162.45844,0"
+       id="path3029"
+       style="stroke-width:0.873172" />
     <polygon
        fill="#000000"
        stroke="#000000"
        points="1287.06,-273 1277.06,-269.5 1277.06,-276.5 "
-       id="polygon3031" />
-    <text
-       text-anchor="middle"
-       x="1140.73"
-       y="-276.79999"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text3033">foaf:familyName</text>
-  </g>
-  <g
-     id="node10"
-     class="node"
-     transform="matrix(0.76242934,0,0,1,-233.14635,401.31903)">
-    <title
-       id="title3036">Rtel:+456</title>
-    <ellipse
-       fill="none"
-       stroke="#0000ff"
-       cx="1332.12"
-       cy="-218"
-       rx="30"
-       ry="18"
-       id="ellipse3038" />
-    <text
-       text-anchor="middle"
-       x="1332.12"
-       y="-214.3"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text3040">tel:+456</text>
-  </g>
-  <g
-     id="edge10"
-     class="edge"
-     transform="matrix(0.76242934,0,0,1,-233.14635,401.31903)">
-    <title
-       id="title3043">Rhttp://a.example/Thompson.J-&gt;Rtel:+456</title>
+       id="polygon3031"
+       transform="matrix(0.76242933,0,0,1,-233.14635,401.31903)" />
+    <g
+       id="node10"
+       class="node"
+       transform="matrix(0.76242933,0,0,1,-233.14635,401.31903)">
+      <title
+         id="title3036">Rtel:+456</title>
+      <ellipse
+         fill="none"
+         stroke="#0000ff"
+         cx="1332.12"
+         cy="-218"
+         rx="30"
+         ry="18"
+         id="ellipse3038" />
+      <text
+         text-anchor="middle"
+         x="1332.12"
+         y="-214.3"
+         font-family="Times, serif"
+         font-size="14px"
+         id="text3040">tel:+456</text>
+    </g>
     <path
        fill="none"
        stroke="#000000"
-       d="m 1018.79,-259.9 c 79.48,10.67 188.93,25.35 254.93,34.2"
-       id="path3045" />
+       d="m 543.88586,141.4497 c 60.59788,10.67 144.04577,25.35 194.36611,34.2"
+       id="path3045"
+       style="stroke-width:0.873172" />
     <polygon
        fill="#000000"
        stroke="#000000"
-       points="1283.93,-224.33 1273.55,-222.19 1274.49,-229.13 "
-       id="polygon3047" />
-    <text
-       text-anchor="middle"
-       x="1140.73"
-       y="-253.8"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text3049">foaf:phone</text>
-  </g>
-  <g
-     id="node11"
-     class="node"
-     transform="matrix(0.76242934,0,0,1,-233.14635,401.31903)">
-    <title
-       id="title3052">Rmail:joe@example.org</title>
-    <ellipse
-       fill="none"
-       stroke="#0000ff"
-       cx="1332.12"
-       cy="-164"
-       rx="70"
-       ry="18"
-       id="ellipse3054" />
-    <text
-       text-anchor="middle"
-       x="1332.12"
-       y="-160.3"
-       font-family="Times, serif"
-       font-size="14px"
-       id="text3056">mail:joe@example.org</text>
-  </g>
-  <g
-     id="edge11"
-     class="edge"
-     transform="matrix(0.87220101,0,0,0.99912021,-345.05265,401.13104)">
-    <title
-       id="title3059">Rhttp://a.example/Thompson.J-&gt;Rmail:joe@example.org</title>
+       points="1273.55,-222.19 1274.49,-229.13 1283.93,-224.33 "
+       id="polygon3047"
+       transform="matrix(0.76242933,0,0,1,-232.86952,401.3497)" />
+    <g
+       id="node11"
+       class="node"
+       transform="matrix(0.76242933,0,0,1,-233.14635,401.31903)">
+      <title
+         id="title3052">Rmail:joe@example.org</title>
+      <ellipse
+         fill="none"
+         stroke="#0000ff"
+         cx="1332.12"
+         cy="-164"
+         rx="70"
+         ry="18"
+         id="ellipse3054" />
+      <text
+         text-anchor="middle"
+         x="1332.12"
+         y="-160.3"
+         font-family="Times, serif"
+         font-size="14px"
+         id="text3056">mail:joe@example.org</text>
+    </g>
     <path
        fill="none"
        stroke="#000000"
-       d="m 1019.19,-259.91 c 15.67,4.73 31.12,11.17 44.54,19.91 11.17,7.28 6.75,16.85 18,24 38.87,24.72 87.38,37.93 131.26,44.91"
-       id="path3061" />
+       d="m 543.88586,141.4497 c 13.66739,4.72584 27.14289,11.16017 38.84783,19.89248 9.74248,7.2736 5.88735,16.83518 15.69962,23.97889 33.90245,24.69825 76.21292,37.89663 114.48509,44.87049"
+       id="path3061"
+       style="stroke-width:0.933506" />
     <polygon
        fill="#000000"
        stroke="#000000"
        points="1212.75,-167.59 1213.78,-174.51 1223.16,-169.57 "
-       id="polygon3063" />
+       id="polygon3063"
+       transform="matrix(0.87220097,0,0,0.99912024,-345.05265,401.13104)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="labeled"
+     style="display:inline">
     <text
        text-anchor="middle"
-       x="1140.73"
-       y="-219.8"
+       x="668.39624"
+       y="209.14494"
        font-family="Times, serif"
-       font-size="14px"
-       id="text3065">foaf:mbox</text>
+       font-size="12.2244px"
+       id="text3001"
+       transform="matrix(0.83315555,-0.26130655,0.34272887,1.0927644,0,0)"
+       style="display:inline;stroke-width:0.873172">foaf:givenName</text>
+    <text
+       text-anchor="middle"
+       x="729.04266"
+       y="164.1601"
+       font-family="Times, serif"
+       font-size="12.2244px"
+       id="text3017"
+       transform="matrix(0.87317205,-0.13166136,0,1.1452497,0,0)"
+       style="display:inline;stroke-width:0.873172">foaf:givenName</text>
+    <text
+       text-anchor="middle"
+       x="729.04266"
+       y="108.72654"
+       font-family="Times, serif"
+       font-size="12.2244px"
+       id="text3033"
+       transform="scale(0.87317197,1.1452497)"
+       style="display:inline;stroke-width:0.873172">foaf:familyName</text>
+    <text
+       text-anchor="middle"
+       x="729.35974"
+       y="51.059223"
+       font-family="Times, serif"
+       font-size="12.2244px"
+       id="text3049"
+       transform="matrix(0.87317205,0.13035009,0,1.1452497,0,0)"
+       style="display:inline;stroke-width:0.873172">foaf:phone</text>
+    <text
+       text-anchor="middle"
+       x="680.25299"
+       y="-95.849571"
+       font-family="Times, serif"
+       font-size="13.0691px"
+       id="text3065"
+       transform="matrix(0.93432804,0.44434739,0,1.0702879,0,0)"
+       style="display:inline;stroke-width:0.933506">foaf:mbox</text>
+    <text
+       text-anchor="middle"
+       x="473.46347"
+       y="88.736473"
+       font-family="Times, serif"
+       font-size="10.69px"
+       id="text2985"
+       transform="matrix(0.76172239,0.2978113,0,1.3128143,0,0)"
+       style="display:inline;stroke-width:0.763572">foaf:mbox</text>
+    <text
+       text-anchor="middle"
+       x="461.99908"
+       y="110.22935"
+       font-family="Times, serif"
+       font-size="10.5544px"
+       id="text2969"
+       transform="matrix(0.75162959,0.15090171,0,1.3304426,0,0)"
+       style="display:inline;stroke-width:0.753888">foaf:familyName</text>
+    <text
+       text-anchor="middle"
+       x="450.9682"
+       y="143.41399"
+       font-family="Times, serif"
+       font-size="10.7488px"
+       id="text2953"
+       transform="scale(0.7606702,1.3146302)"
+       style="display:inline;stroke-width:0.767769">foaf:givenName</text>
+    <text
+       text-anchor="middle"
+       x="458.26285"
+       y="197.91101"
+       font-family="Times, serif"
+       font-size="10.1935px"
+       id="text2937"
+       transform="matrix(0.72657215,-0.24961406,0,1.3763258,0,0)"
+       style="display:inline;stroke-width:0.728108">ex:representative</text>
+    <text
+       text-anchor="middle"
+       x="345.21451"
+       y="111.86073"
+       font-family="Times, serif"
+       font-size="10.0648px"
+       id="text2928"
+       transform="matrix(0.71585026,-0.06158993,0,1.3969402,0,0)"
+       style="display:inline;stroke-width:0.718913">ex:reproducedBy</text>
+    <text
+       text-anchor="middle"
+       x="182.97577"
+       y="101.86734"
+       font-family="Times, serif"
+       font-size="10.7532px"
+       id="text2912"
+       transform="matrix(0.76535709,0.23442193,0,1.3065797,0,0)"
+       style="display:inline;stroke-width:0.768085">ex:reportedBy</text>
   </g>
 </svg>
